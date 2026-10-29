@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Test cornice dedicata — simulazione post Blogger</title>
+<style>
+  /* Simula lo sfondo di un blog */
+  body {
+    background: #ffffff;
+    font-family: Georgia, 'Times New Roman', serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+  }
+  .blog-header {
+    background: #2e2018;
+    color: #f8f1e4;
+    padding: 14px 20px;
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 1px;
+  }
+  .post {
+    max-width: 860px;
+    margin: 24px auto;
+    padding: 0 16px;
+  }
+  .post h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+  }
+  .post p {
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 16px;
+  }
+  .post-box {
+    background: #f5f5f5;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 16px;
+    font-size: 14px;
+  }
+</style>
+</head>
+<body>
+  <div class="blog-header">📐 Il mio blog di matematica</div>
+  <div class="post">
+    <h1>Attività: risolvi le espressioni letterali</h1>
+    <p>Oggi in classe usiamo l'app <strong>Espressioni Letterali, Monomi e Polinomi</strong>. Scrivi a mano l'espressione nel riquadro qui sotto (es. 2x+3y−(x−y)) e l'app ti guiderà nei 6 passi della risoluzione (parentesi, monomi simili colorati, riduzione, verifica), fino a farti scaricare il quaderno PDF. Buon lavoro!</p>
+
+    <!-- ═════════════ INIZIO CORNICE (iframe che carica il file dedicato) ═════════════ -->
+    <iframe src="embed-espressioni-dedicata.html" width="100%" style="border:none;height:760px;overflow:hidden;" title="Cornice dinamica Espressioni Letterali" scrolling="no"></iframe>
+    <!-- ═════════════ FINE CORNICE ═════════════ -->
+
+    <div class="post-box">💡 <strong>Consiglio per l'insegnante:</strong> usa il pulsante <em>Schermo intero</em> della cornice quando proietti sulla LIM, così gli studenti vedono solo l'app.</div>
+    <p>Consegna: risolvi l'espressione con le parentesi, riduci i monomi simili, scrivi i passi sul quaderno e scarica il PDF per la verifica.</p>
+  </div>
+</body>
+</html>

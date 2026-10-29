@@ -1,0 +1,35 @@
+# Render Blueprint — deploy di «Espressioni Letterali, Monomi e Polinomi» (app didattica) con un clic
+# --------------------------------------------------------------------------------
+# Come usarlo:
+#   1. Carica questa cartella (app/) su GitHub — vedi ISTRUZIONI-GITHUB.txt / RENDER.md
+#   2. Vai su https://render.com → New → Blueprint
+#   3. Collega il repository: Render legge questo file e crea il Web Service.
+#
+# Versione universale 8744: Express serve anche le API IA.
+# Configurare la propria EASY_PEASY_API_KEY in Environment (server/build).
+# NON caricare .env, shared/env.generated.ts o dist/index.js su GitHub.
+# DATABASE_URL facoltativa per sessioni/cache; senza DB fallback temporaneo.
+# Asset ONNX, KaTeX e font sono locali. Conservare gli header e CORS /fonts.
+#
+# Il server ascolta su process.env.PORT (impostata automaticamente da Render).
+
+services:
+  - type: web
+    name: espressioni-monomi-polinomi
+    runtime: node
+    plan: free
+    buildCommand: corepack enable && pnpm install --frozen-lockfile --prod=false && pnpm check && pnpm build
+    startCommand: pnpm start
+    healthCheckPath: /
+    autoDeploy: true
+    envVars:
+      - key: NODE_VERSION
+        value: "22"
+      - key: NODE_ENV
+        value: production
+      - key: ENABLE_COREPACK
+        value: "1"
+      - key: EASY_PEASY_API_KEY
+        sync: false
+      # Facoltativo: aggiungere DATABASE_URL in Environment per persistenza.
+      # Non inserire valori sensibili in questo file o nel repository.

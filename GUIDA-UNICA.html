@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Guida Completa — Equazioni Biquadratiche</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Inter', -apple-system, sans-serif; background: #f8fafc; color: #1e293b; line-height: 1.5; }
+  .cover { background: linear-gradient(135deg, #8B3A1A 0%, #B8846A 50%, #D4B896 100%); color: white; padding: 100px 40px; text-align: center; page-break-after: always; display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh; }
+  .cover h1 { font-size: 48px; font-weight: 800; margin-bottom: 16px; }
+  .cover .subtitle { font-size: 22px; opacity: 0.9; margin-bottom: 6px; }
+  .cover .icon-big { font-size: 72px; margin-bottom: 24px; }
+  .cover .tagline { font-size: 16px; opacity: 0.7; margin-top: 12px; font-style: italic; }
+  .cover .meta { font-size: 15px; opacity: 0.6; margin-top: 40px; }
+  .page { page-break-after: always; padding: 36px 44px; }
+  .page:last-child { page-break-after: auto; }
+  .section-title { font-size: 28px; font-weight: 800; color: #0f172a; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 3px solid #8B3A1A; }
+  .section-title .num { display: inline-block; background: #8B3A1A; color: white; width: 36px; height: 36px; border-radius: 10px; text-align: center; line-height: 36px; font-size: 18px; margin-right: 12px; }
+  .step { page-break-inside: avoid; background: white; border-radius: 16px; padding: 28px 32px; margin-bottom: 24px; box-shadow: 0 1px 3px rgba(0,0,0,0.06), 0 6px 16px rgba(0,0,0,0.04); border: 1px solid #e2e8f0; }
+  .step-header { display: flex; align-items: center; gap: 14px; margin-bottom: 18px; }
+  .step-number { width: 42px; height: 42px; background: linear-gradient(135deg, #8B3A1A, #B8846A); color: white; border-radius: 12px; display: flex; align-items: center; justify-content: center; font-weight: 700; font-size: 18px; flex-shrink: 0; }
+  .step-title { font-size: 20px; font-weight: 700; color: #0f172a; }
+  .step-sub { font-size: 14px; color: #64748b; margin-top: 2px; }
+  .step-body p { margin-bottom: 10px; font-size: 15px; color: #334155; }
+  .step-body ul { padding-left: 22px; margin: 12px 0; }
+  .step-body li { margin-bottom: 8px; font-size: 15px; color: #334155; line-height: 1.5; }
+  .step-body li strong { color: #0f172a; }
+  .tip { background: #f0fdf4; border-left: 4px solid #8B3A1A; padding: 12px 16px; border-radius: 0 10px 10px 0; margin: 14px 0; font-size: 14px; color: #166534; page-break-inside: avoid; }
+  .warning { background: #fef3c7; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 0 10px 10px 0; margin: 14px 0; font-size: 14px; color: #92400e; page-break-inside: avoid; }
+  .success-box { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border: 2px solid #86efac; padding: 22px 26px; border-radius: 14px; margin: 18px 0; text-align: center; page-break-inside: avoid; }
+  .success-box .big { font-size: 22px; font-weight: 700; color: #166534; }
+  code { background: #f1f5f9; padding: 2px 8px; border-radius: 6px; font-size: 14px; color: #475569; border: 1px solid #e2e8f0; }
+  .code-block { background: #0f172a; color: #e2e8f0; padding: 16px 20px; border-radius: 12px; font-family: 'Courier New', monospace; font-size: 14px; line-height: 1.6; margin: 14px 0; overflow-x: auto; page-break-inside: avoid; }
+  .final-box { background: linear-gradient(135deg, #f0fdf4, #ecfdf5); border: 3px solid #4ade80; border-radius: 18px; padding: 28px 32px; margin: 20px 0; text-align: center; page-break-inside: avoid; }
+  .final-box h2 { color: #166534; font-size: 26px; margin-bottom: 10px; }
+  .grid-actions { display: flex; gap: 10px; margin: 14px 0; flex-wrap: wrap; }
+  .action-box { background: #f8fafc; border: 1px solid #e2e8f0; border-radius: 12px; padding: 12px 16px; flex: 1; min-width: 180px; page-break-inside: avoid; }
+  .action-box .icon { font-size: 24px; margin-bottom: 4px; }
+  .action-box .label { font-weight: 600; font-size: 14px; color: #0f172a; }
+  .action-box .desc { font-size: 13px; color: #64748b; margin-top: 3px; }
+  .footer { text-align: center; padding: 28px 40px; color: #94a3b8; font-size: 13px; page-break-inside: avoid; }
+  @media print { body { background: white; } .step, .tip, .warning, .success-box, .final-box, .action-box, .code-block { break-inside: avoid; } }
+</style>
+</head>
+<body>
+
+<!-- ============ COPERTINA ============ -->
+<div class="cover">
+  <div class="icon-big">📐</div>
+  <h1>Equazioni Biquadratiche</h1>
+  <div class="subtitle">Guida completa — Come usare, embed e modificare l'app</div>
+  <div class="tagline">Dall'app interattiva al tuo blog Blogger, passo dopo passo</div>
+  <div class="meta">
+    Preparata con ❤️ da MARKY<br>
+    Ultimo aggiornamento: Agosto 2026
+  </div>
+</div>
+
+<!-- ============ INTRO ============ -->
+<div class="page">
+  <h2 class="section-title">Indice</h2>
+  <div class="step">
+    <div class="step-body">
+      <p style="font-size:16px; font-weight:600; margin-bottom:16px;">La guida è divisa in 4 parti:</p>
+      <ul>
+        <li><strong>Parte 1 — Panoramica</strong>: Cos'è l'app e come funziona</li>
+        <li><strong>Parte 2 — Uso in classe</strong>: Flusso studente e docente</li>
+        <li><strong>Parte 3 — Embed nel blog</strong>: Incorporare l'app in Blogger</li>
+        <li><strong>Parte 4 — Personalizzazione</strong>: Come modificare l'app con Easy-Peasy.AI</li>
+      </ul>
+    </div>
+  </div>
+  <div class="tip">
+    <strong>⏱️ L'app è già online!</strong><br>
+    URL: <strong>https://equazioni-biquadratiche.easy-peasy.site</strong><br>
+    Non devi fare nulla per pubblicarla — è già funzionante e pronta all'uso.
+  </div>
+</div>
+
+<!-- ============ PARTE 1: PANORAMICA ============ -->
+<div class="page">
+  <h2 class="section-title"><span class="num">1</span> Cos'è l'App Equazioni Biquadratiche</h2>
+
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">📐</div>
+      <div>
+        <div class="step-title">Un'app didattica interattiva per la matematica</div>
+        <div class="step-sub">Guida gli studenti nella risoluzione passo-passo</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>L'app guida lo studente attraverso <strong>7 passi</strong> per risolvere un'equazione biquadratica (trinomia di quarto grado):</p>
+      <ul>
+        <li><strong>Passo 1:</strong> Scrittura dell'equazione originale (ax⁴ + bx² + c = 0)</li>
+        <li><strong>Passo 2:</strong> Sostituzione t = x² → equazione di secondo grado</li>
+        <li><strong>Passo 3:</strong> Calcolo del discriminante Δ = b² − 4ac</li>
+        <li><strong>Passo 4:</strong> Calcolo di t₁ = (−b + √Δ) / 2a</li>
+        <li><strong>Passo 5:</strong> Calcolo di t₂ = (−b − √Δ) / 2a</li>
+        <li><strong>Passo 6:</strong> Soluzioni ±√t₁ e ±√t₂ (le 4 radici)</li>
+        <li><strong>Passo 7:</strong> Riepilogo finale</li>
+      </ul>
+      <p>Ogni passo richiede allo studente di <strong>scrivere a mano</strong> il valore nel canvas. L'app usa l'intelligenza artificiale (ONNX) per riconoscere la scrittura e verificare la correttezza.</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">✨</div>
+      <div>
+        <div class="step-title">Caratteristiche principali</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li>✅ <strong>Input con scrittura a mano</strong> — riconoscimento matematico ONNX</li>
+        <li>✅ <strong>7 passi guidati</strong> — ogni passaggio spiegato con formule KaTeX</li>
+        <li>✅ <strong>Badge colorati</strong> — frazioni, decimali e frazioni semplificate</li>
+        <li>✅ <strong>PDF scaricabile</strong> — quaderno completo con dati studente</li>
+        <li>✅ <strong>Correzione automatica</strong> — verifica immediata dei valori inseriti</li>
+        <li>✅ <strong>Auto-resize iframe</strong> — si adatta automaticamente nel blog</li>
+        <li>✅ <strong>Nessuna registrazione</strong> — pronto all'uso, senza account</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PARTE 2: USO IN CLASSE ============ -->
+<div class="page">
+  <h2 class="section-title"><span class="num">2</span> Come usare l'app in classe</h2>
+
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">👨‍🎓</div>
+      <div>
+        <div class="step-title">Flusso per lo studente</div>
+        <div class="step-sub">Dal dispositivo alla consegna del PDF</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li><strong>1.</strong> Apri l'app (dal blog o direttamente dal link)</li>
+        <li><strong>2.</strong> Compila Cognome, Nome, Data e Classe nella schermata iniziale</li>
+        <li><strong>3.</strong> Clicca <strong>ENTRA</strong></li>
+        <li><strong>4.</strong> Scrivi a mano l'equazione nel riquadro grande</li>
+        <li><strong>5.</strong> Clicca <strong>RICONOSCI</strong> — l'app interpreta la scrittura</li>
+        <li><strong>6.</strong> Se corretto, clicca <strong>CONFERMA</strong></li>
+        <li><strong>7.</strong> Segui i 7 passi: per ognuno, scrivi il valore a mano e clicca RICONOSCI</li>
+        <li><strong>8.</strong> Alla fine, clicca <strong>SCARICA PDF</strong> per il quaderno completo</li>
+      </ul>
+
+      <div class="tip">
+        <strong>💡 Il pulsante ✎ digita il valore:</strong> Se il riconoscimento della scrittura non funziona bene, lo studente può sempre cliccare su "✎ digita il valore" per inserire il numero manualmente con la tastiera.
+      </div>
+
+      <div class="tip">
+        <strong>💡 Frazioni semplificate:</strong> Quando lo studente inserisce una frazione riducibile (es. 2/4), l'app mostra automaticamente la frazione semplificata (1/2) in un badge verde, aiutando lo studente a capire il concetto di riduzione.
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">👩‍🏫</div>
+      <div>
+        <div class="step-title">Flusso per il docente</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <ul>
+        <li>L'app è <strong>completamente autoguidata</strong> — lo studente non ha bisogno di aiuto</li>
+        <li>Il PDF scaricabile include <strong>Cognome, Nome, Classe e Data</strong> in testa</li>
+        <li>Perfetto per la <strong>valutazione</strong>: ogni studente consegna il PDF del proprio quaderno</li>
+        <li>Può essere usata come <strong>esercitazione in classe</strong> o <strong>compito a casa</strong></li>
+        <li>Funziona su <strong>qualsiasi dispositivo</strong> con browser (computer, tablet, telefono)</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PARTE 3: EMBED ============ -->
+<div class="page">
+  <h2 class="section-title"><span class="num">3</span> Incorporare l'app nel blog Blogger</h2>
+
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">📝</div>
+      <div>
+        <div class="step-title">Codice embed — copia e incolla</div>
+        <div class="step-sub">2 minuti per avere l'app nel tuo blog</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Copia <strong>TUTTO</strong> il codice qui sotto e incollalo nel tuo post o pagina Blogger in modalità <strong>HTML</strong> (non "Componi"):</p>
+
+      <div class="code-block">&lt;!--EQUAZIONI BIQUADRATICHE--&gt;<br>&lt;div style="background: rgb(250, 248, 245); border-radius: 16px; box-shadow: rgba(0, 0, 0, 0.08) 0px 4px 20px; font-family: system-ui, -apple-system, sans-serif; margin: 0px auto; max-width: 800px; overflow: hidden;"&gt;<br>  &lt;div style="background: linear-gradient(135deg, #C69C7C 0%, #E0C8B0 100%); padding: 16px 20px; text-align: center;"&gt;<br>    &lt;span style="color: #3d2b1f; font-family: 'Cambria','Hoefler Text','Times New Roman',serif; font-size: 15px; font-weight: 600; letter-spacing: 1px;"&gt;EQUAZIONI DI QUARTO GRADO&lt;/span&gt;<br>    &lt;br /&gt;<br>    &lt;span style="color: #5a3d2b; font-family: 'Cambria','Hoefler Text','Times New Roman',serif; font-size: 12px; font-weight: 400; letter-spacing: 0.5px;"&gt;TRINOMIE BIQUADRATICHE &amp;nbsp;·&amp;nbsp; RISOLVI IN 7 PASSI&lt;/span&gt;<br>  &lt;/div&gt;<br>  &lt;iframe id="equazioniBiquadraticheIframe" loading="lazy" src="https://equazioni-biquadratiche.easy-peasy.site/" style="border: none; display: block; height: 600px; min-width: 100%; transition: height 0.2s ease; width: 1px;" title="Equazioni Biquadratiche Interattive"&gt;<br>  &lt;/iframe&gt;<br>&lt;/div&gt;<br><br>&lt;script&gt;<br>(function() {<br>  var iframe = document.getElementById('equazioniBiquadraticheIframe');<br>  if (!iframe) return;<br>  window.addEventListener('message', function(e) {<br>    if (e.data &amp;&amp; e.data.type === 'labvisivo:height' &amp;&amp; typeof e.data.height === 'number') {<br>      if (e.data.height &gt; 100) iframe.style.height = e.data.height + 'px';<br>    }<br>  });<br>})();<br>&lt;/script&gt;&lt;br /&gt;&lt;br /&gt;</div>
+
+      <p>Passaggi su Blogger:</p>
+      <ol>
+        <li>Vai su <strong>blogger.com</strong> e accedi</li>
+        <li>Clicca su <strong>"Nuovo post"</strong> (o modifica una pagina esistente)</li>
+        <li>Nell'editor, clicca su <strong>"HTML"</strong> (in alto a sinistra)</li>
+        <li><strong>Incolla</strong> il codice qui sopra</li>
+        <li>Clicca su <strong>"Componi"</strong> per l'anteprima</li>
+        <li>Clicca <strong>"Pubblica"</strong> ✅</li>
+      </ol>
+
+      <div class="tip">
+        <strong>💡 Auto-resize:</strong> L'iframe si ridimensiona automaticamente in base al contenuto. Quando lo studente passa dalla schermata iniziale ai passi dell'esercizio, l'altezza si adatta da sola.
+      </div>
+
+      <div class="warning">
+        <strong>⚠️ Importante:</strong> Il codice deve essere incollato in modalità <strong>HTML</strong>, non in "Componi". Altrimenti Blogger lo interpreta come testo e non funziona.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ============ PARTE 4: PERSONALIZZAZIONE ============ -->
+<div class="page">
+  <h2 class="section-title"><span class="num">4</span> Personalizzare l'app</h2>
+
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">🤖</div>
+      <div>
+        <div class="step-title">Modificare con Easy-Peasy.AI (MARKY)</div>
+        <div class="step-sub">Deploy automatico su Cloud Run</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>L'app è costruita sulla piattaforma <strong>Easy-Peasy.AI</strong>. Puoi chiedere a MARKY (l'agente AI) di modificare qualsiasi aspetto dell'app, ad esempio:</p>
+
+      <div class="grid-actions">
+        <div class="action-box">
+          <div class="icon">🎨</div>
+          <div class="label">Cambiare colori</div>
+          <div class="desc">"Cambia il colore del bottone ENTRA in blu"</div>
+        </div>
+        <div class="action-box">
+          <div class="icon">✏️</div>
+          <div class="label">Modificare testi</div>
+          <div class="desc">"Cambia il titolo in 'Equazioni di Quarto Grado'"</div>
+        </div>
+        <div class="action-box">
+          <div class="icon">📐</div>
+          <div class="label">Aggiungere passi</div>
+          <div class="desc">"Aggiungi un passo per la verifica delle soluzioni"</div>
+        </div>
+        <div class="action-box">
+          <div class="icon">📱</div>
+          <div class="label">Migliorare UI</div>
+          <div class="desc">"Rendi i pulsanti più grandi su mobile"</div>
+        </div>
+      </div>
+
+      <p>MARKY si occupa di tutto:</p>
+      <ul>
+        <li>✅ Modifica il codice</li>
+        <li>✅ Verifica che compili senza errori</li>
+        <li>✅ Fa il deploy in preview (per testare)</li>
+        <li>✅ Fa il deploy in produzione (quando sei pronto)</li>
+      </ul>
+
+      <div class="tip">
+        <strong>💡 Il codice sorgente:</strong> È tutto in questo pacchetto ZIP. Puoi anche caricarlo su GitHub e modificarlo manualmente se preferisci. Il deploy su Cloud Run avviene tramite Easy-Peasy.AI.
+      </div>
+    </div>
+  </div>
+
+  <div class="step">
+    <div class="step-header">
+      <div class="step-number">📂</div>
+      <div>
+        <div class="step-title">Caricare il codice su GitHub</div>
+        <div class="step-sub">Per tenere traccia delle modifiche</div>
+      </div>
+    </div>
+    <div class="step-body">
+      <p>Se vuoi versionare il codice su GitHub:</p>
+      <ol>
+        <li>Crea un repository su <strong>github.com</strong></li>
+        <li>Usa <strong>GitHub Desktop</strong> per clonarlo</li>
+        <li>Copia tutti i file di questo pacchetto nella cartella del repository</li>
+        <li>Fai <strong>Commit</strong> e <strong>Push</strong></li>
+      </ol>
+      <p>Poi, su Easy-Peasy.AI, puoi collegare il repository per il deploy automatico.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============ CONCLUSIONE ============ -->
+<div class="page">
+  <div class="final-box">
+    <h2>🎉 Tutto pronto!</h2>
+    <p>La tua app <strong>Equazioni Biquadratiche</strong> è online e funzionante!</p>
+    <p>URL permanente:</p>
+    <p style="font-size:20px; font-weight:700; margin:12px 0;">
+      <a href="https://equazioni-biquadratiche.easy-peasy.site/" style="color:#8B3A1A;">equazioni-biquadratiche.easy-peasy.site</a>
+    </p>
+  </div>
+
+  <div class="step">
+    <div class="step-body">
+      <p style="font-weight:600; font-size:16px;">📌 Riepilogo:</p>
+      <ul>
+        <li>✅ App online e funzionante</li>
+        <li>✅ Embed nel blog con codice HTML già pronto</li>
+        <li>✅ Riconoscimento scrittura a mano con AI</li>
+        <li>✅ PDF scaricabile con dati studente</li>
+        <li>✅ Auto-resize nell'iframe</li>
+        <li>✅ Personalizzabile con Easy-Peasy.AI</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="footer">
+    Equazioni Biquadratiche — Guida completa<br>
+    Preparata con ❤️ da MARKY (Easy-Peasy.AI) | Agosto 2026
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,3055 @@
+[
+  {
+    "name": "desktop",
+    "checks": [
+      {
+        "name": "altezza massima compatta con contenuto lungo",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "page": 578,
+            "content": 1023,
+            "top": 0,
+            "toolbar": 50,
+            "toolbarTop": 8,
+            "docHeight": 800,
+            "docWidth": 1276,
+            "width": 1280,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 1022.78125
+          },
+          "cap": 640
+        }
+      },
+      {
+        "name": "regione visibile, non collassata, accessibile da tastiera",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1023,
+          "top": 0,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1022.78125
+        }
+      },
+      {
+        "name": "scrollbar4px e nessun overflow orizzontale documento",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1023,
+          "top": 0,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1022.78125
+        }
+      },
+      {
+        "name": "font della terza pagina invariati",
+        "ok": true,
+        "detail": {
+          "font": 18,
+          "root": 16
+        }
+      },
+      {
+        "name": "nessun risultato o PDF anticipato",
+        "ok": true
+      },
+      {
+        "name": "scorrimento interno da tastiera senza spostare toolbar",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1023,
+          "top": 445,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1022.78125
+        }
+      },
+      {
+        "name": "dito emulato o rotella scorrono dentro",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1023,
+          "top": 250,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1022.78125
+        }
+      },
+      {
+        "name": "risposta iniziale vuota e scritta soltanto dallo studente",
+        "ok": true
+      },
+      {
+        "name": "istruzioni lunghe non allungano la cornice",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1246,
+          "top": 446,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1245.78125
+        }
+      },
+      {
+        "name": "errore non rivela risposta e non apre il box seguente",
+        "ok": true
+      },
+      {
+        "name": "passaggio1 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1291,
+          "top": 423,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1290.953125
+        }
+      },
+      {
+        "name": "passaggio2 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1541,
+          "top": 713,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1541.125
+        }
+      },
+      {
+        "name": "passaggio3 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1523,
+          "top": 945,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1522.65625
+        }
+      },
+      {
+        "name": "pulsante PDF finale raggiungibile con scroll interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1523,
+          "top": 945,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1522.65625
+        }
+      },
+      {
+        "name": "PDF mantiene dati e tutte le righe senza limite640",
+        "ok": true,
+        "detail": {
+          "text": "QA LayoutClasse 3A2026-10-292+3+4+12+3+4+12+3+4+15+4+15+4+15+4+19+19+19+1101010RISULTATO FINALE101010window.onload=function(){window.print()}",
+          "rows": [
+            "2+3+4+1",
+            "5+4+1",
+            "9+1",
+            "10",
+            "10"
+          ],
+          "clipped": false
+        }
+      },
+      {
+        "name": "esercizio di un box resta leggibile entro il massimo",
+        "ok": true,
+        "detail": {
+          "before": {
+            "frame": 640,
+            "page": 578,
+            "content": 735,
+            "top": 0,
+            "toolbar": 50,
+            "toolbarTop": 8,
+            "docHeight": 800,
+            "docWidth": 1276,
+            "width": 1280,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 734.78125
+          },
+          "after": {
+            "frame": 640,
+            "page": 578,
+            "content": 692,
+            "top": 114,
+            "toolbar": 50,
+            "toolbarTop": 8,
+            "docHeight": 800,
+            "docWidth": 1276,
+            "width": 1280,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 692.3125
+          }
+        }
+      },
+      {
+        "name": "layout auto si accorcia e ricresce senza collasso",
+        "ok": true,
+        "detail": {
+          "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+          "short": {
+            "frame": 142,
+            "page": 80,
+            "content": 80
+          },
+          "long": {
+            "frame": 640,
+            "page": 578,
+            "content": 1200
+          },
+          "shrunk": {
+            "frame": 142,
+            "page": 80,
+            "content": 80
+          }
+        }
+      },
+      {
+        "name": "tastiera mobile o viewport ridotto rispettato",
+        "ok": true,
+        "detail": {
+          "frame": 600,
+          "page": 538,
+          "content": 692,
+          "top": 154,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 600,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "600px",
+          "natural": 692.3125
+        }
+      },
+      {
+        "name": "stampa rimuove limiti e scroll",
+        "ok": true
+      },
+      {
+        "name": "ritorno a schermo ripristina il limite",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 692,
+          "top": 114,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 800,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 692.3125
+        }
+      },
+      {
+        "name": "seconda pagina rimane al suo limite precedente",
+        "ok": true
+      },
+      {
+        "name": "prima pagina non limitata e variabile viewport rimossa",
+        "ok": true
+      },
+      {
+        "name": "nessuna chiamata IA o scrittura dati",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "initial": {
+      "frame": 640,
+      "page": 578,
+      "content": 1023,
+      "top": 0,
+      "toolbar": 50,
+      "toolbarTop": 8,
+      "docHeight": 800,
+      "docWidth": 1276,
+      "width": 1280,
+      "windowY": 0,
+      "overflow": "auto",
+      "bar": "4px",
+      "maxHeight": "640px",
+      "natural": 1022.78125
+    },
+    "short": {
+      "before": {
+        "frame": 640,
+        "page": 578,
+        "content": 735,
+        "top": 0,
+        "toolbar": 50,
+        "toolbarTop": 8,
+        "docHeight": 800,
+        "docWidth": 1276,
+        "width": 1280,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 734.78125
+      },
+      "after": {
+        "frame": 640,
+        "page": 578,
+        "content": 692,
+        "top": 114,
+        "toolbar": 50,
+        "toolbarTop": 8,
+        "docHeight": 800,
+        "docWidth": 1276,
+        "width": 1280,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 692.3125
+      }
+    },
+    "intrinsic": {
+      "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+      "short": {
+        "frame": 142,
+        "page": 80,
+        "content": 80
+      },
+      "long": {
+        "frame": 640,
+        "page": 578,
+        "content": 1200
+      },
+      "shrunk": {
+        "frame": 142,
+        "page": 80,
+        "content": 80
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "mobile-320",
+    "checks": [
+      {
+        "name": "altezza massima compatta con contenuto lungo",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 568,
+            "page": 392,
+            "content": 1487,
+            "top": 0,
+            "toolbar": 164,
+            "toolbarTop": 8,
+            "docHeight": 568,
+            "docWidth": 320,
+            "width": 320,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "568px",
+            "natural": 1486.78125
+          },
+          "cap": 568
+        }
+      },
+      {
+        "name": "regione visibile, non collassata, accessibile da tastiera",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 1487,
+          "top": 0,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 1486.78125
+        }
+      },
+      {
+        "name": "scrollbar4px e nessun overflow orizzontale documento",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 1487,
+          "top": 0,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 1486.78125
+        }
+      },
+      {
+        "name": "font della terza pagina invariati",
+        "ok": true,
+        "detail": {
+          "font": 18,
+          "root": 16
+        }
+      },
+      {
+        "name": "nessun risultato o PDF anticipato",
+        "ok": true
+      },
+      {
+        "name": "scorrimento interno da tastiera senza spostare toolbar",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 1487,
+          "top": 1095,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 1486.78125
+        }
+      },
+      {
+        "name": "dito emulato o rotella scorrono dentro",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 1487,
+          "top": 142,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 1486.78125
+        }
+      },
+      {
+        "name": "risposta iniziale vuota e scritta soltanto dallo studente",
+        "ok": true
+      },
+      {
+        "name": "istruzioni lunghe non allungano la cornice",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 1850,
+          "top": 1112,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 1849.78125
+        }
+      },
+      {
+        "name": "errore non rivela risposta e non apre il box seguente",
+        "ok": true
+      },
+      {
+        "name": "passaggio1 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 1751,
+          "top": 1097,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 1750.953125
+        }
+      },
+      {
+        "name": "passaggio2 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 1997,
+          "top": 1359,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 1997.125
+        }
+      },
+      {
+        "name": "passaggio3 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 1993,
+          "top": 1601,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 1992.65625
+        }
+      },
+      {
+        "name": "pulsante PDF finale raggiungibile con scroll interno",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 1993,
+          "top": 1601,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 1992.65625
+        }
+      },
+      {
+        "name": "PDF mantiene dati e tutte le righe senza limite640",
+        "ok": true,
+        "detail": {
+          "text": "QA LayoutClasse 3A2026-10-292+3+4+12+3+4+12+3+4+15+4+15+4+15+4+19+19+19+1101010RISULTATO FINALE101010window.onload=function(){window.print()}",
+          "rows": [
+            "2+3+4+1",
+            "5+4+1",
+            "9+1",
+            "10",
+            "10"
+          ],
+          "clipped": false
+        }
+      },
+      {
+        "name": "esercizio di un box resta leggibile entro il massimo",
+        "ok": true,
+        "detail": {
+          "before": {
+            "frame": 568,
+            "page": 392,
+            "content": 765,
+            "top": 0,
+            "toolbar": 164,
+            "toolbarTop": 8,
+            "docHeight": 568,
+            "docWidth": 320,
+            "width": 320,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "568px",
+            "natural": 764.78125
+          },
+          "after": {
+            "frame": 568,
+            "page": 392,
+            "content": 712,
+            "top": 320,
+            "toolbar": 164,
+            "toolbarTop": 8,
+            "docHeight": 568,
+            "docWidth": 320,
+            "width": 320,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "568px",
+            "natural": 712.3125
+          }
+        }
+      },
+      {
+        "name": "layout auto si accorcia e ricresce senza collasso",
+        "ok": true,
+        "detail": {
+          "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+          "short": {
+            "frame": 256,
+            "page": 80,
+            "content": 80
+          },
+          "long": {
+            "frame": 568,
+            "page": 392,
+            "content": 1200
+          },
+          "shrunk": {
+            "frame": 256,
+            "page": 80,
+            "content": 80
+          }
+        }
+      },
+      {
+        "name": "tastiera mobile o viewport ridotto rispettato",
+        "ok": true,
+        "detail": {
+          "frame": 368,
+          "page": 192,
+          "content": 712,
+          "top": 373,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 368,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "368px",
+          "natural": 712.3125
+        }
+      },
+      {
+        "name": "stampa rimuove limiti e scroll",
+        "ok": true
+      },
+      {
+        "name": "ritorno a schermo ripristina il limite",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "page": 392,
+          "content": 712,
+          "top": 320,
+          "toolbar": 164,
+          "toolbarTop": 8,
+          "docHeight": 568,
+          "docWidth": 320,
+          "width": 320,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "568px",
+          "natural": 712.3125
+        }
+      },
+      {
+        "name": "seconda pagina rimane al suo limite precedente",
+        "ok": true
+      },
+      {
+        "name": "prima pagina non limitata e variabile viewport rimossa",
+        "ok": true
+      },
+      {
+        "name": "nessuna chiamata IA o scrittura dati",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "initial": {
+      "frame": 568,
+      "page": 392,
+      "content": 1487,
+      "top": 0,
+      "toolbar": 164,
+      "toolbarTop": 8,
+      "docHeight": 568,
+      "docWidth": 320,
+      "width": 320,
+      "windowY": 0,
+      "overflow": "auto",
+      "bar": "4px",
+      "maxHeight": "568px",
+      "natural": 1486.78125
+    },
+    "short": {
+      "before": {
+        "frame": 568,
+        "page": 392,
+        "content": 765,
+        "top": 0,
+        "toolbar": 164,
+        "toolbarTop": 8,
+        "docHeight": 568,
+        "docWidth": 320,
+        "width": 320,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "568px",
+        "natural": 764.78125
+      },
+      "after": {
+        "frame": 568,
+        "page": 392,
+        "content": 712,
+        "top": 320,
+        "toolbar": 164,
+        "toolbarTop": 8,
+        "docHeight": 568,
+        "docWidth": 320,
+        "width": 320,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "568px",
+        "natural": 712.3125
+      }
+    },
+    "intrinsic": {
+      "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+      "short": {
+        "frame": 256,
+        "page": 80,
+        "content": 80
+      },
+      "long": {
+        "frame": 568,
+        "page": 392,
+        "content": 1200
+      },
+      "shrunk": {
+        "frame": 256,
+        "page": 80,
+        "content": 80
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "mobile-393",
+    "checks": [
+      {
+        "name": "altezza massima compatta con contenuto lungo",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "page": 502,
+            "content": 1271,
+            "top": 0,
+            "toolbar": 126,
+            "toolbarTop": 8,
+            "docHeight": 780,
+            "docWidth": 393,
+            "width": 393,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 1270.78125
+          },
+          "cap": 640
+        }
+      },
+      {
+        "name": "regione visibile, non collassata, accessibile da tastiera",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1271,
+          "top": 0,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1270.78125
+        }
+      },
+      {
+        "name": "scrollbar4px e nessun overflow orizzontale documento",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1271,
+          "top": 0,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1270.78125
+        }
+      },
+      {
+        "name": "font della terza pagina invariati",
+        "ok": true,
+        "detail": {
+          "font": 18,
+          "root": 16
+        }
+      },
+      {
+        "name": "nessun risultato o PDF anticipato",
+        "ok": true
+      },
+      {
+        "name": "scorrimento interno da tastiera senza spostare toolbar",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1271,
+          "top": 769,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1270.78125
+        }
+      },
+      {
+        "name": "dito emulato o rotella scorrono dentro",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1271,
+          "top": 142,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1270.78125
+        }
+      },
+      {
+        "name": "risposta iniziale vuota e scritta soltanto dallo studente",
+        "ok": true
+      },
+      {
+        "name": "istruzioni lunghe non allungano la cornice",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1574,
+          "top": 786,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1573.78125
+        }
+      },
+      {
+        "name": "errore non rivela risposta e non apre il box seguente",
+        "ok": true
+      },
+      {
+        "name": "passaggio1 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1535,
+          "top": 771,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1534.953125
+        }
+      },
+      {
+        "name": "passaggio2 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1781,
+          "top": 1033,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1781.125
+        }
+      },
+      {
+        "name": "passaggio3 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1797,
+          "top": 1279,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1796.65625
+        }
+      },
+      {
+        "name": "pulsante PDF finale raggiungibile con scroll interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1797,
+          "top": 1279,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1796.65625
+        }
+      },
+      {
+        "name": "PDF mantiene dati e tutte le righe senza limite640",
+        "ok": true,
+        "detail": {
+          "text": "QA LayoutClasse 3A2026-10-292+3+4+12+3+4+12+3+4+15+4+15+4+15+4+19+19+19+1101010RISULTATO FINALE101010window.onload=function(){window.print()}",
+          "rows": [
+            "2+3+4+1",
+            "5+4+1",
+            "9+1",
+            "10",
+            "10"
+          ],
+          "clipped": false
+        }
+      },
+      {
+        "name": "esercizio di un box resta leggibile entro il massimo",
+        "ok": true,
+        "detail": {
+          "before": {
+            "frame": 640,
+            "page": 502,
+            "content": 693,
+            "top": 0,
+            "toolbar": 126,
+            "toolbarTop": 8,
+            "docHeight": 780,
+            "docWidth": 393,
+            "width": 393,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 692.78125
+          },
+          "after": {
+            "frame": 640,
+            "page": 502,
+            "content": 684,
+            "top": 182,
+            "toolbar": 126,
+            "toolbarTop": 8,
+            "docHeight": 780,
+            "docWidth": 393,
+            "width": 393,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 684.3125
+          }
+        }
+      },
+      {
+        "name": "layout auto si accorcia e ricresce senza collasso",
+        "ok": true,
+        "detail": {
+          "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+          "short": {
+            "frame": 218,
+            "page": 80,
+            "content": 80
+          },
+          "long": {
+            "frame": 640,
+            "page": 502,
+            "content": 1200
+          },
+          "shrunk": {
+            "frame": 218,
+            "page": 80,
+            "content": 80
+          }
+        }
+      },
+      {
+        "name": "tastiera mobile o viewport ridotto rispettato",
+        "ok": true,
+        "detail": {
+          "frame": 580,
+          "page": 442,
+          "content": 684,
+          "top": 191,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 580,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "580px",
+          "natural": 684.3125
+        }
+      },
+      {
+        "name": "stampa rimuove limiti e scroll",
+        "ok": true
+      },
+      {
+        "name": "ritorno a schermo ripristina il limite",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 684,
+          "top": 182,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 780,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 684.3125
+        }
+      },
+      {
+        "name": "seconda pagina rimane al suo limite precedente",
+        "ok": true
+      },
+      {
+        "name": "prima pagina non limitata e variabile viewport rimossa",
+        "ok": true
+      },
+      {
+        "name": "nessuna chiamata IA o scrittura dati",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "initial": {
+      "frame": 640,
+      "page": 502,
+      "content": 1271,
+      "top": 0,
+      "toolbar": 126,
+      "toolbarTop": 8,
+      "docHeight": 780,
+      "docWidth": 393,
+      "width": 393,
+      "windowY": 0,
+      "overflow": "auto",
+      "bar": "4px",
+      "maxHeight": "640px",
+      "natural": 1270.78125
+    },
+    "short": {
+      "before": {
+        "frame": 640,
+        "page": 502,
+        "content": 693,
+        "top": 0,
+        "toolbar": 126,
+        "toolbarTop": 8,
+        "docHeight": 780,
+        "docWidth": 393,
+        "width": 393,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 692.78125
+      },
+      "after": {
+        "frame": 640,
+        "page": 502,
+        "content": 684,
+        "top": 182,
+        "toolbar": 126,
+        "toolbarTop": 8,
+        "docHeight": 780,
+        "docWidth": 393,
+        "width": 393,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 684.3125
+      }
+    },
+    "intrinsic": {
+      "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+      "short": {
+        "frame": 218,
+        "page": 80,
+        "content": 80
+      },
+      "long": {
+        "frame": 640,
+        "page": 502,
+        "content": 1200
+      },
+      "shrunk": {
+        "frame": 218,
+        "page": 80,
+        "content": 80
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "landscape",
+    "checks": [
+      {
+        "name": "altezza massima compatta con contenuto lungo",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 360,
+            "page": 260,
+            "content": 1015,
+            "top": 0,
+            "toolbar": 88,
+            "toolbarTop": 8,
+            "docHeight": 360,
+            "docWidth": 740,
+            "width": 740,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "360px",
+            "natural": 1014.78125
+          },
+          "cap": 360
+        }
+      },
+      {
+        "name": "regione visibile, non collassata, accessibile da tastiera",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 1015,
+          "top": 0,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 1014.78125
+        }
+      },
+      {
+        "name": "scrollbar4px e nessun overflow orizzontale documento",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 1015,
+          "top": 0,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 1014.78125
+        }
+      },
+      {
+        "name": "font della terza pagina invariati",
+        "ok": true,
+        "detail": {
+          "font": 18,
+          "root": 16
+        }
+      },
+      {
+        "name": "nessun risultato o PDF anticipato",
+        "ok": true
+      },
+      {
+        "name": "scorrimento interno da tastiera senza spostare toolbar",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 1015,
+          "top": 755,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 1014.78125
+        }
+      },
+      {
+        "name": "dito emulato o rotella scorrono dentro",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 1015,
+          "top": 142,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 1014.78125
+        }
+      },
+      {
+        "name": "risposta iniziale vuota e scritta soltanto dallo studente",
+        "ok": true
+      },
+      {
+        "name": "istruzioni lunghe non allungano la cornice",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 1238,
+          "top": 758,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 1237.78125
+        }
+      },
+      {
+        "name": "errore non rivela risposta e non apre il box seguente",
+        "ok": true
+      },
+      {
+        "name": "passaggio1 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 1279,
+          "top": 733,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 1278.953125
+        }
+      },
+      {
+        "name": "passaggio2 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 1525,
+          "top": 1019,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 1525.125
+        }
+      },
+      {
+        "name": "passaggio3 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 1507,
+          "top": 1247,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 1506.65625
+        }
+      },
+      {
+        "name": "pulsante PDF finale raggiungibile con scroll interno",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 1507,
+          "top": 1247,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 1506.65625
+        }
+      },
+      {
+        "name": "PDF mantiene dati e tutte le righe senza limite640",
+        "ok": true,
+        "detail": {
+          "text": "QA LayoutClasse 3A2026-10-292+3+4+12+3+4+12+3+4+15+4+15+4+15+4+19+19+19+1101010RISULTATO FINALE101010window.onload=function(){window.print()}",
+          "rows": [
+            "2+3+4+1",
+            "5+4+1",
+            "9+1",
+            "10",
+            "10"
+          ],
+          "clipped": false
+        }
+      },
+      {
+        "name": "esercizio di un box resta leggibile entro il massimo",
+        "ok": true,
+        "detail": {
+          "before": {
+            "frame": 360,
+            "page": 260,
+            "content": 727,
+            "top": 0,
+            "toolbar": 88,
+            "toolbarTop": 8,
+            "docHeight": 360,
+            "docWidth": 740,
+            "width": 740,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "360px",
+            "natural": 726.78125
+          },
+          "after": {
+            "frame": 360,
+            "page": 260,
+            "content": 684,
+            "top": 424,
+            "toolbar": 88,
+            "toolbarTop": 8,
+            "docHeight": 360,
+            "docWidth": 740,
+            "width": 740,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "360px",
+            "natural": 684.3125
+          }
+        }
+      },
+      {
+        "name": "layout auto si accorcia e ricresce senza collasso",
+        "ok": true,
+        "detail": {
+          "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+          "short": {
+            "frame": 180,
+            "page": 80,
+            "content": 80
+          },
+          "long": {
+            "frame": 360,
+            "page": 260,
+            "content": 1200
+          },
+          "shrunk": {
+            "frame": 180,
+            "page": 80,
+            "content": 80
+          }
+        }
+      },
+      {
+        "name": "tastiera mobile o viewport ridotto rispettato",
+        "ok": true,
+        "detail": {
+          "frame": 240,
+          "page": 140,
+          "content": 684,
+          "top": 467,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 240,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "240px",
+          "natural": 684.3125
+        }
+      },
+      {
+        "name": "stampa rimuove limiti e scroll",
+        "ok": true
+      },
+      {
+        "name": "ritorno a schermo ripristina il limite",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "page": 260,
+          "content": 684,
+          "top": 424,
+          "toolbar": 88,
+          "toolbarTop": 8,
+          "docHeight": 360,
+          "docWidth": 740,
+          "width": 740,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "360px",
+          "natural": 684.3125
+        }
+      },
+      {
+        "name": "seconda pagina rimane al suo limite precedente",
+        "ok": true
+      },
+      {
+        "name": "prima pagina non limitata e variabile viewport rimossa",
+        "ok": true
+      },
+      {
+        "name": "nessuna chiamata IA o scrittura dati",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "initial": {
+      "frame": 360,
+      "page": 260,
+      "content": 1015,
+      "top": 0,
+      "toolbar": 88,
+      "toolbarTop": 8,
+      "docHeight": 360,
+      "docWidth": 740,
+      "width": 740,
+      "windowY": 0,
+      "overflow": "auto",
+      "bar": "4px",
+      "maxHeight": "360px",
+      "natural": 1014.78125
+    },
+    "short": {
+      "before": {
+        "frame": 360,
+        "page": 260,
+        "content": 727,
+        "top": 0,
+        "toolbar": 88,
+        "toolbarTop": 8,
+        "docHeight": 360,
+        "docWidth": 740,
+        "width": 740,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "360px",
+        "natural": 726.78125
+      },
+      "after": {
+        "frame": 360,
+        "page": 260,
+        "content": 684,
+        "top": 424,
+        "toolbar": 88,
+        "toolbarTop": 8,
+        "docHeight": 360,
+        "docWidth": 740,
+        "width": 740,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "360px",
+        "natural": 684.3125
+      }
+    },
+    "intrinsic": {
+      "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+      "short": {
+        "frame": 180,
+        "page": 80,
+        "content": 80
+      },
+      "long": {
+        "frame": 360,
+        "page": 260,
+        "content": 1200
+      },
+      "shrunk": {
+        "frame": 180,
+        "page": 80,
+        "content": 80
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "blog-mobile",
+    "checks": [
+      {
+        "name": "altezza massima compatta con contenuto lungo",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "page": 502,
+            "content": 1271,
+            "top": 0,
+            "toolbar": 126,
+            "toolbarTop": 8,
+            "docHeight": 640,
+            "docWidth": 393,
+            "width": 393,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 1270.78125
+          },
+          "cap": 640
+        }
+      },
+      {
+        "name": "regione visibile, non collassata, accessibile da tastiera",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1271,
+          "top": 0,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1270.78125
+        }
+      },
+      {
+        "name": "scrollbar4px e nessun overflow orizzontale documento",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1271,
+          "top": 0,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1270.78125
+        }
+      },
+      {
+        "name": "font della terza pagina invariati",
+        "ok": true,
+        "detail": {
+          "font": 18,
+          "root": 16
+        }
+      },
+      {
+        "name": "nessun risultato o PDF anticipato",
+        "ok": true
+      },
+      {
+        "name": "scorrimento interno da tastiera senza spostare toolbar",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1271,
+          "top": 769,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1270.78125
+        }
+      },
+      {
+        "name": "dito emulato o rotella scorrono dentro",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1271,
+          "top": 144,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1270.78125
+        }
+      },
+      {
+        "name": "risposta iniziale vuota e scritta soltanto dallo studente",
+        "ok": true
+      },
+      {
+        "name": "istruzioni lunghe non allungano la cornice",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1574,
+          "top": 786,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1573.78125
+        }
+      },
+      {
+        "name": "errore non rivela risposta e non apre il box seguente",
+        "ok": true
+      },
+      {
+        "name": "passaggio1 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1535,
+          "top": 771,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1534.953125
+        }
+      },
+      {
+        "name": "passaggio2 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1781,
+          "top": 1033,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1781.125
+        }
+      },
+      {
+        "name": "passaggio3 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1797,
+          "top": 1279,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1796.65625
+        }
+      },
+      {
+        "name": "pulsante PDF finale raggiungibile con scroll interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 1797,
+          "top": 1279,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1796.65625
+        }
+      },
+      {
+        "name": "PDF mantiene dati e tutte le righe senza limite640",
+        "ok": true,
+        "detail": {
+          "text": "QA LayoutClasse 3A2026-10-292+3+4+12+3+4+12+3+4+15+4+15+4+15+4+19+19+19+1101010RISULTATO FINALE101010window.onload=function(){window.print()}",
+          "rows": [
+            "2+3+4+1",
+            "5+4+1",
+            "9+1",
+            "10",
+            "10"
+          ],
+          "clipped": false
+        }
+      },
+      {
+        "name": "esercizio di un box resta leggibile entro il massimo",
+        "ok": true,
+        "detail": {
+          "before": {
+            "frame": 640,
+            "page": 502,
+            "content": 693,
+            "top": 0,
+            "toolbar": 126,
+            "toolbarTop": 8,
+            "docHeight": 640,
+            "docWidth": 393,
+            "width": 393,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 692.78125
+          },
+          "after": {
+            "frame": 640,
+            "page": 502,
+            "content": 684,
+            "top": 182,
+            "toolbar": 126,
+            "toolbarTop": 8,
+            "docHeight": 640,
+            "docWidth": 393,
+            "width": 393,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 684.3125
+          }
+        }
+      },
+      {
+        "name": "layout auto si accorcia e ricresce senza collasso",
+        "ok": true,
+        "detail": {
+          "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+          "short": {
+            "frame": 218,
+            "page": 80,
+            "content": 80
+          },
+          "long": {
+            "frame": 640,
+            "page": 502,
+            "content": 1200
+          },
+          "shrunk": {
+            "frame": 218,
+            "page": 80,
+            "content": 80
+          }
+        }
+      },
+      {
+        "name": "cornice si restringe al contenuto senza loop con token",
+        "ok": true,
+        "detail": {
+          "height": 640,
+          "frame": 640,
+          "messages": [
+            {
+              "type": "labvisivo:height",
+              "height": 640,
+              "cornice": "exercise-scroll-test"
+            },
+            {
+              "type": "labvisivo:height",
+              "height": 640,
+              "cornice": "exercise-scroll-test"
+            },
+            {
+              "type": "labvisivo:height",
+              "height": 640,
+              "cornice": "exercise-scroll-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "stampa rimuove limiti e scroll",
+        "ok": true
+      },
+      {
+        "name": "ritorno a schermo ripristina il limite",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 502,
+          "content": 684,
+          "top": 182,
+          "toolbar": 126,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 684.3125
+        }
+      },
+      {
+        "name": "seconda pagina rimane al suo limite precedente",
+        "ok": true
+      },
+      {
+        "name": "prima pagina non limitata e variabile viewport rimossa",
+        "ok": true
+      },
+      {
+        "name": "nessuna chiamata IA o scrittura dati",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "initial": {
+      "frame": 640,
+      "page": 502,
+      "content": 1271,
+      "top": 0,
+      "toolbar": 126,
+      "toolbarTop": 8,
+      "docHeight": 640,
+      "docWidth": 393,
+      "width": 393,
+      "windowY": 0,
+      "overflow": "auto",
+      "bar": "4px",
+      "maxHeight": "640px",
+      "natural": 1270.78125
+    },
+    "short": {
+      "before": {
+        "frame": 640,
+        "page": 502,
+        "content": 693,
+        "top": 0,
+        "toolbar": 126,
+        "toolbarTop": 8,
+        "docHeight": 640,
+        "docWidth": 393,
+        "width": 393,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 692.78125
+      },
+      "after": {
+        "frame": 640,
+        "page": 502,
+        "content": 684,
+        "top": 182,
+        "toolbar": 126,
+        "toolbarTop": 8,
+        "docHeight": 640,
+        "docWidth": 393,
+        "width": 393,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 684.3125
+      }
+    },
+    "intrinsic": {
+      "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+      "short": {
+        "frame": 218,
+        "page": 80,
+        "content": 80
+      },
+      "long": {
+        "frame": 640,
+        "page": 502,
+        "content": 1200
+      },
+      "shrunk": {
+        "frame": 218,
+        "page": 80,
+        "content": 80
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "blog-desktop",
+    "checks": [
+      {
+        "name": "altezza massima compatta con contenuto lungo",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "page": 578,
+            "content": 1023,
+            "top": 0,
+            "toolbar": 50,
+            "toolbarTop": 8,
+            "docHeight": 640,
+            "docWidth": 1276,
+            "width": 1280,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 1022.78125
+          },
+          "cap": 640
+        }
+      },
+      {
+        "name": "regione visibile, non collassata, accessibile da tastiera",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1023,
+          "top": 0,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1022.78125
+        }
+      },
+      {
+        "name": "scrollbar4px e nessun overflow orizzontale documento",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1023,
+          "top": 0,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1022.78125
+        }
+      },
+      {
+        "name": "font della terza pagina invariati",
+        "ok": true,
+        "detail": {
+          "font": 18,
+          "root": 16
+        }
+      },
+      {
+        "name": "nessun risultato o PDF anticipato",
+        "ok": true
+      },
+      {
+        "name": "scorrimento interno da tastiera senza spostare toolbar",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1023,
+          "top": 445,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1022.78125
+        }
+      },
+      {
+        "name": "dito emulato o rotella scorrono dentro",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1023,
+          "top": 250,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1022.78125
+        }
+      },
+      {
+        "name": "risposta iniziale vuota e scritta soltanto dallo studente",
+        "ok": true
+      },
+      {
+        "name": "istruzioni lunghe non allungano la cornice",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1246,
+          "top": 446,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1245.78125
+        }
+      },
+      {
+        "name": "errore non rivela risposta e non apre il box seguente",
+        "ok": true
+      },
+      {
+        "name": "passaggio1 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1291,
+          "top": 423,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1290.953125
+        }
+      },
+      {
+        "name": "passaggio2 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1541,
+          "top": 713,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1541.125
+        }
+      },
+      {
+        "name": "passaggio3 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1523,
+          "top": 945,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1522.65625
+        }
+      },
+      {
+        "name": "pulsante PDF finale raggiungibile con scroll interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 1523,
+          "top": 945,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1522.65625
+        }
+      },
+      {
+        "name": "PDF mantiene dati e tutte le righe senza limite640",
+        "ok": true,
+        "detail": {
+          "text": "QA LayoutClasse 3A2026-10-292+3+4+12+3+4+12+3+4+15+4+15+4+15+4+19+19+19+1101010RISULTATO FINALE101010window.onload=function(){window.print()}",
+          "rows": [
+            "2+3+4+1",
+            "5+4+1",
+            "9+1",
+            "10",
+            "10"
+          ],
+          "clipped": false
+        }
+      },
+      {
+        "name": "esercizio di un box resta leggibile entro il massimo",
+        "ok": true,
+        "detail": {
+          "before": {
+            "frame": 640,
+            "page": 578,
+            "content": 735,
+            "top": 0,
+            "toolbar": 50,
+            "toolbarTop": 8,
+            "docHeight": 640,
+            "docWidth": 1276,
+            "width": 1280,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 734.78125
+          },
+          "after": {
+            "frame": 640,
+            "page": 578,
+            "content": 692,
+            "top": 114,
+            "toolbar": 50,
+            "toolbarTop": 8,
+            "docHeight": 640,
+            "docWidth": 1276,
+            "width": 1280,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 692.3125
+          }
+        }
+      },
+      {
+        "name": "layout auto si accorcia e ricresce senza collasso",
+        "ok": true,
+        "detail": {
+          "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+          "short": {
+            "frame": 142,
+            "page": 80,
+            "content": 80
+          },
+          "long": {
+            "frame": 640,
+            "page": 578,
+            "content": 1200
+          },
+          "shrunk": {
+            "frame": 142,
+            "page": 80,
+            "content": 80
+          }
+        }
+      },
+      {
+        "name": "cornice si restringe al contenuto senza loop con token",
+        "ok": true,
+        "detail": {
+          "height": 640,
+          "frame": 640,
+          "messages": [
+            {
+              "type": "labvisivo:height",
+              "height": 640,
+              "cornice": "exercise-scroll-test"
+            },
+            {
+              "type": "labvisivo:height",
+              "height": 640,
+              "cornice": "exercise-scroll-test"
+            },
+            {
+              "type": "labvisivo:height",
+              "height": 640,
+              "cornice": "exercise-scroll-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "stampa rimuove limiti e scroll",
+        "ok": true
+      },
+      {
+        "name": "ritorno a schermo ripristina il limite",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 578,
+          "content": 692,
+          "top": 114,
+          "toolbar": 50,
+          "toolbarTop": 8,
+          "docHeight": 640,
+          "docWidth": 1276,
+          "width": 1280,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 692.3125
+        }
+      },
+      {
+        "name": "seconda pagina rimane al suo limite precedente",
+        "ok": true
+      },
+      {
+        "name": "prima pagina non limitata e variabile viewport rimossa",
+        "ok": true
+      },
+      {
+        "name": "nessuna chiamata IA o scrittura dati",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "initial": {
+      "frame": 640,
+      "page": 578,
+      "content": 1023,
+      "top": 0,
+      "toolbar": 50,
+      "toolbarTop": 8,
+      "docHeight": 640,
+      "docWidth": 1276,
+      "width": 1280,
+      "windowY": 0,
+      "overflow": "auto",
+      "bar": "4px",
+      "maxHeight": "640px",
+      "natural": 1022.78125
+    },
+    "short": {
+      "before": {
+        "frame": 640,
+        "page": 578,
+        "content": 735,
+        "top": 0,
+        "toolbar": 50,
+        "toolbarTop": 8,
+        "docHeight": 640,
+        "docWidth": 1276,
+        "width": 1280,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 734.78125
+      },
+      "after": {
+        "frame": 640,
+        "page": 578,
+        "content": 692,
+        "top": 114,
+        "toolbar": 50,
+        "toolbarTop": 8,
+        "docHeight": 640,
+        "docWidth": 1276,
+        "width": 1280,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 692.3125
+      }
+    },
+    "intrinsic": {
+      "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+      "short": {
+        "frame": 142,
+        "page": 80,
+        "content": 80
+      },
+      "long": {
+        "frame": 640,
+        "page": 578,
+        "content": 1200
+      },
+      "shrunk": {
+        "frame": 142,
+        "page": 80,
+        "content": 80
+      }
+    },
+    "ok": true
+  },
+  {
+    "name": "accessibilita-160",
+    "checks": [
+      {
+        "name": "altezza massima compatta con contenuto lungo",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "page": 360,
+            "content": 2857,
+            "top": 0,
+            "toolbar": 261.0625,
+            "toolbarTop": 12.796875,
+            "docHeight": 640,
+            "docWidth": 393,
+            "width": 393,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 2856.671875
+          },
+          "cap": 640
+        }
+      },
+      {
+        "name": "regione visibile, non collassata, accessibile da tastiera",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 2857,
+          "top": 0,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 2856.671875
+        }
+      },
+      {
+        "name": "scrollbar4px e nessun overflow orizzontale documento",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 2857,
+          "top": 0,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 2856.671875
+        }
+      },
+      {
+        "name": "font della terza pagina invariati",
+        "ok": true,
+        "detail": {
+          "font": 28.8,
+          "root": 25.6
+        }
+      },
+      {
+        "name": "nessun risultato o PDF anticipato",
+        "ok": true
+      },
+      {
+        "name": "scorrimento interno da tastiera senza spostare toolbar",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 2857,
+          "top": 2497,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 2856.671875
+        }
+      },
+      {
+        "name": "dito emulato o rotella scorrono dentro",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 2857,
+          "top": 144,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 2856.671875
+        }
+      },
+      {
+        "name": "risposta iniziale vuota e scritta soltanto dallo studente",
+        "ok": true
+      },
+      {
+        "name": "istruzioni lunghe non allungano la cornice",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 3626,
+          "top": 2549,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 3625.875
+        }
+      },
+      {
+        "name": "errore non rivela risposta e non apre il box seguente",
+        "ok": true
+      },
+      {
+        "name": "passaggio1 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 3277,
+          "top": 2549,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 3276.9375
+        }
+      },
+      {
+        "name": "passaggio2 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 3668,
+          "top": 2917,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 3668.40625
+        }
+      },
+      {
+        "name": "passaggio3 confermato senza crescita esterna",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 3789,
+          "top": 3308,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 3788.84375
+        }
+      },
+      {
+        "name": "pulsante PDF finale raggiungibile con scroll interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 3789,
+          "top": 3338,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 3788.84375
+        }
+      },
+      {
+        "name": "PDF mantiene dati e tutte le righe senza limite640",
+        "ok": true,
+        "detail": {
+          "text": "QA LayoutClasse 3A2026-10-292+3+4+12+3+4+12+3+4+15+4+15+4+15+4+19+19+19+1101010RISULTATO FINALE101010window.onload=function(){window.print()}",
+          "rows": [
+            "2+3+4+1",
+            "5+4+1",
+            "9+1",
+            "10",
+            "10"
+          ],
+          "clipped": false
+        }
+      },
+      {
+        "name": "esercizio di un box resta leggibile entro il massimo",
+        "ok": true,
+        "detail": {
+          "before": {
+            "frame": 640,
+            "page": 360,
+            "content": 1127,
+            "top": 0,
+            "toolbar": 261.0625,
+            "toolbarTop": 12.796875,
+            "docHeight": 640,
+            "docWidth": 393,
+            "width": 393,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 1127.109375
+          },
+          "after": {
+            "frame": 640,
+            "page": 360,
+            "content": 1171,
+            "top": 767,
+            "toolbar": 261.0625,
+            "toolbarTop": 12.796875,
+            "docHeight": 640,
+            "docWidth": 393,
+            "width": 393,
+            "windowY": 0,
+            "overflow": "auto",
+            "bar": "4px",
+            "maxHeight": "640px",
+            "natural": 1170.765625
+          }
+        }
+      },
+      {
+        "name": "layout auto si accorcia e ricresce senza collasso",
+        "ok": true,
+        "detail": {
+          "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+          "short": {
+            "frame": 360.25,
+            "page": 80,
+            "content": 225
+          },
+          "long": {
+            "frame": 640,
+            "page": 360,
+            "content": 1200
+          },
+          "shrunk": {
+            "frame": 360.25,
+            "page": 80,
+            "content": 225
+          }
+        }
+      },
+      {
+        "name": "cornice si restringe al contenuto senza loop con token",
+        "ok": true,
+        "detail": {
+          "height": 640,
+          "frame": 640,
+          "messages": [
+            {
+              "type": "labvisivo:height",
+              "height": 640,
+              "cornice": "exercise-scroll-test"
+            },
+            {
+              "type": "labvisivo:height",
+              "height": 640,
+              "cornice": "exercise-scroll-test"
+            },
+            {
+              "type": "labvisivo:height",
+              "height": 640,
+              "cornice": "exercise-scroll-test"
+            }
+          ]
+        }
+      },
+      {
+        "name": "stampa rimuove limiti e scroll",
+        "ok": true
+      },
+      {
+        "name": "ritorno a schermo ripristina il limite",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "page": 360,
+          "content": 1171,
+          "top": 767,
+          "toolbar": 261.0625,
+          "toolbarTop": 12.796875,
+          "docHeight": 640,
+          "docWidth": 393,
+          "width": 393,
+          "windowY": 0,
+          "overflow": "auto",
+          "bar": "4px",
+          "maxHeight": "640px",
+          "natural": 1170.765625
+        }
+      },
+      {
+        "name": "seconda pagina rimane al suo limite precedente",
+        "ok": true
+      },
+      {
+        "name": "prima pagina non limitata e variabile viewport rimossa",
+        "ok": true
+      },
+      {
+        "name": "nessuna chiamata IA o scrittura dati",
+        "ok": true,
+        "detail": []
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "initial": {
+      "frame": 640,
+      "page": 360,
+      "content": 2857,
+      "top": 0,
+      "toolbar": 261.0625,
+      "toolbarTop": 12.796875,
+      "docHeight": 640,
+      "docWidth": 393,
+      "width": 393,
+      "windowY": 0,
+      "overflow": "auto",
+      "bar": "4px",
+      "maxHeight": "640px",
+      "natural": 2856.671875
+    },
+    "short": {
+      "before": {
+        "frame": 640,
+        "page": 360,
+        "content": 1127,
+        "top": 0,
+        "toolbar": 261.0625,
+        "toolbarTop": 12.796875,
+        "docHeight": 640,
+        "docWidth": 393,
+        "width": 393,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 1127.109375
+      },
+      "after": {
+        "frame": 640,
+        "page": 360,
+        "content": 1171,
+        "top": 767,
+        "toolbar": 261.0625,
+        "toolbarTop": 12.796875,
+        "docHeight": 640,
+        "docWidth": 393,
+        "width": 393,
+        "windowY": 0,
+        "overflow": "auto",
+        "bar": "4px",
+        "maxHeight": "640px",
+        "natural": 1170.765625
+      }
+    },
+    "intrinsic": {
+      "note": "Isolated DOM clone; not a real exercise state or a source/CSS change",
+      "short": {
+        "frame": 360.25,
+        "page": 80,
+        "content": 225
+      },
+      "long": {
+        "frame": 640,
+        "page": 360,
+        "content": 1200
+      },
+      "shrunk": {
+        "frame": 360.25,
+        "page": 80,
+        "content": 225
+      }
+    },
+    "ok": true
+  }
+]

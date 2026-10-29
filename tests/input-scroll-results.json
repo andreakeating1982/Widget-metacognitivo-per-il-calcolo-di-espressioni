@@ -1,0 +1,98 @@
+{
+  "scroll": {
+    "scenari": 7,
+    "controlli": 151,
+    "esiti": [
+      {
+        "nome": "desktop",
+        "controlli": 22
+      },
+      {
+        "nome": "mobile-320",
+        "controlli": 22
+      },
+      {
+        "nome": "mobile-393",
+        "controlli": 22
+      },
+      {
+        "nome": "landscape",
+        "controlli": 22
+      },
+      {
+        "nome": "blog-mobile",
+        "controlli": 21
+      },
+      {
+        "nome": "blog-desktop",
+        "controlli": 21
+      },
+      {
+        "nome": "accessibilita-160",
+        "controlli": 21
+      }
+    ]
+  },
+  "crop": {
+    "scenari": 9,
+    "controlli": 223,
+    "esiti": [
+      {
+        "nome": "mobile-320",
+        "controlli": 25
+      },
+      {
+        "nome": "mobile-393",
+        "controlli": 25
+      },
+      {
+        "nome": "mobile-landscape",
+        "controlli": 25
+      },
+      {
+        "nome": "blog-320",
+        "controlli": 26
+      },
+      {
+        "nome": "blog-393",
+        "controlli": 26
+      },
+      {
+        "nome": "blog-scrolled",
+        "controlli": 26
+      },
+      {
+        "nome": "blog-high-contrast",
+        "controlli": 26
+      },
+      {
+        "nome": "mobile-orientation-change",
+        "controlli": 26
+      },
+      {
+        "nome": "desktop",
+        "controlli": 18
+      }
+    ]
+  },
+  "invarianti_immutati": [
+    "client/src/components/CropDialog.tsx",
+    "client/src/lib/cropBox.ts",
+    "client/src/hooks/useCropDialogViewport.ts",
+    "client/src/photo-crop.css",
+    "client/src/lib/heightSync.ts",
+    "client/src/lib/espressioni.ts",
+    "client/src/pages/EsercizioFrazioni.tsx",
+    "client/src/pages/WelcomePage.tsx",
+    "server",
+    "shared",
+    "package.json",
+    "pnpm-lock.yaml"
+  ],
+  "unitari": {
+    "superati": 738,
+    "saltati": 28
+  },
+  "produzione_modificata": false,
+  "ambiente": "Chromium emulato, blog cross-origin simulato; OCR intercettato, nessuna IA reale o modifica DB"
+}

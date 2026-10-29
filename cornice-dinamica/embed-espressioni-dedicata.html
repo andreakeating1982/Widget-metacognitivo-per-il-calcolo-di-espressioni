@@ -1,0 +1,498 @@
+<!-- ============================================================
+     CORNICE DINAMICA — WIDGET METACOGNITIVO PER IL CALCOLO DI ESPRESSIONI ED EQUAZIONI (embed DEDICATO · v4 impermeabile + anti-loop + anti-tremolio)
+     ------------------------------------------------------------
+     ⭐ Versione DEDICATA: serve SOLO «Espressioni aritmetiche e algebriche».
+        App che risolve le espressioni in 6 passi guidati (parentesi,
+        monomi simili colorati, verifica per sostituzione) con
+        scrittura a mano, quaderno PDF e mappa concettuale.
+        Nessun parametro, nessun riuso per altre app: URL, colori,
+        font e testi sono fissi e allineati a quest'app.
+
+     🛡️ IMPERMEABILE E NON COMUNICANTE (v3):
+        Ogni cornice è un'isola: trova i PROPRI elementi via scoping
+        DOM (document.currentScript), rinomina i propri id con un
+        token univoco (es. lfIframe-xyz123) e accetta SOLO i messaggi
+        di altezza che arrivano dal PROPRIO iframe (filtro e.source)
+        e, se presenti, con il proprio token. Così, anche se il blog
+        ha altre cornici simili (stessa famiglia di app didattiche),
+        ognuna vede SOLO la propria app: nessun incrocio di iframe,
+        nessun furto di messaggi, nessuna app che appare nella cornice
+        dell'altra. Il ping usa l'origin esatto dell'app (mai '*').
+
+     🛡️ ANTI-LOOP SU MOBILE (nuovo in questa versione):
+        L'iframe NON si allunga più a dismisura. Tre livelli di difesa:
+        1) NESSUNA transizione CSS sull'altezza (durante l'animazione
+           l'app misurerebbe altezze intermedie e le rinvierebbe);
+        2) DEBOUNCE: l'altezza viene applicata solo quando l'app smette
+           di inviare per ~200 ms (layout stabilizzato);
+        3) CLAMP + CONFERMA SALTI SOSPETTI + CONGELAMENTO: valori fuori
+           da 100–15000 px ignorati; crescita > 2× richiede conferma;
+           3 crescite consecutive congelano gli aggiornamenti per 5 s.
+
+     📌 Funzioni della cornice:
+        • Titolo e pulsanti SULLA STESSA RIGA, tutti centrati
+        • Pulsante ⛶ SCHERMO INTERO  (utile su LIM, proiettore, tablet)
+        • Pulsante ⟳ RICARICA        (ricarica solo l'app, non la pagina)
+        • Spinner di caricamento     (rispettoso di prefers-reduced-motion)
+        • Stato ONLINE / ERRORE      (con pulsante Riprova se l'app non risponde)
+        • Ping periodico + aggiornamento altezza al resize della finestra
+
+     📏 Altezza dinamica: protocollo «labvisivo:height» + ping.
+        L'app misura la propria altezza e la invia al genitore con
+        { type: "labvisivo:height", height } (vedi heightSync.ts).
+
+     🎨 Colori dell'app: carta #f8f1e4, inchiostro #2e2018,
+        barra accessibilità #fdfbf8, capsule #f5f0e6, bordi #dedbd6.
+
+     📄 Come si usa: copia l'INTERO contenuto di questo file nella
+        vista HTML del post (Blogger) o della pagina del tuo sito.
+        Puoi incollare la stessa cornice in PIÙ post della stessa
+        pagina: ogni istanza resta indipendente (impermeabile).
+     ============================================================ -->
+<style>
+  @font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://espressioni-monomi-polinomi.easy-peasy.site/fonts/OpenDyslexic-Regular-v2.woff2') format('woff2');
+    font-weight: 400; font-style: normal; font-display: swap;
+  }
+  @font-face {
+    font-family: 'OpenDyslexic';
+    src: url('https://espressioni-monomi-polinomi.easy-peasy.site/fonts/OpenDyslexic-Bold-v2.woff2') format('woff2');
+    font-weight: 700; font-style: normal; font-display: swap;
+  }
+
+  /* Tutte le regole sono SCOPED alla classe .lf-cornice:
+     nessun selettore globale, nessuna variabile :root:
+     il blog e le altre cornici non vengono toccate. */
+  .lf-cornice {
+    --lf-carta: #f8f1e4;
+    --lf-inchiostro: #2e2018;
+    --lf-bordo: rgba(46, 32, 24, 0.15);
+    --lf-barra: #fdfbf8;
+    --lf-capsula: #f5f0e6;
+    --lf-bordo-capsula: #dedbd6;
+    --lf-ok: #27ae60;
+    --lf-ko: #c0392b;
+
+    background: var(--lf-carta);
+    border: 1px solid var(--lf-bordo);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'OpenDyslexic', 'Cambria', 'Times New Roman', Georgia, serif;
+    margin: 0 auto;
+    max-width: 800px;
+    overflow: hidden;
+  }
+  .lf-cornice *, .lf-cornice *::before, .lf-cornice *::after { box-sizing: border-box; }
+
+  /* ---------- Testata: TITOLO + pulsanti SULLA STESSA RIGA, centrati ---------- */
+  .lf-testata {
+    align-items: center;
+    background: var(--lf-carta);
+    border-bottom: 2px solid rgba(46, 32, 24, 0.08);
+    display: flex;
+    flex-direction: row;      /* ⭐ titolo e pulsanti sulla stessa riga */
+    flex-wrap: wrap;          /* su schermi stretti vanno a capo senza rompersi */
+    gap: 8px 14px;
+    justify-content: center;  /* ⭐ tutto centrato */
+    padding: 12px 16px;
+    text-align: center;
+  }
+  .lf-titolo {
+    color: var(--lf-inchiostro);
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    margin: 0;
+    text-align: center;
+  }
+  /* ---------- Pulsanti (centrati, accanto al titolo) ---------- */
+  .lf-controlli {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+  }
+  .lf-btn {
+    align-items: center;
+    background: var(--lf-barra);
+    border: 1px solid var(--lf-bordo-capsula);
+    border-radius: 10px;
+    color: var(--lf-inchiostro);
+    cursor: pointer;
+    display: inline-flex;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 700;
+    gap: 6px;
+    justify-content: center;
+    padding: 7px 10px;
+    transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.1s ease;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .lf-btn:hover { background: var(--lf-capsula); box-shadow: 0 2px 6px rgba(46, 32, 24, 0.12); }
+  .lf-btn:active { transform: translateY(1px); }
+  .lf-btn:focus-visible { outline: 2px solid var(--lf-inchiostro); outline-offset: 2px; }
+  .lf-btn svg { flex: none; }
+
+  /* ---------- Barra di stato ---------- */
+  .lf-stato {
+    align-items: center;
+    background: var(--lf-barra);
+    border-bottom: 1px solid var(--lf-bordo-capsula);
+    color: var(--lf-inchiostro);
+    display: none;
+    font-size: 13px;
+    gap: 10px;
+    justify-content: center;
+    padding: 10px 16px;
+  }
+  .lf-stato.visibile { display: flex; }
+  .lf-stato.errore { color: var(--lf-ko); }
+  .lf-pallino {
+    background: var(--lf-ok);
+    border-radius: 50%;
+    height: 10px;
+    width: 10px;
+  }
+  .lf-stato.errore .lf-pallino { background: var(--lf-ko); }
+  .lf-retry {
+    background: none;
+    border: none;
+    color: inherit;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: 700;
+    padding: 0;
+    text-decoration: underline;
+  }
+  .lf-retry:focus-visible { outline: 2px solid var(--lf-inchiostro); outline-offset: 2px; }
+  .lf-spinner {
+    animation: lf-rot 1s linear infinite;
+    border: 3px solid var(--lf-capsula);
+    border-radius: 50%;
+    border-top-color: var(--lf-inchiostro);
+    height: 22px;
+    width: 22px;
+  }
+  @keyframes lf-rot { to { transform: rotate(360deg); } }
+
+  /* ---------- Iframe ---------- */
+  .lf-iframe {
+    border: none;
+    display: block;
+    height: 640px;
+    min-width: 100%;
+    /* ⛔ NESSUNA transizione CSS sull'altezza: durante l'animazione l'app
+       misura altezze INTERMEDIE e le rinvia → il loop si auto-amplifica
+       ("l'app si allunga a dismisura" su mobile). L'altezza viene
+       applicata solo a layout stabilizzato (debounce JS, vedi sotto). */
+    width: 1px;
+  }
+
+  /* ---------- Schermo intero ---------- */
+  .lf-cornice:fullscreen,
+  .lf-cornice:-webkit-full-screen {
+    background: var(--lf-carta);
+    border: none;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: none;
+    overflow: auto;
+    width: 100vw;
+  }
+  .lf-cornice:fullscreen .lf-iframe,
+  .lf-cornice:-webkit-full-screen .lf-iframe {
+    flex: 1;
+    height: 100% !important;
+  }
+
+  /* ---------- Mobile ---------- */
+  @media (max-width: 520px) {
+    .lf-testata { gap: 6px 10px; padding: 10px 12px; }
+    .lf-titolo { font-size: 14px; letter-spacing: 1.5px; }
+    .lf-btn { padding: 7px 8px; font-size: 11px; }
+    .lf-lbl { display: none; }   /* su mobile restano solo le icone */
+  }
+
+  /* ---------- Riduzione movimento ---------- */
+  @media (prefers-reduced-motion: reduce) {
+    .lf-iframe { transition: none; }
+    .lf-spinner { animation: none; border-top-color: var(--lf-inchiostro); opacity: 0.4; }
+  }
+</style>
+
+<div class="lf-cornice">
+  <div class="lf-testata">
+    <p class="lf-titolo">WIDGET METACOGNITIVO PER IL CALCOLO DI ESPRESSIONI ED EQUAZIONI</p>
+    <div class="lf-controlli">
+      <button class="lf-btn lf-full" type="button" aria-label="Apri a schermo intero" title="Apri a schermo intero">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M8 3H5a2 2 0 0 0-2 2v3"/><path d="M21 8V5a2 2 0 0 0-2-2h-3"/><path d="M3 16v3a2 2 0 0 0 2 2h3"/><path d="M16 21h3a2 2 0 0 0 2-2v-3"/>
+        </svg>
+        <span class="lf-lbl">Schermo intero</span>
+      </button>
+      <button class="lf-btn lf-reload" type="button" aria-label="Ricarica l'app" title="Ricarica l'app">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <path d="M21 12a9 9 0 1 1-2.64-6.36"/><path d="M21 3v6h-6"/>
+        </svg>
+        <span class="lf-lbl">Ricarica</span>
+      </button>
+    </div>
+  </div>
+
+  <div class="lf-stato" role="status" aria-live="polite">
+    <span class="lf-spinner" aria-hidden="true"></span>
+    <span class="lf-pallino" aria-hidden="true"></span>
+    <span class="lf-stato-testo">Caricamento…</span>
+    <button class="lf-retry" type="button" hidden>Riprova</button>
+  </div>
+
+  <iframe class="lf-iframe" title="Espressioni aritmetiche e algebriche — app in cornice" src="about:blank" allow="microphone"></iframe>
+</div>
+
+<script>
+  (function () {
+    'use strict';
+
+    /* ================= ⚙️ CONFIGURAZIONE — DEDICATA a Espressioni Aritmetiche e Algebriche ================= */
+    var APP_URL = 'https://espressioni-monomi-polinomi.easy-peasy.site/';
+    /* ============================================================================================= */
+
+    /* ---------- 🛡️ ISOLAMENTO: trova QUESTA istanza di cornice ----------
+       Lo script è subito dopo il suo <div class="lf-cornice">: invece di
+       cercare per id globale (che con più cornici simili nella stessa
+       pagina aggancerebbe SEMPRE la PRIMA — il bug che faceva apparire
+       altre app dentro la cornice), risaliamo al div che precede questo
+       script. Fallback: ultima .lf-cornice presente nella pagina.     */
+    function trovaCornice() {
+      var s = document.currentScript;
+      if (s && s.previousElementSibling && s.previousElementSibling.classList.contains('lf-cornice')) {
+        return s.previousElementSibling;
+      }
+      var tutte = document.querySelectorAll('.lf-cornice');
+      return tutte.length ? tutte[tutte.length - 1] : null;
+    }
+
+    var cornice = trovaCornice();
+    if (!cornice) return;
+
+    /* ---------- 🛡️ Token univoco per istanza ----------
+       Rinomina i propri id con un suffisso casuale (es. lfIframe-x7k2p9):
+       nessun'altra cornice (che cerchi id come "lfIframe" o "lfCornice")
+       può più agganciare i NOSTRI elementi, e viceversa.               */
+    var token = 'lf' + Math.random().toString(36).slice(2, 10);
+    cornice.id = 'lfCornice-' + token;
+
+    var iframe  = cornice.querySelector('.lf-iframe');
+    var stato   = cornice.querySelector('.lf-stato');
+    var statoT  = cornice.querySelector('.lf-stato-testo');
+    var retry   = cornice.querySelector('.lf-retry');
+    var fullBtn = cornice.querySelector('.lf-full');
+    var reloadB = cornice.querySelector('.lf-reload');
+
+    if (!iframe || !stato) return;
+    iframe.id  = 'lfIframe-' + token;
+    stato.id   = 'lfStato-' + token;
+    if (statoT) statoT.id = 'lfStatoTesto-' + token;
+    if (retry)  retry.id  = 'lfRetry-' + token;
+    if (fullBtn) fullBtn.id = 'lfFull-' + token;
+    if (reloadB) reloadB.id = 'lfReload-' + token;
+
+    var APP_ORIGIN = (function () {
+      try { return new URL(APP_URL).origin; } catch (err) { return '*'; }
+    })();
+
+    var appViva = false;
+    var timerErrore = null;
+
+    /* ---------- Avvio (con token nella query: l'app lo rispecchia nei messaggi) ---------- */
+    iframe.src = APP_URL + (APP_URL.indexOf('?') >= 0 ? '&' : '?') + 'cornice=' + token;
+    stato.classList.add('visibile');   // spinner «Caricamento…»
+    stato.classList.remove('errore');
+    retry.hidden = true;
+
+    /* ---------- 🛡️ Altezza dinamica — SOLO dal PROPRIO iframe ----------
+       Filtro impermeabile: accetta messaggi esclusivamente quando
+        1) e.source === il nostro iframe (arrivano dalla nostra app)
+        2) se il messaggio porta un token "cornice", deve essere il nostro
+
+       🛡️ ANTI-LOOP (fix mobile: "l'app si allunga ripetutamente a dismisura"):
+       - NESSUNA transizione CSS sull'altezza (vedi .lf-iframe).
+       - DEBOUNCE: l'altezza viene applicata solo quando l'app smette di
+         inviare per ~200 ms (layout stabilizzato).
+       - CLAMP DI SANITÀ: altezze < 100 px o > 15000 px vengono ignorate.
+       - CONFERMA DEI SALTI SOSPETTI: una crescita > 2× (e > 1000 px)
+         rispetto all'ultima altezza applicata viene accettata SOLO se
+         l'app la conferma rinviando lo STESSO valore entro 2 s. Un loop
+         divergente invia valori sempre diversi → non viene mai confermato
+         → l'iframe resta fermo all'ultima altezza legittima.
+       I messaggi di TUTTE le altre cornici/app della pagina vengono
+       ignorati.                                                       */
+    var altezzaApplicata = 0;     // ultima altezza applicata all'iframe
+    var hCandidata = 0;           // valore in attesa di conferma (salto sospetto)
+    var timerSettle = null;       // debounce: applica a layout stabilizzato
+    var timerConferma = null;     // finestra di conferma per i salti sospetti
+    var ultimoValore = 0;         // ultimo valore RICEVUTO dall'app
+    var cresciteConsecutive = 0;  // conteggio crescite consecutive (anti-loop graduale)
+    var congelatoFino = 0;        // timestamp: finché ora < congelatoFino le crescite sono ignorate
+    var ultimaApplicazione = 0;   // timestamp: inizio del silenzio post-applicazione (anti-tremolio)
+
+    function applicaAltezza(h) {
+      if (typeof h !== 'number' || h < 100 || h > 15000) return;   // sanity assoluta
+      if (!appViva) segnaOnline();   // FIX v3.1: prova di vita = messaggio valido, anche se l'altezza non cambia
+      var ora = Date.now();
+
+      // --- SILENZIO POST-APPLICAZIONE (anti-tremolio): nei 300 ms dopo
+      // aver applicato un'altezza ignoriamo le rimisure ravvicinate: sono
+      // le misure intermedie di transizioni/reflow di stabilizzazione e
+      // alimentavano un ciclo continuo di ±pochi pixel. Un cambiamento
+      // VERO (≥ 30 px, es. cambio passo dell'esercizio) passa comunque. ---
+      if (ultimaApplicazione > 0 && ora - ultimaApplicazione < 300 && Math.abs(h - altezzaApplicata) < 30) return;
+
+      var crescente = h > ultimoValore + 2;
+
+      // --- Anti-loop graduale: 3 crescite consecutive → congela 5 s ---
+      // Un loop invia valori SEMPRE crescenti: dopo 3 passi lo congeliamo.
+      // Una crescita legittima si stabilizza subito → nessun congelamento.
+      if (crescente) {
+        cresciteConsecutive++;
+        if (cresciteConsecutive >= 3) {
+          congelatoFino = ora + 5000;
+          cresciteConsecutive = 0;
+        }
+      } else {
+        cresciteConsecutive = 0;
+      }
+      ultimoValore = h;
+
+      if (ora < congelatoFino) {
+        if (crescente) congelatoFino = ora + 5000;   // il loop continua: resta congelato
+        return;
+      }
+
+      // --- Salto sospetto (crescita > 2× e > 1000 px): richiede conferma ---
+      var salto = altezzaApplicata > 0 ? h - altezzaApplicata : 0;
+      var sospetto = altezzaApplicata > 0 && h > altezzaApplicata * 2 && salto > 1000;
+      if (sospetto) {
+        // crescita troppo rapida (possibile loop): richiede lo STESSO valore
+        // rinviato una seconda volta entro 2 s per essere applicata
+        if (h !== hCandidata) {
+          hCandidata = h;
+          clearTimeout(timerConferma);
+          timerConferma = setTimeout(function () { hCandidata = 0; }, 2000);
+          return;
+        }
+        // confermato: il valore è stabile → procedi con il debounce
+        hCandidata = 0;
+        clearTimeout(timerConferma);
+      }
+
+      // --- Debounce: applica a layout stabilizzato ---
+      clearTimeout(timerSettle);
+      timerSettle = setTimeout(function () {
+        if (Math.abs(h - altezzaApplicata) < 2) return;   // già applicato
+        altezzaApplicata = h;
+        ultimaApplicazione = Date.now();
+        iframe.style.height = h + 'px';
+      }, 200);
+    }
+
+    window.addEventListener('message', function (e) {
+      if (!e.data || typeof e.data !== 'object') return;
+      if (e.source !== iframe.contentWindow) return;              // ⛔ non è la nostra app
+      if (e.data.cornice && e.data.cornice !== token) return;     // ⛔ token di un'altra istanza
+      if (e.data.type === 'labvisivo:height' && typeof e.data.height === 'number') {
+        applicaAltezza(e.data.height);
+      }
+    });
+
+    /* ---------- Ping: chiede l'altezza all'app (subito, poi periodico) ----------
+       NOTA SICUREZZA: usiamo '*' come targetOrigin in USCITA perché il
+       destinatario è il contentWindow del NOSTRO iframe (riferimento fisso,
+       non un broadcast): nessun'altra cornice può intercettarlo. La difesa
+       vera è in RICEZIONE: accettiamo solo messaggi con e.source = nostro
+       iframe E (se presente) token = nostro. Con targetOrigin stretto il
+       primo ping fallirebbe (l'iframe è ancora about:blank e ha origin
+       diversa), quindi '*' è anche più affidabile.                        */
+    function ping() {
+      try {
+        if (iframe.contentWindow) {
+          iframe.contentWindow.postMessage({ type: 'labvisivo:ping', cornice: token }, '*');
+        }
+      } catch (err) { /* app non ancora pronta: si riprova al prossimo tick */ }
+    }
+    ping();
+    // Ogni 3 s: il ping è la RETE DI RECOVERY — se un messaggio di altezza
+    // cade nella finestra di silenzio post-applicazione o si perde, il ping
+    // forza l'app a rinviare il valore corrente (l'app risponde sempre ai
+    // ping; i valori identici vengono scartati dal filtro ±2 px, quindi il
+    // ping non produce mai movimento visivo).
+    setInterval(ping, 3000);
+
+    /* Alla finestra che cambia larghezza l'app può cambiare altezza: la richiediamo */
+    window.addEventListener('resize', function () { ping(); });
+
+    /* ---------- Stato: caricamento → online / errore ---------- */
+    function segnaOnline() {
+      appViva = true;
+      clearTimeout(timerErrore);
+      stato.classList.remove('errore');
+      retry.hidden = true;
+      statoT.textContent = 'App online \u2014 buon lavoro!'   // FIX v3.2: escape unicode = immune all'encoding dell'editor;
+      stato.classList.add('visibile');
+      setTimeout(function () { stato.classList.remove('visibile'); }, 3000);
+    }
+
+    function segnaErrore() {
+      if (appViva) return;
+      stato.classList.add('errore');
+      retry.hidden = false;
+      statoT.textContent = 'L\'app non \u00E8 raggiungibile. Controlla la connessione e riprova.';
+      stato.classList.add('visibile');
+    }
+
+    function ricarica() {
+      appViva = false;
+      altezzaApplicata = 0; ultimoValore = 0; hCandidata = 0; cresciteConsecutive = 0; congelatoFino = 0;  // FIX v3.1: riparti pulito
+      if (timerSettle) { clearTimeout(timerSettle); timerSettle = null; }  // FIX v3.1: nessun debounce in sospeso
+      stato.classList.remove('errore');
+      retry.hidden = true;
+      statoT.textContent = 'Caricamento\u2026';
+      stato.classList.add('visibile');
+      iframe.src = APP_URL + (APP_URL.indexOf('?') >= 0 ? '&' : '?') + 'cornice=' + token;
+      clearTimeout(timerErrore);
+      timerErrore = setTimeout(segnaErrore, 15000);
+      ping();
+    }
+
+    timerErrore = setTimeout(segnaErrore, 15000);
+    reloadB.addEventListener('click', ricarica);
+    retry.addEventListener('click', ricarica);
+
+    /* ---------- Schermo intero (con fallback: nascosto se non supportato) ---------- */
+    function fullscreenOk() {
+      return !!(document.documentElement.requestFullscreen ||
+                document.documentElement.webkitRequestFullscreen ||
+                document.documentElement.msRequestFullscreen);
+    }
+    if (!fullscreenOk()) fullBtn.style.display = 'none';
+
+    fullBtn.addEventListener('click', function () {
+      var doc = document;
+      if (doc.fullscreenElement || doc.webkitFullscreenElement || doc.msFullscreenElement) {
+        if (doc.exitFullscreen) doc.exitFullscreen();
+        else if (doc.webkitExitFullscreen) doc.webkitExitFullscreen();
+        else if (doc.msExitFullscreen) doc.msExitFullscreen();
+      } else {
+        if (cornice.requestFullscreen) cornice.requestFullscreen();
+        else if (cornice.webkitRequestFullscreen) cornice.webkitRequestFullscreen();
+        else if (cornice.msRequestFullscreen) cornice.msRequestFullscreen();
+      }
+    });
+
+  })();
+</script>

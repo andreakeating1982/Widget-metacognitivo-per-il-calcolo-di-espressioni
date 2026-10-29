@@ -1,0 +1,650 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* Ritaglio foto 8731: corpo scorrevole, riquadro comandi unico centrato,
+   trascinamento diretto della selezione (vedi SCROLLING-MOBILE.md) */
+@import "./photo-crop.css";
+
+/* ----------------------------------------------------------------
+   OpenDyslexic: font ad alta leggibilità usato in TUTTA l'app
+   (per dislessia e ipovedenti). File auto-ospitati in /fonts.
+   Aggiunto per l'inclusione (BES/DSA).
+   ---------------------------------------------------------------- */
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Italic.otf") format("opentype");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "OpenDyslexic";
+  src: url("/fonts/OpenDyslexic-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: italic;
+  font-display: swap;
+}
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-plum: var(--plum);
+  --color-gold: var(--gold);
+  --color-success: var(--success);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+:root {
+  /* === PLUM THEME (identico a Shakespeare Quiz) === */
+  --plum: oklch(55% .115 42);
+  --gold: oklch(68% .1 72);
+  --success: oklch(55% .12 145);
+  --background: oklch(95.5% .015 85);
+  --foreground: oklch(26% .025 55);
+  --card: oklch(99% .005 85);
+  --card-foreground: oklch(26% .025 55);
+  --popover: oklch(99% .005 85);
+  --popover-foreground: oklch(26% .025 55);
+  --primary: oklch(55% .115 42);
+  --primary-foreground: oklch(99% 0 0);
+  --secondary: oklch(93.5% .012 85);
+  --secondary-foreground: oklch(35% .02 55);
+  --muted: oklch(94% .01 85);
+  --muted-foreground: oklch(48% .02 55);
+  --accent: oklch(82% .055 42);
+  --accent-foreground: oklch(30% .03 55);
+  --destructive: oklch(55% .18 25);
+  --destructive-foreground: oklch(99% 0 0);
+  --border: oklch(88% .008 85);
+  --input: oklch(88% .008 85);
+  --ring: oklch(55% .115 42);
+  --chart-1: oklch(55% .115 42);
+  --chart-2: oklch(45% .12 145);
+  --chart-3: oklch(68% .1 72);
+  --chart-4: oklch(55% .18 25);
+  --chart-5: oklch(50% .08 260);
+  --radius: 1.1rem;
+  --sidebar: oklch(95.5% .015 85);
+  --sidebar-foreground: oklch(26% .025 55);
+  --sidebar-primary: oklch(55% .115 42);
+  --sidebar-primary-foreground: oklch(99% 0 0);
+  --sidebar-accent: oklch(82% .055 42);
+  --sidebar-accent-foreground: oklch(30% .03 55);
+  --sidebar-border: oklch(88% .008 85);
+  --sidebar-ring: oklch(55% .115 42);
+}
+
+.dark {
+  --plum: oklch(62% .1 42);
+  --gold: oklch(70% .1 72);
+  --success: oklch(60% .12 145);
+  --background: oklch(20% .015 55);
+  --foreground: oklch(92% .01 85);
+  --card: oklch(24% .015 55);
+  --card-foreground: oklch(92% .01 85);
+  --popover: oklch(24% .015 55);
+  --popover-foreground: oklch(92% .01 85);
+  --primary: oklch(62% .1 42);
+  --primary-foreground: oklch(18% .02 55);
+  --secondary: oklch(28% .02 55);
+  --secondary-foreground: oklch(85% .01 85);
+  --muted: oklch(28% .02 55);
+  --muted-foreground: oklch(65% .02 55);
+  --accent: oklch(34% .04 42);
+  --accent-foreground: oklch(90% .01 85);
+  --destructive: oklch(58% .18 25);
+  --destructive-foreground: oklch(99% 0 0);
+  --border: oklch(100% 0 0/.12);
+  --input: oklch(100% 0 0/.16);
+  --ring: oklch(62% .1 42);
+  --chart-1: oklch(62% .1 42);
+  --chart-2: oklch(60% .12 145);
+  --chart-3: oklch(70% .1 72);
+  --chart-4: oklch(58% .18 25);
+  --chart-5: oklch(55% .08 260);
+  --sidebar: oklch(24% .015 55);
+  --sidebar-foreground: oklch(92% .01 85);
+  --sidebar-primary: oklch(62% .1 42);
+  --sidebar-primary-foreground: oklch(18% .02 55);
+  --sidebar-accent: oklch(34% .04 42);
+  --sidebar-accent-foreground: oklch(90% .01 85);
+  --sidebar-border: oklch(100% 0 0/.12);
+  --sidebar-ring: oklch(62% .1 42);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  html, body, #root {
+    text-align: center !important;
+    font-family: 'OpenDyslexic', 'Cambria Math', Cambria, serif !important;
+  }
+
+  /* Scroll morbido (accessibilità: evita salti bruschi di posizione) */
+  html {
+    scroll-behavior: smooth;
+  }
+
+  /* Forza TUTTE le classi font di Tailwind a usare OpenDyslexic */
+  .font-sans,
+  .font-serif,
+  .font-mono {
+    font-family: 'OpenDyslexic', 'Cambria Math', Cambria, serif !important;
+  }
+
+  body *:not(input):not(textarea):not(select) {
+    text-align: center !important;
+    text-transform: uppercase !important;
+  }
+
+  /* Variabili matematiche: MAI forzare maiuscole */
+  .math-var {
+    text-transform: none !important;
+  }
+
+  /* Pedici ed esponenti: rimpiccioliti al 70% */
+  .math-var sub,
+  .math-var sup {
+    font-size: 0.7em !important;
+  }
+
+  sub,
+  sup {
+    font-size: 0.75em;
+  }
+
+  /* NotebookGuide: testo normale, tutto centrato (non maiuscolo) */
+  body .notebook-content,
+  body .notebook-content * {
+    text-transform: none !important;
+    text-align: center !important;
+  }
+
+  /* KaTeX: MAI forzare maiuscole sulla notazione matematica */
+  .katex,
+  .katex *,
+  .font-mono {
+    text-transform: none !important;
+  }
+
+  input,
+  textarea,
+  select {
+    text-align: left;
+    text-transform: none !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    text-align: center !important;
+    text-transform: none !important;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-size: calc(18px * var(--lf-scale, 1));
+    line-height: var(--lf-lh, 1.65);
+    letter-spacing: 0.012em;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+
+  /* Focus sempre ben visibile (accessibilità da tastiera e ipovedenti) */
+  :focus-visible {
+    outline: 3px solid var(--ring);
+    outline-offset: 2px;
+  }
+
+  /* Selezione ad alto contrasto */
+  ::selection {
+    background: var(--primary);
+    color: var(--primary-foreground);
+  }
+
+  h1, h2, h3 {
+    line-height: 1.4;
+  }
+}
+
+/* Paper grain texture (identico a Shakespeare Quiz) */
+.paper-grain {
+  background-image: radial-gradient(#722d8d0a 1px, #0000 1px);
+  background-size: 22px 22px;
+}
+
+/* Math grid pattern — light grid for handwriting canvas */
+.math-grid-pattern {
+  background-image:
+    linear-gradient(rgba(139, 92, 62, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(139, 92, 62, 0.07) 1px, transparent 1px);
+  background-size: 20px 20px;
+  background-position: center center;
+}
+
+/* Pop-in animation (identica a Shakespeare Quiz) */
+@keyframes pop-in {
+  0% { opacity: 0; transform: scale(.96); }
+  100% { opacity: 1; transform: scale(1); }
+}
+.animate-pop-in {
+  animation: .25s ease-out both pop-in;
+}
+
+/* KaTeX overrides */
+.katex {
+  font-size: 1.1em !important;
+}
+.katex .mathnormal,
+.katex .mathrm {
+  color: oklch(26% .025 55) !important;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(139, 92, 62, 0.2);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(139, 92, 62, 0.35);
+}
+
+/* Seconda pagina: scrollbar laterale e altezza iniziale compatta.
+   La cornice dedicata di Latino Facile (fccd3ee, .lf-iframe) parte da
+   640px: qui il medesimo valore delimita SOLO /espressione. I contenuti
+   lunghi scorrono dentro, non allungano la cornice e non riducono i font.
+   Toolbar sempre disponibile. Prima pagina invariata; per la terza
+   pagina vedere il contenitore adattivo expr-exercise-frame sotto. */
+.expr-input-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: min(640px, var(--expr-visible-height, 100dvh));
+  min-height: 0;
+  overflow: hidden;
+}
+.expr-input-frame > [role="toolbar"] {
+  flex: 0 0 auto;
+}
+.expr-input-page {
+  /* Contiene anche il MathML assoluto/sr-only di KaTeX: altrimenti può
+     sfuggire al clipping e gonfiare lo scrollHeight del documento. */
+  position: relative;
+  flex: 1 1 0;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
+}
+/* Firefox: stesso tono tenue della scrollbar Chromium/Safari. */
+@supports not selector(::-webkit-scrollbar) {
+  .expr-input-page {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 92, 62, 0.2) transparent;
+  }
+}
+.expr-input-page:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+/* In iframe il viewport dipende dall'altezza inviata al parent: usare
+   640px indipendenti evita loop. NON height:auto con il figlio flex:1 1 0:
+   la sua base zero farebbe collassare l'area scroll alla sola toolbar.
+   Fuori dall'iframe il min() sopra segue anche tastiera e rotazione. */
+html.lf-embedded .expr-input-frame {
+  height: 640px;
+}
+/* La modale conserva il suo viewport/lock; la posizione della pagina
+   interna resta invariata e non si propagano i gesti allo sfondo. */
+html[data-lf-crop-open] .expr-input-page {
+  overflow-y: hidden;
+}
+/* Le notifiche della pagina sottostante non devono coprire i comandi
+   del ritaglio dopo l'aggiunta rapida di molti pezzi. Non si cancellano:
+   tornano visibili alla chiusura se non sono già scadute. */
+html[data-lf-crop-open] .toaster {
+  visibility: hidden;
+}
+html.lf-hc .expr-input-page::-webkit-scrollbar-thumb {
+  background: #2e2018;
+}
+/* Terza pagina: segue il contenuto fino al medesimo limite compatto.
+   flex-basis:auto (NON 0) mantiene l'altezza naturale quando la pagina
+   è corta; se cresce, min-height:0 consente al figlio di restringersi e
+   scorrere, lasciando la toolbar fuori. Nessun observer aggiuntivo. */
+.expr-exercise-frame {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  max-height: min(640px, var(--expr-visible-height, 100dvh));
+  min-height: 0;
+  overflow: hidden;
+}
+.expr-exercise-frame > [role="toolbar"] {
+  flex: 0 0 auto;
+}
+.expr-exercise-scroll {
+  /* Nome distinto da expr-exercise-page (storica UI con propri font).
+     Contiene anche il MathML assoluto di KaTeX, senza alterare la resa. */
+  position: relative;
+  flex: 0 1 auto;
+  min-height: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  overscroll-behavior-y: contain;
+  scrollbar-gutter: stable;
+  -webkit-overflow-scrolling: touch;
+}
+html.lf-embedded .expr-exercise-frame {
+  /* Limite indipendente dal viewport dell'iframe: niente loop di resize. */
+  max-height: 640px;
+}
+.expr-exercise-scroll:focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: -2px;
+}
+@supports not selector(::-webkit-scrollbar) {
+  .expr-exercise-scroll {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(139, 92, 62, 0.2) transparent;
+  }
+}
+html.lf-hc .expr-exercise-scroll::-webkit-scrollbar-thumb {
+  background: #2e2018;
+}
+@media print {
+  .expr-input-frame { height: auto !important; overflow: visible; }
+  .expr-input-page { overflow: visible !important; }
+  .expr-exercise-frame {
+    display: block;
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  .expr-exercise-scroll { overflow: visible !important; }
+}
+
+/* Fraction line divider */
+.fraction-line {
+  position: relative;
+}
+.fraction-line::before {
+  content: "";
+  position: absolute;
+  left: 10%;
+  right: 10%;
+  top: 50%;
+  height: 2px;
+  background: var(--foreground);
+  transform: translateY(-50%);
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+}
+
+/* ------------------------------------------------------------------
+   ACCESSIBILITÀ — aggiunta per l'inclusione (BES/DSA)
+   ------------------------------------------------------------------ */
+:root {
+  --lf-scale: 1;
+  --lf-lh: 1.65;
+}
+
+/* Righello di lettura: banda che segue il puntatore */
+.lf-ruler-band {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 40vh;
+  height: 2.4em;
+  min-height: 34px;
+  background: rgba(255, 224, 130, 0.38);
+  border-top: 2px solid rgba(230, 81, 0, 0.65);
+  border-bottom: 2px solid rgba(230, 81, 0, 0.65);
+  pointer-events: none;
+  z-index: 110;
+}
+html.lf-ruler .lf-ruler-band {
+  display: block;
+}
+
+/* Modalità ad alto contrasto */
+html.lf-hc {
+  filter: contrast(1.3) saturate(1.15);
+}
+html.lf-hc body {
+  background-color: #ffffff;
+}
+html.lf-hc .paper-grain {
+  background: #ffffff !important;
+}
+
+/* Rispetta chi preferisce meno animazioni (vestibolare / ipersensibilità) */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+
+/* ------------------------------------------------------------------
+   EMBED (cornice dinamica / iframe a altezza automatica)
+   Quando l'app è dentro un iframe, la classe `lf-embedded` viene messa
+   su <html> da heightSync.ts: la pagina deve seguire il CONTENUTO,
+   quindi niente min-h-screen (100vh) — altrimenti l'altezza misurata
+   dipende dall'altezza dell'iframe e si crea un loop di crescita infinita.
+   ------------------------------------------------------------------ */
+html.lf-embedded .min-h-screen,
+html.lf-embedded .min-h-dvh {
+  min-height: 0 !important;
+}
+html.lf-embedded body {
+  min-height: 0 !important;
+}
+
+/* ⚠️ FIX TREMOLIO («barra laterale che appare a alternanza mentre scrivo»):
+   quando il contenuto cresce attorno all'altezza del viewport, la barra di
+   scorrimento verticale compare/scompare a alternanza; ogni comparsa Ruba
+   ~15px di larghezza, il testo si riformatta, l'altezza cambia di nuovo →
+   ciclo di tremolio. `scrollbar-gutter: stable` RISERVA SEMPRE lo spazio
+   della barra (visibile o meno): la larghezza non cambia mai e il ciclo
+   non può partire. Vale sia in pagina autonoma sia dentro la cornice. */
+html {
+  scrollbar-gutter: stable;
+}
+/* La scrollbar del documento iframe non serve: nelle pagine compatte
+   2/3 scorre la regione interna, nelle altre si adatta l'intera cornice. */
+html.lf-embedded {
+  overflow-y: hidden;
+}
+/* PRIMA PAGINA dentro la cornice del blog (lf-embedded): la card segue il
+   contenuto (niente min-height, niente ancoraggio in basso): la cornice
+   dinamica riceve l'altezza REALE e si restringe da sola. Lo spazio tra la
+   barra di accessibilità e la card è pareggiato con quello sotto la card:
+   la barra ha già mb-1 (4px), quindi padding-top 20px + 4px = 24px sopra,
+   padding-bottom 24px sotto. */
+html.lf-embedded .lf-welcome {
+  min-height: 0 !important;
+  justify-content: flex-start;
+  padding-top: 20px;
+  padding-bottom: 24px;
+}
+/* Il primo contenitore interno della card ha pt-4 sm:pt-8 (16/32px): dentro
+   la cornice lo azzeriamo perché lo spazio sopra la card è già dato dal
+   padding-top di .lf-welcome (pareggiato con quello sotto). */
+html.lf-embedded .lf-welcome > div:first-child {
+  padding-top: 0 !important;
+}
+
+/* ------------------------------------------------------------------
+   PRIMA PAGINA come pagina autonoma (non iframe): la classe lf-welcome-top
+   viene messa su <html> da WelcomePage quando l'app è aperta da sola nel
+   browser (window.self === window.top). Il body crema (#f8f1e4) riempie
+   l'intero viewport e lasciava un grande vuoto sotto la card; rendendo
+   neutro il canvas sotto il contenuto, la pagina "termina" subito sotto la
+   card, replicando l'aspetto compatto delle altre app del blog.
+   ------------------------------------------------------------------ */
+html.lf-welcome-top body {
+  background-color: #ffffff;
+}
+html.lf-welcome-top .lf-welcome {
+  position: relative;
+}
+/* Dissolvenza morbida in fondo al blocco crema: la pagina sfuma nel bianco
+   del canvas invece di tagliarsi con un bordo netto. */
+html.lf-welcome-top .lf-welcome::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 48px;
+  background: linear-gradient(to bottom, rgba(248, 241, 228, 0), #ffffff);
+  pointer-events: none;
+}
+
+/* ─── GIRO 30: TUTTE le scritte della pagina esercizi ≥ 14pt ──────────
+   Stessa scala dell'app audio originaria (AUDIO-MATEMATICI):
+   text-xs = text-sm = text-base = 14pt, text-lg = 15pt.
+   SCOPATA alla sola pagina esercizi (.expr-exercise-page): la prima
+   pagina (WelcomePage) resta ESATTAMENTE com'è (richiesta utente). */
+.expr-exercise-page {
+  font-size: 14pt;
+}
+.expr-exercise-page .text-xs,
+.expr-exercise-page .text-sm,
+.expr-exercise-page .text-base {
+  font-size: 14pt;
+  line-height: 1.5;
+}
+.expr-exercise-page .text-lg {
+  font-size: 15pt;
+  line-height: 1.4;
+}
+.expr-exercise-page .text-\[13px\] {
+  font-size: 14pt;
+}
+
+/* 28/10 — Pezzi molto lunghi su schermo stretto (foto utente): l'espressione
+   NON esce più dai bordi della card. Il box del pezzo diventa un contenitore
+   che SCORRE in orizzontale al proprio interno; se il pezzo è corto resta
+   centrato esattamente come prima. Scopata alle res KaTeX dei pezzi e al
+   box «Espressione trascritta» del pannello audio/tastiera. */
+.piece-display {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+}
+.piece-display .katex-display {
+  margin: 0.25em auto;
+  width: max-content;
+  min-width: 100%;
+  overflow: visible;
+}
+.piece-display .katex-display > .katex {
+  padding-bottom: 2px;
+}

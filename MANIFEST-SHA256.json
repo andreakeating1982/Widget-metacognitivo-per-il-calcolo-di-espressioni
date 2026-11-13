@@ -1,0 +1,2574 @@
+{
+  "format": 1,
+  "created_at_utc": "2026-11-13T11:01:09.724355+00:00",
+  "source_commit": "569413200b7fe80c3cdc6208b37a1697f9beede5",
+  "production_deployment": 9213,
+  "archive_prefix": "espressioni-monomi-polinomi",
+  "payload_file_count": 501,
+  "zip_file_entries_including_manifest": 502,
+  "note": "Manifest lists every payload file except itself; no production credentials or runtime data.",
+  "excluded_tracked_files": [
+    {
+      "path": "client/diag-89.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "client/diag-profile.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "scripts/diag-avanza.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "scripts/diag-box-indice.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "scripts/diag-costruttori.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "scripts/diag-foto-periodici.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "scripts/diag-indice-comune.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "scripts/diag-link.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "scripts/diag-quarta.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "scripts/diag-righe-indice.ts",
+      "reason": "standalone diagnostic"
+    },
+    {
+      "path": "scripts/diag-ripara-indice.ts",
+      "reason": "standalone diagnostic"
+    }
+  ],
+  "excluded_untracked_categories": [
+    ".cache",
+    ".env* (except empty .env.example)",
+    ".git",
+    ".venv",
+    "__pycache__",
+    "data",
+    "dist",
+    "node_modules",
+    "shared/env.generated.ts"
+  ],
+  "files": [
+    {
+      "path": ".env.example",
+      "size": 585,
+      "sha256": "47ad62695815e7f8e68c535f3264355da5ee61439f7478fa278198b6d67135bb"
+    },
+    {
+      "path": ".github/workflows/ci.yml",
+      "size": 1657,
+      "sha256": "1194e7c8f5aec577e8638896473dea202f1547f4e5a7008190ba351760d3e12a"
+    },
+    {
+      "path": ".gitignore",
+      "size": 153,
+      "sha256": "74db4af49960588361f5a4a95adbe33c166f20dbe8232a2ec1c8078748b7a77c"
+    },
+    {
+      "path": ".prettierignore",
+      "size": 42,
+      "sha256": "22816e742d51eac0b9e746ac37ce0ba581ef90c899e2d24f4506bb312e589161"
+    },
+    {
+      "path": ".prettierrc",
+      "size": 310,
+      "sha256": "087532218269eb851c22dcc3d5234ea46bfa513b494a3d7b167b1c1f48c410c5"
+    },
+    {
+      "path": "ACCESSIBILITA.md",
+      "size": 16322,
+      "sha256": "5ef272063ee0db54dd8584f7ca19a81c816e111b0e65858b8d0fbb9d4df27c3a"
+    },
+    {
+      "path": "ADATTARE-EQUAZIONI.md",
+      "size": 10671,
+      "sha256": "12fe635b9003f03ac78b2135a8b3490b3cc86ba391ba366c7ad6da11b0f72f1b"
+    },
+    {
+      "path": "ADATTARE.md",
+      "size": 9933,
+      "sha256": "ce92c8c89227ca059c252c71a47820034b0930bad56d390fce8b757102db60dc"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 12982,
+      "sha256": "6224aed62485d84388d249840f01228b6366ad4ca3784f3206bd632ae6529474"
+    },
+    {
+      "path": "COLLAUDO-PHOTO-CROP-8731.md",
+      "size": 4228,
+      "sha256": "60746b28fbc64ef7698caa75a346ea346218c38107230a80e95d52fbb1e791e3"
+    },
+    {
+      "path": "ESPORTA-PAGINE-1-2-EQUAZIONI.md",
+      "size": 13637,
+      "sha256": "a29baa245743724bcd26795c72b89364ccf7737f84bf85de3f8d183c1d508597"
+    },
+    {
+      "path": "FILOSOFIA-DSA.md",
+      "size": 12392,
+      "sha256": "a13188b45c860354198e64173e282e13644ec14d723bf3ae40252be53f1ee8bc"
+    },
+    {
+      "path": "GUIDA-IA-CLONAZIONE-EQUAZIONI.md",
+      "size": 17275,
+      "sha256": "5585461438352ee19874817cddd1f0e528ff48a7f20b6a5bbf0280226a99a973"
+    },
+    {
+      "path": "GUIDA-IA.md",
+      "size": 205239,
+      "sha256": "63fa37a8ee4f5d85ad25989541648a7b9158fa242c70a1249097790969e2f373"
+    },
+    {
+      "path": "GUIDA-UNICA.html",
+      "size": 18269,
+      "sha256": "f4374781fb5766853d56ec1076b57028a6b22c0c3aea716d8c2f3903ae7cbd47"
+    },
+    {
+      "path": "IMPLEMENTAZIONE-IA.md",
+      "size": 21908,
+      "sha256": "a08f790ac91d1a48cb56d34a952c8cb736bc2ad64da034792858035b2667a2aa"
+    },
+    {
+      "path": "ISTRUZIONI-GITHUB.txt",
+      "size": 4816,
+      "sha256": "1f8976e2d944e9d78bd339ae5c9e9b0761090bb11527de7611544b4c1ce4dc68"
+    },
+    {
+      "path": "README.md",
+      "size": 17511,
+      "sha256": "72ffeacf938439999f02b597c8bae8a1d3f3fe8534a6c2116b2efe6f0755bf49"
+    },
+    {
+      "path": "REBUILD.md",
+      "size": 14198,
+      "sha256": "fb64a8869a9cf78dfae0102bce1c0fb763cb976154efdeed1000ecc1bbbb4fa7"
+    },
+    {
+      "path": "RENDER.md",
+      "size": 7753,
+      "sha256": "f2c7132993ecd9cd19a2578e96398ce75db9267973a70181ca1a47a5310974cb"
+    },
+    {
+      "path": "SCROLLING-MOBILE.md",
+      "size": 8992,
+      "sha256": "c729d54de06654138a7627b4ea2acf06710d10f23f0f5b1af42c508f6f103a33"
+    },
+    {
+      "path": "SECONDA-PAGINA-SCROLL.md",
+      "size": 7166,
+      "sha256": "b185e9c4cdea298f357b4c3b2a17fc4fa34d9627ebbe076395314e9361f4b64b"
+    },
+    {
+      "path": "TRAPIANTO-FOTO.md",
+      "size": 7760,
+      "sha256": "b8de29b8e5017654ec03fc39a77f67adf901f02151ed7b6657526db77ebc8812"
+    },
+    {
+      "path": "VERIFICA-PACCHETTO-8736.md",
+      "size": 3209,
+      "sha256": "376f3ac7a7bf7ce23c754d13f4acfa5523544e9d43d6c6ca01f6bdd8dbe45ee0"
+    },
+    {
+      "path": "VERIFICA-PACCHETTO-8737.md",
+      "size": 3719,
+      "sha256": "ae03c427d5c1ac620ba32c5ed9e69a7a0b3f9edd2b8781d84b4f183df5be9c49"
+    },
+    {
+      "path": "VERIFICA-PACCHETTO-8742.md",
+      "size": 4208,
+      "sha256": "543fbae26c1c45aacd458309fb1f4baad486c18a0f3c4a0b8d081985125e0d92"
+    },
+    {
+      "path": "VERIFICA-PACCHETTO-8744.md",
+      "size": 6431,
+      "sha256": "ae0087f970a27f3a6a58d4e3dead2bd7d94d439fccefa95224f2dc578ff23f0c"
+    },
+    {
+      "path": "VERSIONE-8736.md",
+      "size": 3682,
+      "sha256": "3a305f932f141b7fd631233e22695021b099a7d8cf5d9b81d9fc03de383497a2"
+    },
+    {
+      "path": "VERSIONE-8737.md",
+      "size": 3813,
+      "sha256": "3f7d3356989bc0fd81b87363911d68e7a6c3c62c84aa3503e65ba903069784b3"
+    },
+    {
+      "path": "VERSIONE-8742.md",
+      "size": 2126,
+      "sha256": "72da5b14027511bc43a9658319f65ae1aa3205945456f009238344c3c1f04a8c"
+    },
+    {
+      "path": "VERSIONE-8744.md",
+      "size": 2944,
+      "sha256": "c714136f1ce5bd09389a35e65124e8ef82446dc6cf6bd9492182a96fb40e6f63"
+    },
+    {
+      "path": "VERSIONE-8756.md",
+      "size": 3615,
+      "sha256": "8aac31bdc048a7c57c1948983edf8f7d07e8f887f3f028d5fb30ca6c4889ccc8"
+    },
+    {
+      "path": "VERSIONE-8999.md",
+      "size": 3772,
+      "sha256": "3df969eed4933bd3823ac8ca2dec952b7c8cb602264b38095615c7db662d17a4"
+    },
+    {
+      "path": "client/index.html",
+      "size": 1075,
+      "sha256": "d1928a66729fb324def1b330a8d3df8e45f481992e6b5220ce18ee1484fe3ed3"
+    },
+    {
+      "path": "client/public/.gitkeep",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "client/public/anteprima-cornice.html",
+      "size": 24873,
+      "sha256": "8b913b33f9a1b90c179a1af290e6fdf1737d5003e6d206c83938fd3e2555dfd1"
+    },
+    {
+      "path": "client/public/fonts/OpenDyslexic-Bold-v2.woff2",
+      "size": 41344,
+      "sha256": "c7e66ec88f44e5b29dd005c50b7422f5298ed20b3f141f8e884271d186a16e5b"
+    },
+    {
+      "path": "client/public/fonts/OpenDyslexic-Bold.otf",
+      "size": 48832,
+      "sha256": "8cd3dc316f3567a28c732f71629cb40ab58b6c7351560960bf4af1ffa8450185"
+    },
+    {
+      "path": "client/public/fonts/OpenDyslexic-Bold.ttf",
+      "size": 142508,
+      "sha256": "ffdbc5e2e454f6d9e1d0fc581995ef23f608cc5a2c92dc9ecae3d723547cedc7"
+    },
+    {
+      "path": "client/public/fonts/OpenDyslexic-Bold.woff2",
+      "size": 41344,
+      "sha256": "c7e66ec88f44e5b29dd005c50b7422f5298ed20b3f141f8e884271d186a16e5b"
+    },
+    {
+      "path": "client/public/fonts/OpenDyslexic-Italic.otf",
+      "size": 71120,
+      "sha256": "6abd13b9690e8140655fcda16f7a3d2a1fc1f5a4da61895cce7bed9eb774a1af"
+    },
+    {
+      "path": "client/public/fonts/OpenDyslexic-Regular-v2.woff2",
+      "size": 39912,
+      "sha256": "2ebd6cbe970e7fae3451bf236fc5b33bef133152f392ec2dfe0a9095ba6cffd0"
+    },
+    {
+      "path": "client/public/fonts/OpenDyslexic-Regular.ttf",
+      "size": 138312,
+      "sha256": "9e397e67a856cbe4caa5ff5ae8670a1ffe3d67d2591d69a1162556f01bb5ac6b"
+    },
+    {
+      "path": "client/public/fonts/OpenDyslexic-Regular.woff2",
+      "size": 39912,
+      "sha256": "2ebd6cbe970e7fae3451bf236fc5b33bef133152f392ec2dfe0a9095ba6cffd0"
+    },
+    {
+      "path": "client/public/guida-notazioni-matematiche.pdf",
+      "size": 262242,
+      "sha256": "a6756c73cedbdbfe889292e6c64c7e04341e31cf2410423be9b269ca2b32cf2c"
+    },
+    {
+      "path": "client/public/models/comer/decoder_int8.onnx",
+      "size": 4118047,
+      "sha256": "658901d81ca3aa4b62b0da262e8fe67ebcfdac19cfb52ca2cfd076bebd481088"
+    },
+    {
+      "path": "client/public/models/comer/encoder_int8.onnx",
+      "size": 3460779,
+      "sha256": "272f17c7b120db61db6cd8d77e695d0139144044abd57d9b23284435a5d916fa"
+    },
+    {
+      "path": "client/public/models/comer/vocab.json",
+      "size": 3697,
+      "sha256": "1d75cbbea3bed558683d7e9c3b3c72069ef2143a155d5f8c610f85a281af000c"
+    },
+    {
+      "path": "client/public/quaderno-matematica-facile-v4.pdf",
+      "size": 1652347,
+      "sha256": "016b4c601bac32c7bb7154f184159e07ff62f9fff3345d441d4f389d5064b55f"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-lstm.wasm",
+      "size": 2855361,
+      "sha256": "66b17df6e20c5329a17ffa9c202a47eaa3e32500b253d4c7f38e7f2bc01457c3"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-lstm.wasm.js",
+      "size": 3896484,
+      "sha256": "eef5f8b2f8e20e150680b20adaec4a60babafee3adbe8a94583c81fee46e8680"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-relaxedsimd-lstm.wasm",
+      "size": 2862266,
+      "sha256": "7985c92d4c64e7267d24cadffe1b2a1da6bf8aa55fdcaf953fe94fe122a24545"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-relaxedsimd-lstm.wasm.js",
+      "size": 3905767,
+      "sha256": "861a536cf9ef8e63cb644d57bab39c388f37f7d6b6f60024b741c5f6b39a59b3"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-relaxedsimd.wasm",
+      "size": 3456075,
+      "sha256": "45f8c9b516df326b6ae6b493ed3a6289df5cbd10490e7b6ff8bf5b12ea42d1da"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-relaxedsimd.wasm.js",
+      "size": 4697227,
+      "sha256": "843074aa5bad1cc6421b74a86201768ced9f244795e4d81435435a61a40ce535"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-simd-lstm.wasm",
+      "size": 2857601,
+      "sha256": "34e8d50cac216427d86bf397d610fdd9f49492539bbcdfbfccc4eda20c810bea"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-simd-lstm.wasm.js",
+      "size": 3899472,
+      "sha256": "c58b46a4c796c0b8afccf77591d5b875b6896b45d402bbce8caa6f5362447b38"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-simd.wasm",
+      "size": 3451410,
+      "sha256": "7d237a13edfeb0fa2f104744fccde0a00e0c076c3e23b7a8fc7af75ec9af2c3e"
+    },
+    {
+      "path": "client/public/tess/tesseract-core-simd.wasm.js",
+      "size": 4690932,
+      "sha256": "6b61ef4e911b5cf57e656bbfe983d6e2b3711a02dd164154ddda064566e8e09d"
+    },
+    {
+      "path": "client/public/tess/tesseract-core.wasm",
+      "size": 3449168,
+      "sha256": "c7f5ace62ac0ad065e71e9c6725f1d7cdf82e7eda8fba532cbb9563964da7098"
+    },
+    {
+      "path": "client/public/tess/tesseract-core.wasm.js",
+      "size": 4687944,
+      "sha256": "0bc6ce3e5fbbd0cd89706cf2fd70960e3372f4f01ee24265b26990808aaeb286"
+    },
+    {
+      "path": "client/public/tess/worker.min.js",
+      "size": 111307,
+      "sha256": "576b7df7e3393e137e51849357c9adb53fe7ac1bb69bfa06cf3d61520f182c6d"
+    },
+    {
+      "path": "client/public/tessdata/eng.traineddata.gz",
+      "size": 10923060,
+      "sha256": "ed350f3752f81ee8f38769edc14d92d997dababe23b565c59879372cc46a2468"
+    },
+    {
+      "path": "client/public/test-tremolio.html",
+      "size": 4580,
+      "sha256": "0826f29b4e93820e844b67031233eee3f4bcb7fc21f71bc838297b592a75e5a4"
+    },
+    {
+      "path": "client/public/wasm/ort-wasm-simd-threaded.asyncify.mjs",
+      "size": 47507,
+      "sha256": "7236653b8565da4046e459cd0e274123419a1d9f1f8f18fd36c28058346ca655"
+    },
+    {
+      "path": "client/public/wasm/ort-wasm-simd-threaded.asyncify.wasm",
+      "size": 24254953,
+      "sha256": "7e83cd6cee77e478bc96a7e91b198144fb5e4126287daf1f9b54bb195ebcd55a"
+    },
+    {
+      "path": "client/public/wasm/ort-wasm-simd-threaded.jsep.mjs",
+      "size": 46614,
+      "sha256": "3ee381d20a80f51a788a1c4a5872f6f1d047538dd4342f4af00062de5f9ea4c6"
+    },
+    {
+      "path": "client/public/wasm/ort-wasm-simd-threaded.jsep.wasm",
+      "size": 26827543,
+      "sha256": "78feeeb3d08f6bcee94d938ed322f69073bb8076b5f9d34697a574ffba8deb48"
+    },
+    {
+      "path": "client/src/App.tsx",
+      "size": 2953,
+      "sha256": "ae206209689bc02f6899536643b4db590f5b4d04a105475de2c30424c4bbf9af"
+    },
+    {
+      "path": "client/src/components/AccessibilityToolbar.tsx",
+      "size": 9427,
+      "sha256": "f3fafb02fbaf940b03ba4e95f2f74a613942efbe48516cf6297465e30b1ce829"
+    },
+    {
+      "path": "client/src/components/CalculatorPanel.tsx",
+      "size": 2991,
+      "sha256": "de31321d5e6f0032bbe64672e3e72df5532e4a8c6b6ef64f23f2f8db05c1e62e"
+    },
+    {
+      "path": "client/src/components/CropDialog.tsx",
+      "size": 25110,
+      "sha256": "e2dffc70087006413bee0a6e6b12668af7f9258110ee4d389aeb98f09728d76c"
+    },
+    {
+      "path": "client/src/components/ErrorBoundary.tsx",
+      "size": 1688,
+      "sha256": "3b0bdb7a19758fcd440138ccfb5f306b96836564f15d7c8c9663d7dd7417e972"
+    },
+    {
+      "path": "client/src/components/FractionDisplay.tsx",
+      "size": 1414,
+      "sha256": "e91441d6fd1e77f87e0547c8814ef6ef0e6f4cfbb3f7a44cf77db741c0fdbbd1"
+    },
+    {
+      "path": "client/src/components/FratteExercise.tsx",
+      "size": 16139,
+      "sha256": "d63c6647503498643e02e8329cd6e6ae229ee2c7906ed7c13bb408df8a409de0"
+    },
+    {
+      "path": "client/src/components/MathDrawCanvas.tsx",
+      "size": 12526,
+      "sha256": "ce90c84729cfd63cd8587e07bb1f852843a4a0a480dfefb94ba185edeaf0cc41"
+    },
+    {
+      "path": "client/src/components/NumberInputCanvas.tsx",
+      "size": 53077,
+      "sha256": "f187b34a79e7a2be8c37eb0c8b876dc74a5b709b2bea8d3d2740592548d36f57"
+    },
+    {
+      "path": "client/src/components/SymbolInkInput.tsx",
+      "size": 5023,
+      "sha256": "e3b44739ccf3f3213e074ae436f92764da4d6086aacd0a804064fbe696bd9500"
+    },
+    {
+      "path": "client/src/components/auditNumericInput.test.ts",
+      "size": 789,
+      "sha256": "b5db6e9e436a8d0d2fc8e0c492b5abbe75a48bcf6d213cbd2258fca36ca45f14"
+    },
+    {
+      "path": "client/src/components/evaluateLatex.test.ts",
+      "size": 1487,
+      "sha256": "4e54c790607f9c6fcd1f46a7c4ff94328882ba88bdea76eaf1c948f50ef4d2e8"
+    },
+    {
+      "path": "client/src/components/typedValueNotation.test.ts",
+      "size": 1712,
+      "sha256": "03f1b7e0ae1d3b5d3144baaea928fdcf64c8293e10ef827635c25195671cf55f"
+    },
+    {
+      "path": "client/src/components/ui/accordion.tsx",
+      "size": 2048,
+      "sha256": "7b96cf50388ad3d07be64924ab33ba5f63b79a6a5749ebe4d31c789c0bc00d44"
+    },
+    {
+      "path": "client/src/components/ui/alert-dialog.tsx",
+      "size": 3866,
+      "sha256": "aeecd7967eb0be3bad2753b6633d9a43cc4c08cb35de872ffdc0b9f2b6a9b26c"
+    },
+    {
+      "path": "client/src/components/ui/alert.tsx",
+      "size": 1622,
+      "sha256": "eccfc7f6ca9d51407cb413a3ca4b5ac721898ac93d38e95c02c35188ad674abe"
+    },
+    {
+      "path": "client/src/components/ui/aspect-ratio.tsx",
+      "size": 269,
+      "sha256": "654f5d6e9ed17472305d7e6fc5de30453875ffae585f5d064aedc9e6945bdbb0"
+    },
+    {
+      "path": "client/src/components/ui/avatar.tsx",
+      "size": 1090,
+      "sha256": "c2382ff71d7ef3492096ed6ef35bf82e1fd421a81d55ca80453f5f5138eac360"
+    },
+    {
+      "path": "client/src/components/ui/badge.tsx",
+      "size": 1639,
+      "sha256": "51fd797c59e63d164ade736769f19f26e41c157daba29aa0b327b3b226f4d4ac"
+    },
+    {
+      "path": "client/src/components/ui/breadcrumb.tsx",
+      "size": 2371,
+      "sha256": "dd84657e30691ea7f14a785c13b660d6cd626c08ba1df8439c3eca858ee3cd7e"
+    },
+    {
+      "path": "client/src/components/ui/button-group.tsx",
+      "size": 2220,
+      "sha256": "ba1d824f0f4d8b5dd78a80fa766e3543eefb9173143652be2c7cb765af1864f5"
+    },
+    {
+      "path": "client/src/components/ui/button.tsx",
+      "size": 2097,
+      "sha256": "b08b4785e03566c7a6063b3d57234deae41649676870cbbb9ab2448d816e1739"
+    },
+    {
+      "path": "client/src/components/ui/calendar.tsx",
+      "size": 7663,
+      "sha256": "89308bce82e8b23b611cfbc88bc19f7b341d7109ab9a2838c04cb50922113501"
+    },
+    {
+      "path": "client/src/components/ui/card.tsx",
+      "size": 1997,
+      "sha256": "1397e7d264d90162220ea7473b311e434651886267c71e7f58d4488be9d8ff39"
+    },
+    {
+      "path": "client/src/components/ui/carousel.tsx",
+      "size": 5603,
+      "sha256": "42f66e6fde568c209df5d58a4ca13c3ae92d120a04fd99f7be695d6a570ef0a9"
+    },
+    {
+      "path": "client/src/components/ui/chart.tsx",
+      "size": 10113,
+      "sha256": "47c4de202fe1dc229af94d2c86197251d279bee131d2a6fb75ab9e58cec71aab"
+    },
+    {
+      "path": "client/src/components/ui/checkbox.tsx",
+      "size": 1218,
+      "sha256": "4fc309590e66d3c41e3be5fb73f988b0e916e7bf5fff321c22c3a64cd4fe97cf"
+    },
+    {
+      "path": "client/src/components/ui/collapsible.tsx",
+      "size": 791,
+      "sha256": "95b5b9ea89a4105045c58b7eba539e57a1f4abc5a54d43ea0f7168f46b645eeb"
+    },
+    {
+      "path": "client/src/components/ui/command.tsx",
+      "size": 4838,
+      "sha256": "47910540789d4de9e890de63bfc0046f9cf6bfaa86d496a98c79622900f8520c"
+    },
+    {
+      "path": "client/src/components/ui/context-menu.tsx",
+      "size": 8284,
+      "sha256": "fe63c0a0dcabe749874ad19e07dee8418337c62dd64452fc08b5abf27b49b9eb"
+    },
+    {
+      "path": "client/src/components/ui/dialog.tsx",
+      "size": 6024,
+      "sha256": "3ffd83bd2940c1191fde091bc47311aebc2b79d78824965a5c446115e58190aa"
+    },
+    {
+      "path": "client/src/components/ui/drawer.tsx",
+      "size": 4255,
+      "sha256": "573deecc31f90fcd96f53a37b2e5363eb326fe737cbdb28cac38a5d014734fc8"
+    },
+    {
+      "path": "client/src/components/ui/dropdown-menu.tsx",
+      "size": 8434,
+      "sha256": "ede99252b737a29eb1f05370956e2b842be161b6a661f1429155ac561653d029"
+    },
+    {
+      "path": "client/src/components/ui/empty.tsx",
+      "size": 2406,
+      "sha256": "c0b612929b15fd498b984d8d98d1b082a3eb294be5aa8eb9cb53b67cf152f465"
+    },
+    {
+      "path": "client/src/components/ui/field.tsx",
+      "size": 6057,
+      "sha256": "f093424ca5eadf43d46b020ed780aee7aa5f6d90d0b48fb50c031e3d7b0528c7"
+    },
+    {
+      "path": "client/src/components/ui/form.tsx",
+      "size": 3801,
+      "sha256": "0157362d572713567d989b726277879e75c60c24684ade4aef854867dc2fac48"
+    },
+    {
+      "path": "client/src/components/ui/hover-card.tsx",
+      "size": 1525,
+      "sha256": "bdfe831708e7de6b9fbb14d8fe5af5a0985f67cff3c2b5755b4b570c3b4e7ad5"
+    },
+    {
+      "path": "client/src/components/ui/input-group.tsx",
+      "size": 5066,
+      "sha256": "f62f2be2ad4c2c7711e7b25b0d6c03572f7871cb4022e9f4f6860dcd77dd9e57"
+    },
+    {
+      "path": "client/src/components/ui/input-otp.tsx",
+      "size": 2253,
+      "sha256": "45fc7fed882aa5024d8eea52d9b392d13b1d80f2b7f846365bc2586e3d16253d"
+    },
+    {
+      "path": "client/src/components/ui/input.tsx",
+      "size": 2728,
+      "sha256": "0aaad971269e84519fb14928a70777db539b4cacf9f145fecd905ba483a199c6"
+    },
+    {
+      "path": "client/src/components/ui/item.tsx",
+      "size": 4513,
+      "sha256": "89f2ed48c2270064d63e0a40f755c1da14e99e7db46bceac56d6dee7b45b8798"
+    },
+    {
+      "path": "client/src/components/ui/kbd.tsx",
+      "size": 866,
+      "sha256": "4f8f3e521b2b007643b8a2c8f86cf547bd87e703dc2bed067083ca48f901d6ad"
+    },
+    {
+      "path": "client/src/components/ui/label.tsx",
+      "size": 602,
+      "sha256": "7fdad17d8e83912ad0cfc372c551a901ab98523ef17c0792a17c592a147db732"
+    },
+    {
+      "path": "client/src/components/ui/menubar.tsx",
+      "size": 8405,
+      "sha256": "53fb1c058fabaf0cfb3fb2cfdb9b17ccc8762376d62cc011150d919209b82c1a"
+    },
+    {
+      "path": "client/src/components/ui/navigation-menu.tsx",
+      "size": 6680,
+      "sha256": "aafccbe2b05d9f80b7d007301b51aaede4692efc468304c5fb11b21cd0c0ef43"
+    },
+    {
+      "path": "client/src/components/ui/pagination.tsx",
+      "size": 2726,
+      "sha256": "8f0d822b4688eb131e37fbf2330e19b269ab6487583be3249b98f3b68bb07928"
+    },
+    {
+      "path": "client/src/components/ui/popover.tsx",
+      "size": 1629,
+      "sha256": "5e7bec05904d9091a7b53963f5b49660bf3564b02a057ef8640ab6855d6e32fd"
+    },
+    {
+      "path": "client/src/components/ui/progress.tsx",
+      "size": 731,
+      "sha256": "2297e3c13d5b2a04a9164c3900c8cae2e477c07ebed35c4bbda98d1232ab7b7e"
+    },
+    {
+      "path": "client/src/components/ui/radio-group.tsx",
+      "size": 1459,
+      "sha256": "025f03d81d4e304eb27d94e6517f37072a3941df8f8603ac55cfb42b17cd99ef"
+    },
+    {
+      "path": "client/src/components/ui/resizable.tsx",
+      "size": 2023,
+      "sha256": "52e1027a4b4a5f70f0479f69fe40046dfa112952b7e568292727e1618348ee80"
+    },
+    {
+      "path": "client/src/components/ui/scroll-area.tsx",
+      "size": 1637,
+      "sha256": "793c5d69e6e5ce8bcbe453b8834d53f3a90839fc8e8e1f9fe5f77e7626566677"
+    },
+    {
+      "path": "client/src/components/ui/select.tsx",
+      "size": 6297,
+      "sha256": "40945665ec8363e55ae38f26115ee763cbc5548bed585eed569d406cbc4b7a75"
+    },
+    {
+      "path": "client/src/components/ui/separator.tsx",
+      "size": 690,
+      "sha256": "23bbf3f74d01f55533f6f22ebbc2b299137421e07896cb7af21245756a10c27e"
+    },
+    {
+      "path": "client/src/components/ui/sheet.tsx",
+      "size": 4107,
+      "sha256": "ab22e38f2cf312a31a84fb91f7e912f0da66e809f6e1ae675ec6cf0c8ec0ba61"
+    },
+    {
+      "path": "client/src/components/ui/sidebar.tsx",
+      "size": 21947,
+      "sha256": "782ec3ba8a570c9a0f6ec12d7e1c1efdee5e02eb2da7aa46131c734e7f7bbea8"
+    },
+    {
+      "path": "client/src/components/ui/skeleton.tsx",
+      "size": 279,
+      "sha256": "1f75b999a5ad2f65e8fb807faa2b3fccef9eb333996fb4c9030575dac7393091"
+    },
+    {
+      "path": "client/src/components/ui/slider.tsx",
+      "size": 1988,
+      "sha256": "9c458646597836916678a9bce2f3064d4d5cdb0c65d32d92bc71f57d7569fb6b"
+    },
+    {
+      "path": "client/src/components/ui/sonner.tsx",
+      "size": 561,
+      "sha256": "a65fe9ded89363ec546f28401a26caec1a3aa38c52259eb829cfa33723dbe3a5"
+    },
+    {
+      "path": "client/src/components/ui/spinner.tsx",
+      "size": 335,
+      "sha256": "ecd836d476573adb4403747c3457339276805433c20eacf3408303b76ec283ff"
+    },
+    {
+      "path": "client/src/components/ui/switch.tsx",
+      "size": 1168,
+      "sha256": "688cccb52220e05f6770fb5e8296375f2a784bcf6585eb26a721a9f29361ab60"
+    },
+    {
+      "path": "client/src/components/ui/table.tsx",
+      "size": 2445,
+      "sha256": "085566291cf03c9fea590aa9b77339feebf04cf8ce23494a3667f84bf4811e29"
+    },
+    {
+      "path": "client/src/components/ui/tabs.tsx",
+      "size": 1963,
+      "sha256": "394b62295cee5185e858bcabfafcd5a7287910944c962fbd9c1c06444b22cedb"
+    },
+    {
+      "path": "client/src/components/ui/textarea.tsx",
+      "size": 2613,
+      "sha256": "ffbad961ec02f9ca23f4157daa1a4139960c4477a245c216a793b4692dec142c"
+    },
+    {
+      "path": "client/src/components/ui/toggle-group.tsx",
+      "size": 1936,
+      "sha256": "92e7640e30c4ae3ffd775e9a3d845327c26d9ce0f9f39555c2e7cfc2c8671c4d"
+    },
+    {
+      "path": "client/src/components/ui/toggle.tsx",
+      "size": 1563,
+      "sha256": "a922c5e0534b9fd556ff8a8b56e25f7d24544be6050472cdd1ea003b8a0f3e47"
+    },
+    {
+      "path": "client/src/components/ui/tooltip.tsx",
+      "size": 1886,
+      "sha256": "6f0c581e2018d676e43c0b4b5aeb62d3fe68e65907cf748548208d75ac212677"
+    },
+    {
+      "path": "client/src/const.ts",
+      "size": 643,
+      "sha256": "65400a775381cec4ae19f68373550f1318fb45970313ad91e91a1adc42b0bacc"
+    },
+    {
+      "path": "client/src/contexts/AccessibilityContext.tsx",
+      "size": 4327,
+      "sha256": "3c6e244cfd36166b45ab51500acf7f79dde73a3d4f8bfab7d756a88494fe673d"
+    },
+    {
+      "path": "client/src/contexts/ThemeContext.tsx",
+      "size": 1467,
+      "sha256": "e025cdb51ad747757235b16dccbb39b5e949cdf93fa9a822ff81ef6e32f65924"
+    },
+    {
+      "path": "client/src/hooks/readAloud-extra.test.ts",
+      "size": 3632,
+      "sha256": "e3497c5efac9eea7b3c2ffc8712b4c2ff3797c8110c5f4649db6ec88596fc184"
+    },
+    {
+      "path": "client/src/hooks/readAloud.test.ts",
+      "size": 1982,
+      "sha256": "70c2952cea84447f3369ea5c700fb29b2177e367ce2a16cf16d8925639c7c353"
+    },
+    {
+      "path": "client/src/hooks/useComposition.ts",
+      "size": 2333,
+      "sha256": "674c515075a2f318d4ec2291313ba552488de0b2c1aac7f36f3d71c4e34d434e"
+    },
+    {
+      "path": "client/src/hooks/useCropDialogViewport.ts",
+      "size": 4867,
+      "sha256": "27d001e1b8cdf6945bb075f778fb6ea60a2eb6d07748087b11bb8fa910baba80"
+    },
+    {
+      "path": "client/src/hooks/useMathRecognition.ts",
+      "size": 6899,
+      "sha256": "c44edaf1c55ff91c86b2a8c3720072f50996fa9d14c425cd0260e6c040188e0f"
+    },
+    {
+      "path": "client/src/hooks/useMobile.tsx",
+      "size": 584,
+      "sha256": "464e778a9da49481e3c6dac4f92ff589e01349b33063a74c45435cfeed81e1c0"
+    },
+    {
+      "path": "client/src/hooks/usePersistFn.ts",
+      "size": 471,
+      "sha256": "60cc14f39a3f8b212d7baf4beeaf35f81e09a7c78e4154bcca3477e010879511"
+    },
+    {
+      "path": "client/src/hooks/useReadAloud.ts",
+      "size": 26852,
+      "sha256": "4d79cd5537c1b09a353b3285d6e598b776bcdbe19ac0467a66242f5fa83fa79a"
+    },
+    {
+      "path": "client/src/hooks/useRecorder.ts",
+      "size": 9484,
+      "sha256": "659bd11a409eb968e021e7c10805b7afee8cf4979f8c7d483a25d490b592e29f"
+    },
+    {
+      "path": "client/src/index.css",
+      "size": 20062,
+      "sha256": "db67737d780380e65fe42ce79fa1cc835cad0967b449d2c664950a3b367e988e"
+    },
+    {
+      "path": "client/src/lib/aiClean.test.ts",
+      "size": 4207,
+      "sha256": "207b0c0bd39fcd3b31d7c7e4d69b44a5f8e91bdc7199245ca712772a2ce2e4e5"
+    },
+    {
+      "path": "client/src/lib/aiClean.ts",
+      "size": 5235,
+      "sha256": "afdd3cd4419ce664e4f104b5f35365a04cb8f77788ad4fcc62a5c4e291ab8b8c"
+    },
+    {
+      "path": "client/src/lib/aiTranscribe.ts",
+      "size": 5474,
+      "sha256": "8cc9289aa9db8316fe7d570e39907de7fac9eb060926509260673c99b5d58eb2"
+    },
+    {
+      "path": "client/src/lib/aiVerify.ts",
+      "size": 5666,
+      "sha256": "9157cbb3d0a54154e63a31d576b419dc0d97137237bd8f39b1c3bdd1f64fb590"
+    },
+    {
+      "path": "client/src/lib/appNotationLatex.test.ts",
+      "size": 7418,
+      "sha256": "b3edad665005b3e5f3c5b35398d5d49e63dbb9d6176e4ac9cbcccca732157c1a"
+    },
+    {
+      "path": "client/src/lib/appNotationLatex.ts",
+      "size": 17043,
+      "sha256": "b403d76f8d61e8d96306167920975d5ee1cbfd71786ef3b43da2316a1ad5275a"
+    },
+    {
+      "path": "client/src/lib/audioNotation.test.ts",
+      "size": 1140,
+      "sha256": "3767e7932c81a25b29ed17bdce5fa51639279ac6408fb8b207a6509d87f17052"
+    },
+    {
+      "path": "client/src/lib/audioNotation.ts",
+      "size": 1413,
+      "sha256": "10c246b788990d59b3c93b6264d5c72fd0d1c8ba5fab78268752875ddc75417b"
+    },
+    {
+      "path": "client/src/lib/auditAIGuidata.test.ts",
+      "size": 7346,
+      "sha256": "219f65407f80fa983e5fe75bc22d4d7a338720cdbc82a780720f9135bca57c6d"
+    },
+    {
+      "path": "client/src/lib/auditEspressioni.test.ts",
+      "size": 4885,
+      "sha256": "cbe25e06ed13ce2eeedac6b211f38867b0ae034a789a182106af6636c607fb55"
+    },
+    {
+      "path": "client/src/lib/bench/bracketBench.test.ts",
+      "size": 8584,
+      "sha256": "983cbedb70bc7179fc85d88c90ef2310c65cfe3151d958b8132bb63f10db28f8"
+    },
+    {
+      "path": "client/src/lib/bench/bracketSeq.test.ts",
+      "size": 5358,
+      "sha256": "070af1c5bd3e99507e256a680d478fc7c92e0c5c15044e6dae5ad240a733a1f3"
+    },
+    {
+      "path": "client/src/lib/bench/cases.ts",
+      "size": 3413,
+      "sha256": "5efa7c00e81fe4c8c4b6769026009137d1df67b504fd8036332e6ea7af2c789c"
+    },
+    {
+      "path": "client/src/lib/bench/classAudit.test.ts",
+      "size": 3693,
+      "sha256": "81dcc207585ea4aea6a63be3ad246bf022e18b8bebf49aef1c9ed025aa55f728"
+    },
+    {
+      "path": "client/src/lib/bench/compare.py",
+      "size": 3420,
+      "sha256": "0e2258b53f95e704d8f2d30f2a34ba6766b51c56e206a1ef5470907efee3475b"
+    },
+    {
+      "path": "client/src/lib/bench/curlyStats.test.ts",
+      "size": 8479,
+      "sha256": "865e5fe3f748b67d3fc5e13ef1e6f6b62c849cac9e27445dbace3faee52739e1"
+    },
+    {
+      "path": "client/src/lib/bench/debug.test.ts",
+      "size": 1941,
+      "sha256": "47605bafe50c0180a989f54072942d19162a52cfd9eb387470d93f8021e0a8fe"
+    },
+    {
+      "path": "client/src/lib/bench/digitFP.test.ts",
+      "size": 1804,
+      "sha256": "529713b51e4f21f4fd82c4b0398766d264aaaa3b7d9ea4823d00fb3a7f52e793"
+    },
+    {
+      "path": "client/src/lib/bench/eightProbe.test.ts",
+      "size": 2315,
+      "sha256": "2c9df4a1517fd745a8af432ba25be19033556d591d91500d8810720621a4dc1e"
+    },
+    {
+      "path": "client/src/lib/bench/exportStrokes.test.ts",
+      "size": 2107,
+      "sha256": "d24d38078f700a112b1c665c04bdb478be5186dd949624df5edcd8cb05e73a4f"
+    },
+    {
+      "path": "client/src/lib/bench/fixtures/foto-esercizi.png",
+      "size": 92746,
+      "sha256": "8771a264aa27b95f7e1a37f8677b3c0c01e85d7edd6f76733ad34351793411cf"
+    },
+    {
+      "path": "client/src/lib/bench/fixtures/foto-parentesi-frazione.jpg",
+      "size": 6979,
+      "sha256": "f3edd9f33db915e19bd3a97f5aadd520fe1dd5971904555d1ce7a93f83914b2d"
+    },
+    {
+      "path": "client/src/lib/bench/fixtures/uiCanvasRoundOpen.json",
+      "size": 8105,
+      "sha256": "e9646fd62e19d3da387f8b6c0ac80e5e1f3264351ec6d86dd8e448ee4a1f20b5"
+    },
+    {
+      "path": "client/src/lib/bench/genBracketFixtures.cjs",
+      "size": 2710,
+      "sha256": "9ed879e5b58e4a209830fed39a68818bf02f150c523f9b9a68cd4ec2d0832d8f"
+    },
+    {
+      "path": "client/src/lib/bench/geoAudit.test.ts",
+      "size": 7263,
+      "sha256": "e4b8096a23e8e038691da6470ea8de3dc4959b7d57a298fd5fc947aadcb42dc7"
+    },
+    {
+      "path": "client/src/lib/bench/handBench.test.ts",
+      "size": 6965,
+      "sha256": "7a327af1222dbc059423592b284c32e576b90a071ed520aeb5fadf8f7757b21c"
+    },
+    {
+      "path": "client/src/lib/bench/letterBench.test.ts",
+      "size": 9177,
+      "sha256": "d354080a7fb59d89dec9eaacc04f32218c5e93e77c8a3835130d7435b9c142a0"
+    },
+    {
+      "path": "client/src/lib/bench/modelProbe.test.ts",
+      "size": 4560,
+      "sha256": "8a0967d978e72b84a1b78405a47689ddcf54f991d30b29286231aeaf3b2433f3"
+    },
+    {
+      "path": "client/src/lib/bench/nodeEngine.ts",
+      "size": 2904,
+      "sha256": "87d46621272de4e11e5ada308be88c8cb91c32a66245768c7b455fdddad13e19"
+    },
+    {
+      "path": "client/src/lib/bench/oneCase.test.ts",
+      "size": 2209,
+      "sha256": "479ced63db2cfae927e79a003973087fa8f31a23078b7cf3f5a76e6fe261d7d6"
+    },
+    {
+      "path": "client/src/lib/bench/photoBench.test.ts",
+      "size": 10406,
+      "sha256": "937b6e82c22f8d9ac9e4be43b3934167ca21bfa12492c5be83669245d5c33b9e"
+    },
+    {
+      "path": "client/src/lib/bench/photoSweep.sh",
+      "size": 1240,
+      "sha256": "2ef9269a50a1099a6439d7112a302be65392d2475863326012df2b4e6b1e70c0"
+    },
+    {
+      "path": "client/src/lib/bench/photoSweepSummary.py",
+      "size": 578,
+      "sha256": "284275a0039eff7303c82b9a14d895f352657f8c9f61bcda0ab81fef9029cd9a"
+    },
+    {
+      "path": "client/src/lib/bench/photoSynth.py",
+      "size": 10048,
+      "sha256": "02aefe444a1b2d83951ac8ce789f9fb3bee72f6880d80d21ce379e5c3832a079"
+    },
+    {
+      "path": "client/src/lib/bench/photoVariants.py",
+      "size": 1857,
+      "sha256": "b2e252b748f4a4eb0ea93b8d29d9708b47d023885c148a6eab3d94aa9cc62883"
+    },
+    {
+      "path": "client/src/lib/bench/pipeProbe.test.ts",
+      "size": 6277,
+      "sha256": "8ef4f45ead8f9686e55574a9dcebbacb2f4b990283b7956f2b1fc6d999569e7e"
+    },
+    {
+      "path": "client/src/lib/bench/profileClass.test.ts",
+      "size": 1538,
+      "sha256": "999983713e7067c78ea817171ea36f3b47f5de263b0368d095bebbf9244c89a8"
+    },
+    {
+      "path": "client/src/lib/bench/profileStats.test.ts",
+      "size": 2430,
+      "sha256": "692179e728d7aeb3fedfa95010eab3ac0eb15d3cf39ac0aba7cb4adfdb19a550"
+    },
+    {
+      "path": "client/src/lib/bench/ptsProbe.test.ts",
+      "size": 896,
+      "sha256": "4e1ee9746b5be9f22595304b8754a4ac9aadc6520754733d077baa141759294c"
+    },
+    {
+      "path": "client/src/lib/bench/roundStats.test.ts",
+      "size": 2963,
+      "sha256": "02ad874acc16e95b4c1d096143d6ea83afdd67b648c04a37adb7bcdd1ce3c205"
+    },
+    {
+      "path": "client/src/lib/bench/shapeProbe.test.ts",
+      "size": 5310,
+      "sha256": "659aabe40bf0178d0d77769eee8863f6eddad385c0620f1c43eac4c4b55fbe4d"
+    },
+    {
+      "path": "client/src/lib/bench/smoke.test.ts",
+      "size": 1336,
+      "sha256": "dd053fc5938ebfeeaa8aacdae31f0a8d1b69e9532ee3fc84f74417db7ad73b4c"
+    },
+    {
+      "path": "client/src/lib/bench/squareRise.test.ts",
+      "size": 3831,
+      "sha256": "024a97f0ab0219c693e4c9080697ba445af05e12828b139e2b2fcc7c9945d5e8"
+    },
+    {
+      "path": "client/src/lib/bench/stageDump.test.ts",
+      "size": 3662,
+      "sha256": "edc6160ef40e82cf9a34fe5a10b9f73afc5c4b32200fa2bf6660bf1f0e57c27d"
+    },
+    {
+      "path": "client/src/lib/bench/strokesCheck.test.ts",
+      "size": 2858,
+      "sha256": "7960b8ed8a5dcb2fe324a71a47d938175b39a072dd257dddf1b80eaf08caf1c9"
+    },
+    {
+      "path": "client/src/lib/bench/synthDeterminism.test.ts",
+      "size": 792,
+      "sha256": "3f56340f87d34779c99d7cdfb1e8852aad71bd4d44a31ca0af18e3f4609a21d7"
+    },
+    {
+      "path": "client/src/lib/bench/synthInk.ts",
+      "size": 19364,
+      "sha256": "08eba5f8ae1834dced0ba4f11f18d5685f4bc4d1585c4c2cb601cdb1f28d63d6"
+    },
+    {
+      "path": "client/src/lib/bench/tipStats.test.ts",
+      "size": 2402,
+      "sha256": "f8045ffb7cfbab1cd856a7f92059b498a130eea3be9fe5801a65056844c485bc"
+    },
+    {
+      "path": "client/src/lib/bench/trace.py",
+      "size": 1592,
+      "sha256": "772bfbc3c0d76f95fb4842f56aae9c7304035a62eb86287e2d6b299730cfeb09"
+    },
+    {
+      "path": "client/src/lib/bench/trace.test.ts",
+      "size": 4651,
+      "sha256": "de03f6962e213356b9dd5c561d6f40c21f48b6407abfeb9fdee7c10d608c33cc"
+    },
+    {
+      "path": "client/src/lib/bracketProfile.ts",
+      "size": 19982,
+      "sha256": "b5c29089f7cd7573a9fcb16806cba5148e755383cbce10db5b4184d41a9ff6f9"
+    },
+    {
+      "path": "client/src/lib/bracketTick.test.ts",
+      "size": 3510,
+      "sha256": "009e7eab1cbf6203a5e56c9e744d6fea9a3358939b369831c3cb38b1a7e344be"
+    },
+    {
+      "path": "client/src/lib/chainSelection.test.ts",
+      "size": 2475,
+      "sha256": "204fdc13eba4a8ee9647f365a2d618928454706b48547dabbe4c703e8c6d1258"
+    },
+    {
+      "path": "client/src/lib/composeLatex.test.ts",
+      "size": 9795,
+      "sha256": "fdd91ece19a4ae56668c08794c257c521d15ae697e8abde5ebe6f36bf89502f4"
+    },
+    {
+      "path": "client/src/lib/composeLatex.ts",
+      "size": 18211,
+      "sha256": "767a5a1719ef296161c1c4eb2831515a229c1223dd6875c1b5531baabf0228f7"
+    },
+    {
+      "path": "client/src/lib/conti-audit.test.ts",
+      "size": 5910,
+      "sha256": "0923e051ea4fccfe12022aa0937e8099535b82500fa87586ef999d645da16276"
+    },
+    {
+      "path": "client/src/lib/criteriDidattici.ts",
+      "size": 3865,
+      "sha256": "8c9e77114a0aefa0af8aed2f6e7bf3205482bc00ad1e54c0f9cf23a616fe59ca"
+    },
+    {
+      "path": "client/src/lib/criterioRadicale.test.ts",
+      "size": 1467,
+      "sha256": "21ac4c2703607e245774163017dd825697d6d69a8cc1e3a133a4ca0f6c02d58a"
+    },
+    {
+      "path": "client/src/lib/cropBox.test.ts",
+      "size": 1880,
+      "sha256": "5a8db110f03ec6e8bfdc7aa905d2e9c4e6c3fc30eaaa15a3962cad069b0c42a6"
+    },
+    {
+      "path": "client/src/lib/cropBox.ts",
+      "size": 2105,
+      "sha256": "89cf51024d1a24aabe68b7daf115af7c11e28e480130c8e3b7740ae25105e8b7"
+    },
+    {
+      "path": "client/src/lib/curlyVariants.test.ts",
+      "size": 5459,
+      "sha256": "88653ce774201ac90abf7d6baecdaacae2ca22fda88c309c3fc9e5fae40066a5"
+    },
+    {
+      "path": "client/src/lib/decimaliFedeli.test.ts",
+      "size": 837,
+      "sha256": "4fe16197b982ce3fce8335294796714f7328abe54c36a997f4d6f21c2bb78210"
+    },
+    {
+      "path": "client/src/lib/dotCross.test.ts",
+      "size": 2847,
+      "sha256": "36ebf3e43e2e888bcd421953666654590ad1ddc5f1622355de9859f5a4c38051"
+    },
+    {
+      "path": "client/src/lib/dotSigns.test.ts",
+      "size": 15043,
+      "sha256": "b5b6cf4b594b60a9d46447a29cb9ab2370e7a0d1bcde3eed108d0748e6bdbeed"
+    },
+    {
+      "path": "client/src/lib/dotSigns.ts",
+      "size": 20356,
+      "sha256": "599cdac734e9af571ac57c26ce54f29e46b48902441c980757002c0d823b77f4"
+    },
+    {
+      "path": "client/src/lib/dotSignsScale.test.ts",
+      "size": 2822,
+      "sha256": "ba6eb15283893480dbd24ee4cd0983d07696c396b270dd13d137e1aeaa0bcf1e"
+    },
+    {
+      "path": "client/src/lib/eightScale.test.ts",
+      "size": 4538,
+      "sha256": "52091427686cab1ce7d584823f6428d6f97359b9cce6bccbf81047f8f36ee0cc"
+    },
+    {
+      "path": "client/src/lib/esponenti-negativi.test.ts",
+      "size": 4409,
+      "sha256": "134b7a0652907f76c34c5997067abd9ff6c22b45d546ba54acc6c00275e53736"
+    },
+    {
+      "path": "client/src/lib/espressioni.test.ts",
+      "size": 23565,
+      "sha256": "c0ee21b33a26b112f19e2adb2fb1cf0f9d223ff1d2769aa906d366d21d449779"
+    },
+    {
+      "path": "client/src/lib/espressioni.ts",
+      "size": 180702,
+      "sha256": "68c02bd4b4397ee78d14760f3114211334eafb2a00c233fb92c0595a07e668f0"
+    },
+    {
+      "path": "client/src/lib/exprOcr.test.ts",
+      "size": 6547,
+      "sha256": "1e0512a0256932ee42b1f601b85f8ec27c756b21c91f1ac9f52ca0359b124b15"
+    },
+    {
+      "path": "client/src/lib/exprOcr.ts",
+      "size": 15124,
+      "sha256": "98ac83ecc4619310c244d9c44e41225ae27ba5169dfda6f694233900d307a468"
+    },
+    {
+      "path": "client/src/lib/exprOcrFedele.test.ts",
+      "size": 3696,
+      "sha256": "78a4eaa901f5f29ba98c8bc420f5a392730aa73933b5cb2507e6b96fbb7ba4f9"
+    },
+    {
+      "path": "client/src/lib/feedback.test.ts",
+      "size": 2833,
+      "sha256": "b961b839e28800a3a5d2064558367d7bac9af1a440ffbf574e80f7fe0b531c7f"
+    },
+    {
+      "path": "client/src/lib/foto-periodici-radicali.test.ts",
+      "size": 3775,
+      "sha256": "83a6ecf0b013099c51754466512c24c2d56d28febd8afeb173c114adb624e388"
+    },
+    {
+      "path": "client/src/lib/foto-radice-fuori-virgola.test.ts",
+      "size": 5556,
+      "sha256": "ee2fe21c5a42ae695ffc3b1d49bb067de37218c52e36d8000434fb8cbb4e8047"
+    },
+    {
+      "path": "client/src/lib/fracDots.test.ts",
+      "size": 1396,
+      "sha256": "30a1e25ba0a15fa30c38f61e02ff416235712fa516c6a59ef092a081d9405d79"
+    },
+    {
+      "path": "client/src/lib/fracDots.ts",
+      "size": 2260,
+      "sha256": "fd6c1b88d3b03432374caa1650a12953a7a021441cc897d90e482981c7f945ed"
+    },
+    {
+      "path": "client/src/lib/fratte.test.ts",
+      "size": 5417,
+      "sha256": "3212ac9cd6b97d17f4cf7b3f8f25f8d44f0b2cedf336e7b4154cfe085e728ec0"
+    },
+    {
+      "path": "client/src/lib/fratte.ts",
+      "size": 29979,
+      "sha256": "27f16feb7474847eb4b4d4a2469a2218305d80d47969b14de7b814e3c8748e4c"
+    },
+    {
+      "path": "client/src/lib/frazioniConAtomi.test.ts",
+      "size": 3048,
+      "sha256": "fd4258bb38b752d0d572f60a4aa3b3a10ff0a31dd06a0dc31a02e4569a8313eb"
+    },
+    {
+      "path": "client/src/lib/frazioniConAtomi.ts",
+      "size": 5202,
+      "sha256": "dfc156291a9fba8179a4887a4eae6e701fe19fb2097c30bc9d15907040592d1b"
+    },
+    {
+      "path": "client/src/lib/frazioniLetterali.test.ts",
+      "size": 3899,
+      "sha256": "04ee4641b96383bdee60ac3455e93e4ee809a5451c865c1f11d71a2ad817a629"
+    },
+    {
+      "path": "client/src/lib/gapClose.test.ts",
+      "size": 2728,
+      "sha256": "e52286f13304f53fccfcc1f1a7803b2ffd0a0a1a991542f337538173bf855162"
+    },
+    {
+      "path": "client/src/lib/gapClose.ts",
+      "size": 3827,
+      "sha256": "589bad981f73a1d27d19d8699ba62cf62873098b0649928405bdbe41a91994fc"
+    },
+    {
+      "path": "client/src/lib/glyphScale.test.ts",
+      "size": 4466,
+      "sha256": "ebb1407236ae85777b594986cd1941f099c06338eebd803466fe7e1b4221abb7"
+    },
+    {
+      "path": "client/src/lib/glyphScale.ts",
+      "size": 6970,
+      "sha256": "7944c4703edba1f654092bb7e4e3fa937cb8421587c4fb646fe1f0aa790ab76c"
+    },
+    {
+      "path": "client/src/lib/heightSync.ts",
+      "size": 7744,
+      "sha256": "5991f5de0ede23b33e6d674ef20de23b7dc01e57a4f7754485e8034d99f628cd"
+    },
+    {
+      "path": "client/src/lib/imagePrep.ts",
+      "size": 8742,
+      "sha256": "7c0719f283555089e005b913f6c1b4fc4e5a766601d91f0264db8e1d3308df53"
+    },
+    {
+      "path": "client/src/lib/indici-negativi-foto.test.ts",
+      "size": 2917,
+      "sha256": "8e258db1758a0d9c49541111f9358ba5e190aebf0bcb024c7f81c6fea6a6b825"
+    },
+    {
+      "path": "client/src/lib/indici-oltre-12.test.ts",
+      "size": 1182,
+      "sha256": "929679a520459c9ebbc353cb13d84b285d4f4107b932d14881b48b5e9611094d"
+    },
+    {
+      "path": "client/src/lib/inkContext.ts",
+      "size": 9685,
+      "sha256": "d6399c3d18e9c212f32f65ba4b72b7e5629f63c970b4ca0a249bf105c5a16ec1"
+    },
+    {
+      "path": "client/src/lib/inkSigns.test.ts",
+      "size": 35450,
+      "sha256": "99dc82fee64e2590c1d45ba1d69443bccd8bdc9dbdff92e4c4b9a29cf2f24904"
+    },
+    {
+      "path": "client/src/lib/inkSigns.ts",
+      "size": 64579,
+      "sha256": "5324ebe02c6fca69702b94c9855bc34f7c3406466febbacc679eb46a23f4acf9"
+    },
+    {
+      "path": "client/src/lib/keyboardNotation.test.ts",
+      "size": 9432,
+      "sha256": "64982c1e3fa16625b3d14ac53cc5c7ed4bc53c2b81e048ccd29a32d1adf605c6"
+    },
+    {
+      "path": "client/src/lib/keyboardNotation.ts",
+      "size": 13171,
+      "sha256": "d9a811b27a8880879af101b5110c47107631ac2c79eaaa2f4033ab91c1e6a87c"
+    },
+    {
+      "path": "client/src/lib/moduliSottintesi.test.ts",
+      "size": 4032,
+      "sha256": "59988ead4d1098023f803e2fcb2c3108ec1fa836de5bba69a8e2c812bd72f1c4"
+    },
+    {
+      "path": "client/src/lib/moduliSottintesi.ts",
+      "size": 5000,
+      "sha256": "2306ead90b1880a041802abfe079a202167a41d109a8001b13bad96a655a3c55"
+    },
+    {
+      "path": "client/src/lib/numericRadicalEquality.test.ts",
+      "size": 1152,
+      "sha256": "dde1d79be47a670b13ec3e3ef9a6ae54f2c426b555b6f80bf07a5c905ae12abe"
+    },
+    {
+      "path": "client/src/lib/numericRadicalEquality.ts",
+      "size": 24861,
+      "sha256": "9f6749613c5c4e91da35244e44e6bb268d4ba41da95f8154e74c454cd9755555"
+    },
+    {
+      "path": "client/src/lib/ocr.ts",
+      "size": 32960,
+      "sha256": "d38ad5127be3913237463b088a8eb1d7056f1434fb668f7f8dd207ade4d0a327"
+    },
+    {
+      "path": "client/src/lib/ocrDecimalConfidence.test.ts",
+      "size": 1959,
+      "sha256": "6da63296352648d1639870a5fb0e03a7d91323c03e85588c8464fb05977cdef4"
+    },
+    {
+      "path": "client/src/lib/ocrDecimalConfidence.ts",
+      "size": 1852,
+      "sha256": "79479155d1046400600eeaecbdb2c72c3b78e2dfaf4b8cd6a7acceea07f7dcfe"
+    },
+    {
+      "path": "client/src/lib/ocrGeometry.fixture.json",
+      "size": 159256,
+      "sha256": "6f5c57ebf305508eca39ab17d50d8c1028719e6d9a678ca2f46b3d11f7a84ac1"
+    },
+    {
+      "path": "client/src/lib/ocrGeometry.test.ts",
+      "size": 10345,
+      "sha256": "4cb49b1a7f3135d7125bb0715f03c906d92a0760a490268073167c56690cd504"
+    },
+    {
+      "path": "client/src/lib/ocrGeometry.ts",
+      "size": 11659,
+      "sha256": "29216f3bd2ebff3354a34db636c014854eec33cc3373895d3ca7a79b194dfce0"
+    },
+    {
+      "path": "client/src/lib/ocrReconcile.test.ts",
+      "size": 8096,
+      "sha256": "201adf04a8427f93a571255d3a203298783ef4a758d3aaf563a16e11f84c78e3"
+    },
+    {
+      "path": "client/src/lib/ocrReconcile.ts",
+      "size": 36310,
+      "sha256": "5fdcf299a536ed66c217b62af953c02e86b9ed5dca584993c1e0eda35dc59dbe"
+    },
+    {
+      "path": "client/src/lib/parenNearFrac.test.ts",
+      "size": 5114,
+      "sha256": "0ff208bccd8fb2d12094c108bbf1e1b7aaebfcd72094e11378690267ec6c8adf"
+    },
+    {
+      "path": "client/src/lib/periodicNotation.ts",
+      "size": 1805,
+      "sha256": "0da3c8a28d73d5d95732c35225f0fa9a93668ac7668b790ea42bdff07c8d86b5"
+    },
+    {
+      "path": "client/src/lib/periodicPhotoRegression.test.ts",
+      "size": 4292,
+      "sha256": "07576f997ef0399760a3940fde56b7b611f7535662172aa2777cad294423a3e1"
+    },
+    {
+      "path": "client/src/lib/photoFractions.test.ts",
+      "size": 4157,
+      "sha256": "8b052ceb654432a44296333ebd308fe338f43661d2f327b1852db0aefd164761"
+    },
+    {
+      "path": "client/src/lib/photoFractions.ts",
+      "size": 20312,
+      "sha256": "5d1e2148808f4d50c67c2dc2bc7461a9b4da945e25a2bda2bfe32290d5454a40"
+    },
+    {
+      "path": "client/src/lib/pieceCount.test.ts",
+      "size": 3523,
+      "sha256": "40d0d30246c2851b6324efe3d1d573829641465482e3b80300cb9252cfef5ab1"
+    },
+    {
+      "path": "client/src/lib/pieceCount.ts",
+      "size": 1760,
+      "sha256": "8e2f168ffd0d63a37dde65e78dd726ace71f309e6cd704cf1ebf1277fda49443"
+    },
+    {
+      "path": "client/src/lib/plusSigns.test.ts",
+      "size": 2039,
+      "sha256": "c46478c70fa1254976c48396144c1eeac9f5d3a3c991f09884a8ad6890ca4785"
+    },
+    {
+      "path": "client/src/lib/plusSigns.ts",
+      "size": 3281,
+      "sha256": "0a3312e88c645684b6b78549ff2a9e62ca6d47f9ea58d156087471a706ca9e59"
+    },
+    {
+      "path": "client/src/lib/potenza-frac.test.ts",
+      "size": 2629,
+      "sha256": "861107e891e5310947a433195217f780d6bd75eb2fa6d43c1edc8fcdf02b25e4"
+    },
+    {
+      "path": "client/src/lib/potenza-neg.test.ts",
+      "size": 2435,
+      "sha256": "6ef5f6156bb88778ecc3214e0eb885831a5d374f3ddb9c39a6599ded6e4ac215"
+    },
+    {
+      "path": "client/src/lib/potenza-prodotto.test.ts",
+      "size": 2522,
+      "sha256": "9ec348a88ab2279957e173eb4ae4481c94f70056a70fd426fda00e9983ddd859"
+    },
+    {
+      "path": "client/src/lib/potenza-prop.test.ts",
+      "size": 4032,
+      "sha256": "9ac9c1d53189eb7739766ddc4aaeeaf253f376d0f6028cdcda80b324aad0e91f"
+    },
+    {
+      "path": "client/src/lib/potenze-simboliche.test.ts",
+      "size": 8355,
+      "sha256": "56ac35031c660616dd3396321f2282a397507223954562bbc7b671114084757f"
+    },
+    {
+      "path": "client/src/lib/printedBracket.fixtures.ts",
+      "size": 8109,
+      "sha256": "f5fe3be5965a297a114a41c9ccad17bac557bc908d36f8cf3bd5cdbe8f07607a"
+    },
+    {
+      "path": "client/src/lib/printedBracket.test.ts",
+      "size": 2396,
+      "sha256": "5690f4b6a13d5ac0e2191733b9348cd5954ae715023a820114eae723e48ae877"
+    },
+    {
+      "path": "client/src/lib/printedBracket.ts",
+      "size": 7332,
+      "sha256": "959286ccd0c4ffd1cdb1603d0fbfe617c996f2405319bc90f01119cb48504659"
+    },
+    {
+      "path": "client/src/lib/prodottiNotevoli.test.ts",
+      "size": 5090,
+      "sha256": "dec98f113cdb8fa3afc2b30f66a7cf8b77faf204205948599e87097b1511963e"
+    },
+    {
+      "path": "client/src/lib/progressiveExpression.ts",
+      "size": 18846,
+      "sha256": "88f13c82322541acc4e4b7e33e5a5806bb39f32d53afa74238ad98afb07ee808"
+    },
+    {
+      "path": "client/src/lib/promptSicuri.test.ts",
+      "size": 6479,
+      "sha256": "6c237da73f77260ff601195d4ea0a7c1e15cf5e06f540b9ea5b4eafb8c0f9aaa"
+    },
+    {
+      "path": "client/src/lib/promptSicuri.ts",
+      "size": 20519,
+      "sha256": "9b74146ec42e41ec1501507704796566f89580eed9a3d9f4fd8a27811567441c"
+    },
+    {
+      "path": "client/src/lib/quaderno.test.ts",
+      "size": 1876,
+      "sha256": "51aa89b48174b63e9162c19ae283c51abc1b7e3b3b1e0aa38b8f1354f3d0f495"
+    },
+    {
+      "path": "client/src/lib/quaderno.ts",
+      "size": 1414,
+      "sha256": "0e4cefd22993c5e4979b9f03671ef264ffa21c12a2bf66fda74dbbcb5f7a15d8"
+    },
+    {
+      "path": "client/src/lib/radicaliCostruzione.test.ts",
+      "size": 3887,
+      "sha256": "aefc0d5cfa412c9d70e7ae35959b68fdacbeaa815b9ead8c9089463f19572735"
+    },
+    {
+      "path": "client/src/lib/radici-divmonomi.test.ts",
+      "size": 3273,
+      "sha256": "b6bc449ff3457d718926f0619390cee58aafcfb253f9ff5d12824a0af2240fac"
+    },
+    {
+      "path": "client/src/lib/radici-prop.test.ts",
+      "size": 2509,
+      "sha256": "9a29a525436582c360e2c5ec42a0b1aa4fc2ffea9f45148e68b62839c0eefc80"
+    },
+    {
+      "path": "client/src/lib/radici.test.ts",
+      "size": 3377,
+      "sha256": "11cc3e349f7cc6b2fb25d685bb1029c6b75fb68d67d4ffae5cfbbc14cb89b16c"
+    },
+    {
+      "path": "client/src/lib/ramoCondizionato.test.ts",
+      "size": 5796,
+      "sha256": "78639856210bd0b03ee9abaa9badbbda93186c8c369b887bff7c86b513f0c33b"
+    },
+    {
+      "path": "client/src/lib/ramoCondizionato.ts",
+      "size": 9815,
+      "sha256": "f0ef6853177a174bbcdd7e6a475c851e8814e8dbc8d7ad7d181aaf19e0fb0c0b"
+    },
+    {
+      "path": "client/src/lib/recognizePiece.ts",
+      "size": 3450,
+      "sha256": "727f35c65b7ce302345ddbf451d7ef29d863504ceaabfab69d04abd8a30f6dfe"
+    },
+    {
+      "path": "client/src/lib/recognizePipeline.ts",
+      "size": 26333,
+      "sha256": "9deaa894ea904b6207e87bc581913c0e96c18fe92ea35c0585e801338f244f08"
+    },
+    {
+      "path": "client/src/lib/rifinisciFrase.test.ts",
+      "size": 893,
+      "sha256": "87834ce4357dffa70e83d25149dde719a7b70c9583d002dca640af36e72ef7a3"
+    },
+    {
+      "path": "client/src/lib/roundOpeners.test.ts",
+      "size": 12597,
+      "sha256": "9aa27d4f5e3a406347e18b7a39693fadb99f46e68d793c540035d80fa52f982d"
+    },
+    {
+      "path": "client/src/lib/smallScaleBrackets.test.ts",
+      "size": 4354,
+      "sha256": "0374bed91afebfe11e43759aecfac581abe30c170492c8379dbc0dd601caef32"
+    },
+    {
+      "path": "client/src/lib/smallWriting.test.ts",
+      "size": 986,
+      "sha256": "60cfa728189fe9df0b2b30f2b15dbaf36ee7bf1dc8bea4bd9eeb83c504289f61"
+    },
+    {
+      "path": "client/src/lib/smallWriting.ts",
+      "size": 1061,
+      "sha256": "cfa53f80b7bd357f31fe5745774458f44cc38970f9a1901c03bc632f16af2286"
+    },
+    {
+      "path": "client/src/lib/soluzioneCalcolatrice.test.ts",
+      "size": 2909,
+      "sha256": "85506039446d374b462a379d951d9a18e13a726791bdba789364b5b130fff3e3"
+    },
+    {
+      "path": "client/src/lib/soluzioneCalcolatrice.ts",
+      "size": 2731,
+      "sha256": "1db7b3c4d5f7a942a1cf26527347fa9f90f77619dbe0022007d75106363f4509"
+    },
+    {
+      "path": "client/src/lib/sonda-div.test.ts",
+      "size": 719,
+      "sha256": "8f806c670cbff0cebfefea2d1abdbd9e5ae74f1ddc220c7da56d2533a80563c1"
+    },
+    {
+      "path": "client/src/lib/sonda-paren.test.ts",
+      "size": 763,
+      "sha256": "6314caa6ac59a77c674c924636e8b1db3e24d73e04bc91328f17428991e0f0ab"
+    },
+    {
+      "path": "client/src/lib/squareBrackets.test.ts",
+      "size": 31349,
+      "sha256": "729792552b1bda5676ae77b8d5e80a9d34283b0d9189190a2ba26428dceac23b"
+    },
+    {
+      "path": "client/src/lib/squareBrackets.ts",
+      "size": 96342,
+      "sha256": "77d69c7a84fc706740f57a076fb7d8c5378e85dd6bedb06c75ca091de289628a"
+    },
+    {
+      "path": "client/src/lib/strokeRecorder.test.ts",
+      "size": 4325,
+      "sha256": "98a3200bf90df13a96a740f6d40cc487f1890ff9d5137c251f7fb5e7e6412751"
+    },
+    {
+      "path": "client/src/lib/strokeRecorder.ts",
+      "size": 2498,
+      "sha256": "8e04ef4112658118782a047d3b66b08de804f6aa9f0bf4cfc95c84eb5aa385af"
+    },
+    {
+      "path": "client/src/lib/supScript.test.ts",
+      "size": 24079,
+      "sha256": "1135eb8cbcb6f707f174f0637c585def40844f0956163ce382f0bb454e3a0966"
+    },
+    {
+      "path": "client/src/lib/supScript.ts",
+      "size": 40010,
+      "sha256": "66d7f1c88d7a09bdc3990a35ab9bfaf88daf2738d730fe4eb12e484f722288ed"
+    },
+    {
+      "path": "client/src/lib/utils.ts",
+      "size": 169,
+      "sha256": "d1f1e0d62cb8d8d1e04c26e14de842d8a151f75812d81b046c65b5d1fe8e4b27"
+    },
+    {
+      "path": "client/src/lib/verificaSostituzione.test.ts",
+      "size": 2732,
+      "sha256": "d3e3509342f087e79c24d0e2cb816266ae4df50fe0ad41091914a2744e5fa7ff"
+    },
+    {
+      "path": "client/src/lib/verificaSostituzione.ts",
+      "size": 9350,
+      "sha256": "ae5e9a0d6e4d330c9b2aa20e20e45bedbdd1df2cc60b332155dadee9c62308c8"
+    },
+    {
+      "path": "client/src/main.tsx",
+      "size": 672,
+      "sha256": "8f6d30089d32e3dfcaea275ecf6261830c50d8d6356410e99ccc07351cf9c7b4"
+    },
+    {
+      "path": "client/src/pages/EsercizioFrazioni.tsx",
+      "size": 58095,
+      "sha256": "2c416f5fd34c4b2c16b067832d67ba1611e5866098a5c2444dc0169d71f1fbad"
+    },
+    {
+      "path": "client/src/pages/EspressioniExercises.tsx",
+      "size": 127162,
+      "sha256": "e45ff952bc3f3403b29b8bd9eb0d0c48049966bb0a2cc2900b7d2a3544c6b63e"
+    },
+    {
+      "path": "client/src/pages/Home.tsx",
+      "size": 905,
+      "sha256": "5c8eb1ffcbc15891d54a1fc184577fd325f469e4a4486b946e7c5e5b97154a80"
+    },
+    {
+      "path": "client/src/pages/NotFound.tsx",
+      "size": 1756,
+      "sha256": "8d463442b5f0514d4dacc4b1f195599f7d22254f6240488cead16ec8ac80888f"
+    },
+    {
+      "path": "client/src/pages/WelcomePage.tsx",
+      "size": 6361,
+      "sha256": "c323f350b26f27f4f8104d9e3d0d4ef20ab8368b19d039fc0983b36a882d1054"
+    },
+    {
+      "path": "client/src/pages/auditStudentValidation.test.ts",
+      "size": 1735,
+      "sha256": "1e6bd533628a900f107651e949f79dd4d4631dbecd721e0056bfdd8079ea35e4"
+    },
+    {
+      "path": "client/src/pages/feedbackPrimoColpo.test.ts",
+      "size": 5514,
+      "sha256": "dab06f1e7342b8366fc611f77fce4f625c4c03417aaf511cf3bf3c6471e8e40e"
+    },
+    {
+      "path": "client/src/pages/parentesiFrazione.test.ts",
+      "size": 3420,
+      "sha256": "7d650cb866fd62e73829f4bd208eaefccd091cac3e31bce43c3c8c0845e2a684"
+    },
+    {
+      "path": "client/src/pages/pdfNumeriPagina.test.ts",
+      "size": 2003,
+      "sha256": "d3a8e830f3adb7ead0e9df42d4ea861f2e9110c8de1ac9c2ccb1549fc73e0388"
+    },
+    {
+      "path": "client/src/photo-crop.css",
+      "size": 1375,
+      "sha256": "f1c23ad66d6b2383eb1887500eb987830d48c25d8607c983ae6208c66115b91b"
+    },
+    {
+      "path": "components.json",
+      "size": 388,
+      "sha256": "8be0e54515838be398164884e96319b52bcfcbd52b2e63171d51df4131cfcb03"
+    },
+    {
+      "path": "cornice-dinamica/README.md",
+      "size": 12599,
+      "sha256": "4e0b266f35da16f03d09d02f5503501461ebc64f76c6db61bc9762241dc84a95"
+    },
+    {
+      "path": "cornice-dinamica/embed-espressioni-autosufficiente.html",
+      "size": 110671,
+      "sha256": "5576c6782c2ca17e345bed40dd6ee992641efe6a8235269fe0e82bf736a97a33"
+    },
+    {
+      "path": "cornice-dinamica/embed-espressioni-dedicata.html",
+      "size": 24291,
+      "sha256": "d7cd547a6f0ba53815a12dd0adcc16276cf02b3a91a16a74b46d8cbcf1968a4c"
+    },
+    {
+      "path": "cornice-dinamica/embed-espressioni-lite.html",
+      "size": 6628,
+      "sha256": "2ef1d4dae440b1606f94aacce21d21dab3dc18f1e00536a292a672dc865c8ce6"
+    },
+    {
+      "path": "cornice-dinamica/embed-universale.html",
+      "size": 6488,
+      "sha256": "f2bc1a06940b8c7c7bfeaf099e78067ffc6d0d6abebc0ca1f8ee53fdd0f70a54"
+    },
+    {
+      "path": "cornice-dinamica/fonts/OpenDyslexic-Bold-v2.woff2",
+      "size": 41344,
+      "sha256": "c7e66ec88f44e5b29dd005c50b7422f5298ed20b3f141f8e884271d186a16e5b"
+    },
+    {
+      "path": "cornice-dinamica/fonts/OpenDyslexic-Regular-v2.woff2",
+      "size": 39912,
+      "sha256": "2ebd6cbe970e7fae3451bf236fc5b33bef133152f392ec2dfe0a9095ba6cffd0"
+    },
+    {
+      "path": "cornice-dinamica/generate_embed.py",
+      "size": 3372,
+      "sha256": "48e004abfb17d7ec1a6bf7beab7952ceeb134a6e8c7119bfd573bd84695687cc"
+    },
+    {
+      "path": "cornice-dinamica/generate_test_impermeabile.py",
+      "size": 3776,
+      "sha256": "5af1334469e072b7f8e156f2230a496893532ac8feb37ccbcddc0f37454df318"
+    },
+    {
+      "path": "cornice-dinamica/test-dedicata.html",
+      "size": 2260,
+      "sha256": "169929c81bc96f8d385254bdecc51c49c58931fa312364f2dadfa90056f6cb8d"
+    },
+    {
+      "path": "cornice-dinamica/test-impermeabile.html",
+      "size": 46313,
+      "sha256": "a27960ecdd0345b1ffb1db1c7e18d52f03b0ae5d7f7b0ab8c7ca8f952e8593b1"
+    },
+    {
+      "path": "debug-ia-save.script.ts",
+      "size": 740,
+      "sha256": "4d1ec64338583cfe0504da17859a2f77d43c034a775eeaff2942911a0da4d082"
+    },
+    {
+      "path": "debug-periodici.script.ts",
+      "size": 1268,
+      "sha256": "2e939a9b213c80e9a5db650484ffb3452a3fb4e23f7c47611e8f8c81afc7bb88"
+    },
+    {
+      "path": "debug-rad.ts",
+      "size": 437,
+      "sha256": "afc9fa56b1af85dc4c02e3c584369e1c933140ca07f3d78d42a80a6cb3a80c5e"
+    },
+    {
+      "path": "debug-rad10.ts",
+      "size": 437,
+      "sha256": "4961e0e719a0959c3b1976769f90c359d46f4f7e4b4cae87b82dc7273e9ab0fa"
+    },
+    {
+      "path": "debug-rad12.ts",
+      "size": 1010,
+      "sha256": "ae4ef43ca6857370635c3af6195e677b9acc63ba2adbf0522ea9b93b38196771"
+    },
+    {
+      "path": "debug-rad13.ts",
+      "size": 699,
+      "sha256": "4f365dd1393da2f3a05c582a3cc21e583652cb7018e0d2a672082cf749056b20"
+    },
+    {
+      "path": "debug-rad14.ts",
+      "size": 1274,
+      "sha256": "fd718622dee00b0b5d92a8d3521cef8c8f37c084b081cc16b67b8e151add6a40"
+    },
+    {
+      "path": "debug-rad15.ts",
+      "size": 503,
+      "sha256": "1af48288e49907e94fb1dad749a2199a72c63f15fd1e23f85381b43193f922ee"
+    },
+    {
+      "path": "debug-rad16.ts",
+      "size": 1003,
+      "sha256": "f50a6412f40207c009f1215adde1378ab6c69801540e0cbc8659ede1bd4fc714"
+    },
+    {
+      "path": "debug-rad17.ts",
+      "size": 509,
+      "sha256": "08fa2e52a62b96842a4af77f9554ebc705ed3d752aa358f1834f1ce28fb018d2"
+    },
+    {
+      "path": "debug-rad19.ts",
+      "size": 570,
+      "sha256": "1cbc4b26c76d6d0677b3961488c97d36c81f76da946df5a344b775083127e803"
+    },
+    {
+      "path": "debug-rad2.ts",
+      "size": 438,
+      "sha256": "58a17af0a1c76f22aeb0b91bb6e51b7c24b914df81a99debd4a6c2ca538d8bce"
+    },
+    {
+      "path": "debug-rad3.ts",
+      "size": 804,
+      "sha256": "9c4dc0df2c848bc6ae7ed6f578918eb8a99102594eaf6547d7dcdd6e48717f5a"
+    },
+    {
+      "path": "debug-rad4.ts",
+      "size": 617,
+      "sha256": "9fe6abed2d4d06a916608c9f6f10d1af9b680aa44ddd3185c03f80978cf1787e"
+    },
+    {
+      "path": "debug-rad5.ts",
+      "size": 371,
+      "sha256": "3be0b3014343f45158ac088398ae2c1a0a2670716cb11c9e9124777bc3631dd4"
+    },
+    {
+      "path": "debug-rad6.ts",
+      "size": 326,
+      "sha256": "02bcd2c15f10cb364c9b88b15298833f98118e54c1f81734a779cace4803d109"
+    },
+    {
+      "path": "debug-rad7.ts",
+      "size": 453,
+      "sha256": "06ace396049568338fe5ef3673984ff429fc60216d18dd6cc140ec70df39eb48"
+    },
+    {
+      "path": "debug-rad8.ts",
+      "size": 396,
+      "sha256": "b1715b0397c2109a5172659e90f5b9d20274f1aebae59735a511d7f7c8bb2017"
+    },
+    {
+      "path": "debug-rad9.ts",
+      "size": 593,
+      "sha256": "e6234c89718e466f8fdba641f56350adef703833387cabc132bc334f966c1dc8"
+    },
+    {
+      "path": "debug-ripara-profile.ts",
+      "size": 538,
+      "sha256": "77d2b48763dee936c86fca76b204ade7b9b282f660e37506a3aacf12ca4b1e3f"
+    },
+    {
+      "path": "design.md",
+      "size": 4339,
+      "sha256": "9a51453802011f27fd338d2f89863e91cfa476509ec64e900ff1f1057e5d48c1"
+    },
+    {
+      "path": "docs/ALTEZZA-COMPATTA-PREVIEW.md",
+      "size": 4121,
+      "sha256": "f46f1aa5a882dc5fe3fbf66c1e9b6206499eabc5d0820c5ee3ea3205e071e89a"
+    },
+    {
+      "path": "docs/COLLAUDO-ESPRESSIONI-2026-11-07.md",
+      "size": 4794,
+      "sha256": "07cf6e0286a344fd68e59f8fc57084e1ac9c686288b8cc5e02fff1e84dce11bc"
+    },
+    {
+      "path": "docs/COLLAUDO-FRATTE-FATTORE-ESTERNO-ANTEPRIMA.md",
+      "size": 5504,
+      "sha256": "b09e11e923ce9c0aa1a79343883768219568a0bed6ab0087776905f95da0f7ac"
+    },
+    {
+      "path": "docs/COLLAUDO-PDF-PRIMO-COLPO-ANTEPRIMA.md",
+      "size": 3139,
+      "sha256": "6222f3ef97fd7059231e4da9b7fe738b07e07f14dab698ec5ec9289eedbfcd55"
+    },
+    {
+      "path": "docs/COLLAUDO-PULSANTI-2026-11-07.md",
+      "size": 3492,
+      "sha256": "7656354b1c8fd5ea9265a020a16c974b8f38c9ffd2eb48ca6cd500c4a7f6f19f"
+    },
+    {
+      "path": "docs/CORNICE-BLOG-2026-11-07.md",
+      "size": 2695,
+      "sha256": "cc120a76b19b721587feac5a56f0af8ad803ed599bd9f3b5a137ceed00f23333"
+    },
+    {
+      "path": "docs/DEPLOY-8756.md",
+      "size": 3955,
+      "sha256": "2792c87aa33b1eb2e06bf9c96bb20d83652f752bcd976c626b949320e981bf6b"
+    },
+    {
+      "path": "docs/DEPLOY-8999.md",
+      "size": 2850,
+      "sha256": "96a566ae7788d4b036539afa8224d4ff21161b7c9852900c7899874e8f82f758"
+    },
+    {
+      "path": "docs/DEPLOY-9019.md",
+      "size": 3525,
+      "sha256": "a489349bf19b83a5af48bad0542285e4e1198ea26108926fe7c7b57251f43f2c"
+    },
+    {
+      "path": "docs/DEPLOY-9029.md",
+      "size": 2996,
+      "sha256": "a84cca50edf7849cf6857592ef7d5f67c03b467cfa99a8e50bc185a81c7717bc"
+    },
+    {
+      "path": "docs/DEPLOY-9033.md",
+      "size": 2991,
+      "sha256": "46feca306b12c6aa77758fe4cb339e1b8df0cef77378bd081f5ec6f7ab31db0d"
+    },
+    {
+      "path": "docs/DEPLOY-9038.md",
+      "size": 3609,
+      "sha256": "dad42266f09524f214d97c97846848938ebebc2465c6deef4c8ec5bca97bb574"
+    },
+    {
+      "path": "docs/DEPLOY-9052.md",
+      "size": 4180,
+      "sha256": "5151fc441be76074e143e4f8802d111f90ee36eb5c6424a1f1d8d907ec04874a"
+    },
+    {
+      "path": "docs/DEPLOY-9055.md",
+      "size": 5619,
+      "sha256": "eac84a5e4144db4f25a2675704c3bd3fedf5b54ed4839f2bdb9be1cb06feb582"
+    },
+    {
+      "path": "docs/DEPLOY-9058.md",
+      "size": 3878,
+      "sha256": "a8cd162e6e70ec9122a1e35cf9a808503359700908e05786bc48de43cf034df5"
+    },
+    {
+      "path": "docs/DEPLOY-9062.md",
+      "size": 6879,
+      "sha256": "065bca346de3ae87c318f447265cc5607ce56dc91a9494fc1f5c4e70e12756be"
+    },
+    {
+      "path": "docs/DEPLOY-9073.md",
+      "size": 4479,
+      "sha256": "102f1f18f85f036b0ec37ade128a2994a50d150c8dac80142a333f99720258b4"
+    },
+    {
+      "path": "docs/DEPLOY-9094.md",
+      "size": 4830,
+      "sha256": "2e2a0714479838efeb69b38e9611399bfacc03b31103ccc6ea5320376cd44fea"
+    },
+    {
+      "path": "docs/DEPLOY-9096.md",
+      "size": 3304,
+      "sha256": "f771897504970496be59cf6bb440626c2d1da6a8f98bcb3e8bdf710d38c1d13f"
+    },
+    {
+      "path": "docs/DEPLOY-9097.md",
+      "size": 3438,
+      "sha256": "ff45b5476f23377b87636fc811965fbaa10a6c54ce87392178d640d603bb6879"
+    },
+    {
+      "path": "docs/DEPLOY-9197.md",
+      "size": 3971,
+      "sha256": "f6db941111891120de9cad602ebd3b27f8aa4ba595adc54bb067a87eb60d415d"
+    },
+    {
+      "path": "docs/DEPLOY-9212.md",
+      "size": 3283,
+      "sha256": "fd1a6d4aa8dbb28e97421d516f83120e55e8a5d06e102c1d53323124b4377b7f"
+    },
+    {
+      "path": "docs/DEPLOY-9213.md",
+      "size": 2841,
+      "sha256": "389893e8246ba7e34c2ccf7b45f4c993ade993312de20caaeffd572558034cd7"
+    },
+    {
+      "path": "docs/FEEDBACK-PRODOTTI-ANTEPRIMA.md",
+      "size": 5531,
+      "sha256": "19c706b6c2b2382a2e1009483a9df40a47ca4c121f4cda90cea9e1ee3b572eba"
+    },
+    {
+      "path": "docs/ISTRUZIONI-FRAZIONE-ANTEPRIMA-2026-11-07.md",
+      "size": 3148,
+      "sha256": "e7dd0976a804b00a7e52f8dfa0b23ce64ad963ba099e21320c3e55c1d630e203"
+    },
+    {
+      "path": "docs/LETTURA-ACCESSIBILE-ANTEPRIMA.md",
+      "size": 2480,
+      "sha256": "3e6316366b046ff6bf15684392f2999e578043939d86d83edce20dba04772e61"
+    },
+    {
+      "path": "docs/PACCHETTO-ESPORTABILE.md",
+      "size": 7100,
+      "sha256": "a5acf9f6d4d5b44feeed731b757e6b8c6ce3af7124654591b8a3cdb9d8825867"
+    },
+    {
+      "path": "docs/TERZA-PAGINA-ADATTIVA.md",
+      "size": 4691,
+      "sha256": "4a463f7c10117d388be141a7f6418951fa47e65eecdb3f10b07f07e1c520e25f"
+    },
+    {
+      "path": "docs/VERIFICA-RIORDINO-2026-10-29.md",
+      "size": 3785,
+      "sha256": "a2eb0cfadf7069de26b50f7bc0cadddfee1f6ff3babe4dfb27d95e729b7cb2b9"
+    },
+    {
+      "path": "docs/storico/ADATTARE-prima-riordino-2026-10-29.md",
+      "size": 10994,
+      "sha256": "bedc449e6e9cf4c413d0689e845e2dc67528a2438c16ececa639616596f6b732"
+    },
+    {
+      "path": "docs/storico/AGENTS-prima-riordino-2026-10-29.md",
+      "size": 15626,
+      "sha256": "6913697192104ce2122d273b4ee684a252f857c857d1c85c1aa9c954235ca3f1"
+    },
+    {
+      "path": "docs/storico/README-prima-riordino-2026-10-29.md",
+      "size": 29548,
+      "sha256": "5e588d142f2e0410e4a41df3f8cbe850e348351d63c1d1282ee8f677c1dc4d1a"
+    },
+    {
+      "path": "docs/storico/RENDER-prima-riordino-2026-10-29.md",
+      "size": 6170,
+      "sha256": "ce879157533b03916fba129e9efdd0201ebd041012da2efb17a5f89732da25b0"
+    },
+    {
+      "path": "drizzle.config.ts",
+      "size": 310,
+      "sha256": "675ae2d3901b7c4402c535ab88fa5395923a10e297d4b121b562e724897115c5"
+    },
+    {
+      "path": "drizzle/migrations/meta/_journal.json",
+      "size": 51,
+      "sha256": "b52519952bdce9dfa93d698a12c2a65930c947be8dbca741e6d7295d0e0ebb38"
+    },
+    {
+      "path": "drizzle/schema.ts",
+      "size": 709,
+      "sha256": "82a6e8231695270969de12d8933eb56d0bf11f3d280db1d8ea06eb5fbee2040b"
+    },
+    {
+      "path": "famiglie-espressioni.test.ts",
+      "size": 11874,
+      "sha256": "517571d3e406c992c2da55c13d08ac2b98fc803508153245636b3685fc3fe694"
+    },
+    {
+      "path": "package.json",
+      "size": 4005,
+      "sha256": "5688aed6aa8e365b5c3464eae27b1aa416768da650ced09c81c4f80f97ea92b8"
+    },
+    {
+      "path": "patches/wouter@3.7.1.patch",
+      "size": 918,
+      "sha256": "4e16e6ff3fde7d6c1024d3e0c8605dc9eb6afb690d0d49958c2f449091813072"
+    },
+    {
+      "path": "pnpm-lock.yaml",
+      "size": 305237,
+      "sha256": "6d28b17e070a4c32e9b34dde0bd68c31ec75634224f66aabf3fa054d1ad13b1a"
+    },
+    {
+      "path": "render.yaml",
+      "size": 1503,
+      "sha256": "23582a4b27e72b8b2a07a448d94cf4ec6cd964e76d2634148cbde6488d1eea89"
+    },
+    {
+      "path": "scripts/canone-client.mjs",
+      "size": 538,
+      "sha256": "7b4d7a63dfd8d658ebd2fbbae595f7a4da6fcefce9dd848fd0bb23639d312584"
+    },
+    {
+      "path": "scripts/clona-app-equazioni.py",
+      "size": 6174,
+      "sha256": "f50ca7d9da3e7dc487235a356f9710a645c06619427091a1441fb0b30363ef86"
+    },
+    {
+      "path": "scripts/debug-box-indice.mjs",
+      "size": 818,
+      "sha256": "38d42148e3f76669be8e89a54387346674dda8930e3fd9918fd524127ad5688a"
+    },
+    {
+      "path": "scripts/debug-box-verifica.mjs",
+      "size": 732,
+      "sha256": "f13606455b8c02e04013df9d78768db856fff6c43e56b34a092bd90234b79942"
+    },
+    {
+      "path": "scripts/debug-conto-box.mjs",
+      "size": 392,
+      "sha256": "7412dfe8ca56be3148a34e4e4f7df061a797dced01702411ab0a37f00cf846e7"
+    },
+    {
+      "path": "scripts/debug-guida-radicali.mjs",
+      "size": 694,
+      "sha256": "d7e8aac378ec09083dd2548336df5463095a056cc8aba8384a6be281c1fe11b4"
+    },
+    {
+      "path": "scripts/debug-indice-negativo.mjs",
+      "size": 942,
+      "sha256": "5dc18fad240cbba08198176a7e07bf76f3f5c2956e90891a9ecd7d260e1e45b2"
+    },
+    {
+      "path": "scripts/diag-assoluto.mts",
+      "size": 1495,
+      "sha256": "e8825ca7e321e00d02a66017f36791b6d3589222542b27cecbe81abbc0274741"
+    },
+    {
+      "path": "scripts/diag-letterali-radicali.mts",
+      "size": 2303,
+      "sha256": "fdb789c8f30bb4c7634d1b0c4d66a6aabfe2f0d839396dcfd23d213805142efe"
+    },
+    {
+      "path": "scripts/diag-ma-cos.mts",
+      "size": 2230,
+      "sha256": "d2ffded1ff5d0118c65c7414beb341a7d5ddffdfe4b3108599fc3ca27cf1991a"
+    },
+    {
+      "path": "scripts/diag-radicali-fedele.mts",
+      "size": 1399,
+      "sha256": "8a853b927462776c0173da850cdbd3da1b1cf8a45e405d9e91502abd1237b605"
+    },
+    {
+      "path": "scripts/diag-radicali-foto.mts",
+      "size": 3811,
+      "sha256": "e3befa628d029298a7178528fd179100c6e3e02f540f4993544954b8d5d3cb1f"
+    },
+    {
+      "path": "scripts/diag-radicali-struttura.mts",
+      "size": 2202,
+      "sha256": "b31273ed57f8c1a3285c5c3a59e070cec699de4f0e8a32103b94cd41e867029f"
+    },
+    {
+      "path": "scripts/diagnosi-indici-diversi.ts",
+      "size": 1184,
+      "sha256": "0b855083775965d6f9fc461bd21293ebf28e53d491ea9c4dfda7cb27863d794f"
+    },
+    {
+      "path": "scripts/export-verified.py",
+      "size": 10617,
+      "sha256": "4a5ce99a276d42f08e3883193d3721e5fb0d04d0597dcaae75772edaf9e7bcb5"
+    },
+    {
+      "path": "scripts/prepare-cornice-preview.mjs",
+      "size": 2187,
+      "sha256": "b320e38793890addd68a2de72bc0a4bb38e5fbff85d29847a223a80aba872556"
+    },
+    {
+      "path": "scripts/repro-foto.mjs",
+      "size": 915,
+      "sha256": "50d1848cbd9867146a7f273b577c496edce12ba9bf4649845779862a29182f79"
+    },
+    {
+      "path": "scripts/sonda-parse-indici.ts",
+      "size": 1596,
+      "sha256": "f354723aa2afbf671fcab020a57813c4a476ed063a1501a99522603b854d8e24"
+    },
+    {
+      "path": "scripts/sync-env.mjs",
+      "size": 1885,
+      "sha256": "ab6f5462f264ec69b5915328d4167c28ad9d669f5d45326b8cd8ccffe9063ee5"
+    },
+    {
+      "path": "scripts/test-eval.mjs",
+      "size": 286,
+      "sha256": "6ef2dfe1b327cab70198a42ef8ff88ae25f781eae17a6e97acaafa9bc5bffb3d"
+    },
+    {
+      "path": "scripts/test-flip.mjs",
+      "size": 551,
+      "sha256": "efb9172d6808257243e538ed71dec3ee8b58d423bcfbc37d23422a69e1e2a4ee"
+    },
+    {
+      "path": "scripts/test-neg.mjs",
+      "size": 315,
+      "sha256": "e280412d485038a8bf07b61e87576e6d05c667baf0eee367d1d1e913fb4f2351"
+    },
+    {
+      "path": "scripts/test-negexp.mjs",
+      "size": 937,
+      "sha256": "d67d579d431f6cc6c74188c25502c9d829227bb00f425891766f553e9bbaabe4"
+    },
+    {
+      "path": "scripts/test-potenza-base.mjs",
+      "size": 941,
+      "sha256": "86437e999d18f8af642c9a786458729411f47b1d75ff3fc7dc8088ea5b35eb9b"
+    },
+    {
+      "path": "scripts/test-radici-prop.mjs",
+      "size": 975,
+      "sha256": "179b08b3561f83de09d74cb38e28971db4d09a05a1a997c17e7b57007e8fa2e2"
+    },
+    {
+      "path": "scripts/test-radici-prop2.mjs",
+      "size": 923,
+      "sha256": "cc0cf78d600b40cfeca0d8f7b3659c3b299ac58ed40e1e34703f155092c7e7d0"
+    },
+    {
+      "path": "scripts/test-radici.mjs",
+      "size": 448,
+      "sha256": "511cbcf6d7febafa3238b8c01b04d1dd9255cbb50629463da60483bf063081a9"
+    },
+    {
+      "path": "scripts/test-regress.mjs",
+      "size": 616,
+      "sha256": "be5bbe4646d1ead9b08649dee5a482c83e5ed081aaa00a68cd12df06ad2c7f33"
+    },
+    {
+      "path": "scripts/test-silent.mjs",
+      "size": 732,
+      "sha256": "ea35029852e17f9e7a8fdbf7a141d0381689b0e42f39dc6b807eb75a1f5d50e4"
+    },
+    {
+      "path": "scripts/verify-package.py",
+      "size": 12250,
+      "sha256": "d64867a291746995ca294159540240dbbaa048402144a68bace6789f39f68fae"
+    },
+    {
+      "path": "server/audio.ts",
+      "size": 9200,
+      "sha256": "cc8cdba3557c1857bb01391954e3637d1a491174d59d1b1a2c47e1e44276cefa"
+    },
+    {
+      "path": "server/condizioni-generali.test.ts",
+      "size": 2300,
+      "sha256": "ef2f87d820a5caf60b476a787cf7366fe8da8409b18500949849198056723b16"
+    },
+    {
+      "path": "server/condizioniEsistenza.test.ts",
+      "size": 5765,
+      "sha256": "da80e0f451e2744b079229a8a1bdf7a02b7189f81a18059e49212fd0ae782950"
+    },
+    {
+      "path": "server/correzione-frazioni-con-atomi.test.ts",
+      "size": 2053,
+      "sha256": "b9e9f8801e1018b2683926b16c1217f1608ed31a40ff04d5be9a12efb9e4505c"
+    },
+    {
+      "path": "server/costruisci-ai-mock.test.ts",
+      "size": 3136,
+      "sha256": "ba920d6a1e5ad121a34859173dcdd5b0c87cbddbc9cd589ec6e7c619fa1da28f"
+    },
+    {
+      "path": "server/costruisci-http-mock.test.ts",
+      "size": 12201,
+      "sha256": "238a1d5e3e2c4054b0985c636deaea35a91d06f076e5d4eb1ad29f088d02a694"
+    },
+    {
+      "path": "server/costruisci-semplificazione-extra.test.ts",
+      "size": 3360,
+      "sha256": "44482b0147e65725b0c84cd724ad0b74e8bd918fc934a906a03231d830e72d4a"
+    },
+    {
+      "path": "server/costruisci.test.ts",
+      "size": 7339,
+      "sha256": "543b5e4e5e3219521b59f073bf44652259901381f81192d70fea85aeba45dcb6"
+    },
+    {
+      "path": "server/costruisci.ts",
+      "size": 149295,
+      "sha256": "f09c0a6554a4f39d37a4c7a4d7b53f5fd5b16eeeb7548c717a5059f583f0aebf"
+    },
+    {
+      "path": "server/costruzione-indice-negativo.test.ts",
+      "size": 2068,
+      "sha256": "6832d185ce5607555137bad4cc5764c9537df75153c1811e194103fa5dff5c41"
+    },
+    {
+      "path": "server/db.ts",
+      "size": 545,
+      "sha256": "01b9d8bad9a18121fffd984099d3e99cb6b6db6ecfdfed366b2766a372e07455"
+    },
+    {
+      "path": "server/fixtures/foto-periodici-prefissi-ia.json",
+      "size": 12369,
+      "sha256": "3aedc1dd6da9d96e934daeaf5c8e7caf12544c067a04f06fb14499118c13c4ad"
+    },
+    {
+      "path": "server/foto-costruzione-http.test.ts",
+      "size": 4718,
+      "sha256": "c14d1749f4881a3c31c8ff92beb43090d8391f8d6e599da6a2210a61041b76e2"
+    },
+    {
+      "path": "server/foto-costruzione-radici.test.ts",
+      "size": 2014,
+      "sha256": "f2de70176abf2a7464d390f44c228f31bf428446186d8cf0c357061b731eeb42"
+    },
+    {
+      "path": "server/foto-periodici-lunghi-verifica.test.ts",
+      "size": 1947,
+      "sha256": "33aef843d27b20345b32e6c2867c110a1bcc821fe6916a8e41d76ea6b2499d88"
+    },
+    {
+      "path": "server/foto-prova-impilata.test.ts",
+      "size": 3544,
+      "sha256": "7c95be5ecf0888c29b8d5200b0e6caf7e45dfd9ebd5149108ef61c1e5ad38047"
+    },
+    {
+      "path": "server/frazioniLetteraliGuidate.test.ts",
+      "size": 6497,
+      "sha256": "b6988fa4dea6801f86326fdf3afe6969fb9df9853d1a394bee04199187625dba"
+    },
+    {
+      "path": "server/frazioniLetteraliGuidate.ts",
+      "size": 22064,
+      "sha256": "c87872c4285552e523965d769ab690311b8f4738e55722f4fea30bdc1e0750df"
+    },
+    {
+      "path": "server/generativo-famiglie.test.ts",
+      "size": 8681,
+      "sha256": "c523085631a5fa2c84717f3bc9cd5465d3cb314e0ae91388eeba1b797425aec3"
+    },
+    {
+      "path": "server/guida-radicali.test.ts",
+      "size": 10502,
+      "sha256": "c005d0857ff70ef85a6c7b4c3ec3c769872bbae120e16aa3addc20b11d508b3e"
+    },
+    {
+      "path": "server/guida-radicali.ts",
+      "size": 65095,
+      "sha256": "d8442a779eec2b330eb07ce7ab5fd47bc301345471d1371de84e6357d33df8c7"
+    },
+    {
+      "path": "server/index.ts",
+      "size": 29833,
+      "sha256": "99dc453b204b3fc33bc9e0859d3f895d775590aaf1367be30fd1a58ef3fcdbba"
+    },
+    {
+      "path": "server/indice-comune.test.ts",
+      "size": 6739,
+      "sha256": "8875e419fe56b1fc2959df3a89bb736da0e5be792e949f435e261067d3c80bf5"
+    },
+    {
+      "path": "server/indici-negativi-generalizzati.test.ts",
+      "size": 6483,
+      "sha256": "6998790aa7c4ba95ea1903398be95a8084caed7abd67da05a31132522925b359"
+    },
+    {
+      "path": "server/letterali-radicali.test.ts",
+      "size": 10647,
+      "sha256": "13f8d90b8f41c0166b477301c1aeae378e0b9dba01615a05545933126cf689c6"
+    },
+    {
+      "path": "server/passi-mancanti.test.ts",
+      "size": 8969,
+      "sha256": "cc80942b6e9d5d687e3919061c014ad2330f4af4958e1ce52875d2555a1d235f"
+    },
+    {
+      "path": "server/passiMancanti.ts",
+      "size": 7179,
+      "sha256": "572a2a2f1266aabaa0ce8ba80fd8c14534934d81d5b8df827be9a446cf8d252f"
+    },
+    {
+      "path": "server/perfetti-sotto-radice.test.ts",
+      "size": 2210,
+      "sha256": "203d8ef8b094fa5342bc67f482b2f529eaf193662800aeb6a0bca7443b61ce65"
+    },
+    {
+      "path": "server/periodici-generatrice.test.ts",
+      "size": 2230,
+      "sha256": "00e8a938bde2786aa95c6cd661425c5d5575f249051b19eafe0a51bbe2c127aa"
+    },
+    {
+      "path": "server/periodiciDaSorgente.test.ts",
+      "size": 4075,
+      "sha256": "185c0c1ad46da7f9e2de9949b64cfc58e5e73a8ea883c51864bb11dc22e5afb1"
+    },
+    {
+      "path": "server/periodiciDaSorgente.ts",
+      "size": 2377,
+      "sha256": "85a518a2acb2259970e2a93a2528d3e2efe38b6cdd54598486c10820278d8d03"
+    },
+    {
+      "path": "server/probe-razionalizzazione.test.ts",
+      "size": 907,
+      "sha256": "47188a00044a9ebcc8ff1f71c9b08feab0a54113f4fab10135698ba90c701376"
+    },
+    {
+      "path": "server/prodottiNotevoli.ts",
+      "size": 7671,
+      "sha256": "9371c5815285f9e36b7da749a570785f67214d83848b03295e1899ecf4eab7c5"
+    },
+    {
+      "path": "server/radicale-indice-negativo.test.ts",
+      "size": 8904,
+      "sha256": "afbe245d4e65de5050e5ef02b22206cdf9f3069810f1d8c4e41b781ee0ee7b64"
+    },
+    {
+      "path": "server/radicali-costruisci.test.ts",
+      "size": 5852,
+      "sha256": "44cd4ee2b663a3ec775b55e2380d87a1040ebe2e6d0ecf61b9cbe45814e6379a"
+    },
+    {
+      "path": "server/radici-negative-feedback.test.ts",
+      "size": 3398,
+      "sha256": "0459aa405a41456517b895ea46f6295c740f5f2fde7d5faa1457b18e025f213e"
+    },
+    {
+      "path": "server/razionalizzazione-guidata.test.ts",
+      "size": 11046,
+      "sha256": "941fafa9f7e0f34c8ed52cb1aa97bb6a06cc1c190b0322f6bb190a8f8e0e7b27"
+    },
+    {
+      "path": "server/recupero-finali-verificati.test.ts",
+      "size": 5593,
+      "sha256": "776e67cb603760bc5f5540cf8697cb5fb3026979f33551422c75f350e194b556"
+    },
+    {
+      "path": "server/semplificazione-radice-denominatore.test.ts",
+      "size": 1650,
+      "sha256": "823465652cf34f6d3d37cf96cac9d528b4311f99f4566d3cd08cc891af4da979"
+    },
+    {
+      "path": "server/sonda.test.ts",
+      "size": 3287,
+      "sha256": "90206a80898ac876abaeae9668fdf640d13595663ec5d2e2f0833a17e9cfb897"
+    },
+    {
+      "path": "server/trascrizioneFratte.test.ts",
+      "size": 1345,
+      "sha256": "c1e6ccc5f79beecc103ddd2b3d08ef762a937baf31f898887435fe904f4c74c4"
+    },
+    {
+      "path": "shared/const.ts",
+      "size": 99,
+      "sha256": "cc8cc322a6549244df90260eb5ec4472c13fb82357b0a2b1002935ea34d2985e"
+    },
+    {
+      "path": "tests/EXERCISE-SCROLL.md",
+      "size": 3100,
+      "sha256": "abced8f809ac22272f440df3b4201b97971198542ad192a21233ad63d9580372"
+    },
+    {
+      "path": "tests/FEEDBACK-PRODOTTI.md",
+      "size": 5599,
+      "sha256": "7996c0afd5e5d687638cb3af199229237734467a897b9323b291419964d9f9ba"
+    },
+    {
+      "path": "tests/FRAME-CONTROLS.md",
+      "size": 1613,
+      "sha256": "cb331888a8514af0f1fb795a87310ad45a0365575ccaa76929f7ca7c13a024cf"
+    },
+    {
+      "path": "tests/FRATTE-FOTO.md",
+      "size": 1689,
+      "sha256": "0742f05338bff18c3c603757faadfb865691439cf90d73e72a3d5538b663e385"
+    },
+    {
+      "path": "tests/INPUT-SCROLL.md",
+      "size": 2929,
+      "sha256": "c113aa5bbd4efe6bd58bd2ed9b19919973073623ee1461274367331aad00a2fc"
+    },
+    {
+      "path": "tests/PHOTO-CROP.md",
+      "size": 2628,
+      "sha256": "dbf7db01648460464f15e7f795712757dc907ebd6ddf3b1d806d1e981d256c47"
+    },
+    {
+      "path": "tests/STUDENT-FLOW.md",
+      "size": 2350,
+      "sha256": "1250abff957d91745f92c097885bbec26fa3be8579947b1bbc5d9a0373c71562"
+    },
+    {
+      "path": "tests/compact-height-browser-results.json",
+      "size": 54252,
+      "sha256": "5b5442e376693b78f2689b6668d8d97e89e4ea8fafe4d7ea4a51efa41f3894ff"
+    },
+    {
+      "path": "tests/crop-controls.e2e.mjs",
+      "size": 12012,
+      "sha256": "302eb13e53b8d9195b421aa3a08466defcdd15db2c0e57a3344564f32c8436d4"
+    },
+    {
+      "path": "tests/crop-drag.e2e.mjs",
+      "size": 9390,
+      "sha256": "96b15a3436f2f79a91b4382d38519fbb7b2980f2e2760eb51f03226a7efc59a1"
+    },
+    {
+      "path": "tests/crop-mobile.e2e.mjs",
+      "size": 15757,
+      "sha256": "d7ff0d06f1183a887f5c30b0f20b704636a5e37fa7c93efe98d87e561dce19c8"
+    },
+    {
+      "path": "tests/crop-small.e2e.mjs",
+      "size": 3174,
+      "sha256": "6da1808d8136d7db3bae868f6f22c810dc12384219bfd6f34c562adf9b39352c"
+    },
+    {
+      "path": "tests/exercise-scroll-results.json",
+      "size": 75376,
+      "sha256": "37a290b8b06fd4b0a224679715279ec3722bb332f9329b62328e52642ed118a4"
+    },
+    {
+      "path": "tests/exercise-scroll.e2e.mjs",
+      "size": 17705,
+      "sha256": "7799f31c4861a5b7342876508c927d666ad30e25f72456969eb81463cfcdd15c"
+    },
+    {
+      "path": "tests/feedback-fixtures.ts",
+      "size": 1443,
+      "sha256": "bcee7021bc3f56633d3400cf5ec00fb4b8b07adbeb47f10dcf889454d9c556b0"
+    },
+    {
+      "path": "tests/feedback-prodotti.e2e.mjs",
+      "size": 18623,
+      "sha256": "4d1cac8c0e4248a9e2c763c3cb870c581c2b3078a08c87073952d87ba641a981"
+    },
+    {
+      "path": "tests/fixtures/photo-crop/PhotoCropBridge.tsx",
+      "size": 4325,
+      "sha256": "842cbd0abdf63a42bd96600d7a8f356509d2fa50ae07d9f61ae7a65c3b04c2e0"
+    },
+    {
+      "path": "tests/fixtures/photo-crop/PhotoCropDemo.tsx",
+      "size": 1032,
+      "sha256": "f98caecd5b06d11de11fbcd7ed354f73719bb41fe133f7cd611743cc8d2fbe0e"
+    },
+    {
+      "path": "tests/frame-blog-sync.e2e.mjs",
+      "size": 5076,
+      "sha256": "978c7707752f6e8419e7cd2d36cdb06fee56f1ba4326a4a01882bb059b1c98fd"
+    },
+    {
+      "path": "tests/frame-controls.e2e.mjs",
+      "size": 12364,
+      "sha256": "7bbc23b5c3305a42d092bb3ca5356549fbf30dec9d9a46088344120002b809eb"
+    },
+    {
+      "path": "tests/fratte-foto-iframe.e2e.mjs",
+      "size": 13314,
+      "sha256": "c99c2ddbb630bfdb423fe391a2505b3ebef688870b045074f14b5512d8c121b7"
+    },
+    {
+      "path": "tests/input-scroll-page3-regression-results.json",
+      "size": 54288,
+      "sha256": "47dc67caad92148583c85748239e7ecc6a468f63035c83d68c6b797d32feda37"
+    },
+    {
+      "path": "tests/input-scroll-results.json",
+      "size": 1950,
+      "sha256": "172893dc3767556775649d165393aec372d00552d3f5ce0c5e89e846d607d191"
+    },
+    {
+      "path": "tests/input-scroll.e2e.mjs",
+      "size": 13791,
+      "sha256": "fa4f110e6ffe958a47c5c7dec7aa358fbf7345cb14203d5ba61fcfa8d6f397a9"
+    },
+    {
+      "path": "tests/lettura-accessibile.e2e.mjs",
+      "size": 11713,
+      "sha256": "fcd187d32705532171ec5940c99855549c3125a910ba7a6e5e5e36839df53665"
+    },
+    {
+      "path": "tests/mostra-soluzione.e2e.mjs",
+      "size": 6571,
+      "sha256": "e6d09ba8fc96cd05f0fc8afc0cd34c9fa1e0fb6328a414547971c01ad4ce04eb"
+    },
+    {
+      "path": "tests/parentesi-frazione.e2e.mjs",
+      "size": 11864,
+      "sha256": "459675acea5f7f53cf6b949e31073b65ebff63e15d6316fc9e5335c7f9ac7c5f"
+    },
+    {
+      "path": "tests/pdf-intestazione.e2e.mjs",
+      "size": 14415,
+      "sha256": "38c299042273ded079ab2ecc335195aceb5871d7402d7a9160f05c61bbc8edd5"
+    },
+    {
+      "path": "tests/photo-crop-portable.mjs",
+      "size": 9177,
+      "sha256": "ad738fb1f81a0f030ea1eb4a25ac791e2922fe174493ed3bc7a954e47318a7d4"
+    },
+    {
+      "path": "tests/razionalizzazione-fixtures.ts",
+      "size": 1658,
+      "sha256": "860ed63b714268b9dc68e88443facda68b00ae8a4c8a8a99d7a9223688fd42a4"
+    },
+    {
+      "path": "tests/razionalizzazione-live.ts",
+      "size": 1349,
+      "sha256": "177d5cb3bb1ae77ad85e8aebc6598acb532372459d98afea5a8d380013aa5809"
+    },
+    {
+      "path": "tests/razionalizzazione.e2e.mjs",
+      "size": 3940,
+      "sha256": "31d613ac0d3e1ff712b88d2ace6ecf7589855c1dd5272ecab42c3ed52e462bf0"
+    },
+    {
+      "path": "tests/student-flow-fixtures.ts",
+      "size": 5417,
+      "sha256": "006cf41f19eef66b24c1f65c441816946a05ce3a3338d4c5c6fbfdf1c4de2150"
+    },
+    {
+      "path": "tests/student-flow.e2e.mjs",
+      "size": 14480,
+      "sha256": "13cf4f3b6ee52871bf032872f5a1bbbe481bce27fe3480722729c678c0123571"
+    },
+    {
+      "path": "tests/test_clone_equazioni.py",
+      "size": 3994,
+      "sha256": "558e2258216133017d4bd3728b0a5773d7c22b67660fe72ddf3fa20e2065ed54"
+    },
+    {
+      "path": "tests/test_export_tools.py",
+      "size": 10295,
+      "sha256": "5d31e025248bbd8338986a050612f9edf31ece0fbf4c028df6482266a10d40e2"
+    },
+    {
+      "path": "todo.md",
+      "size": 36021,
+      "sha256": "37cd227b702498d9dc0d03b2f3563e7b1a8c0cb9be361f5d4a27665c4470c925"
+    },
+    {
+      "path": "tsconfig.json",
+      "size": 713,
+      "sha256": "5eaf48b3c18551e252d8751a999806230b132067d51d9bf9727a835202f3d422"
+    },
+    {
+      "path": "tsconfig.node.json",
+      "size": 479,
+      "sha256": "1a270cb8020d1fa879262423b9c222fa38d94b830ec61164a46b558ea9d2a526"
+    },
+    {
+      "path": "vite.config.ts",
+      "size": 1205,
+      "sha256": "757a120a0b2bcccbf7ce5efd9706038f680417990863b2f2919ca0060fc41fe8"
+    }
+  ]
+}

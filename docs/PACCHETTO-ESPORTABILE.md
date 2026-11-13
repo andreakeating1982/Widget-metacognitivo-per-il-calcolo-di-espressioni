@@ -1,0 +1,143 @@
+# Pacchetto esportabile: GitHub, clonazione e verifica
+
+Questa guida descrive il pacchetto della produzione **9212** del 13/11/2026 (ora italiana).
+Il checkpoint runtime approvato è `fa1d410`; guide e strumenti possono avere
+un commit successivo identificato nel manifest, senza cambiare il runtime.
+Gli ZIP delle release precedenti sono storici. Per clonazione ed equazioni:
+`GUIDA-IA-CLONAZIONE-EQUAZIONI.md`. Non includere dati o segreti.
+
+## 1. Radice e file obbligatori
+
+Lo ZIP ha una sola cartella `espressioni-monomi-polinomi/`.
+Caricarne il CONTENUTO nella root GitHub, compresi i file nascosti.
+Alla root devono esserci package/lockfile, patch, configurazioni, client,
+server, shared e guide. Lo ZIP non sostituisce un repository remoto.
+
+`MANIFEST-SHA256.json` indica:
+- `source_commit`: commit esatto delle sorgenti del pacchetto;
+- `production_deployment`: baseline funzionale, non un deploy dello ZIP;
+- `payload_file_count`: numero di file sorgenti/guide/asset esportati;
+- `zip_file_entries_including_manifest`: payload + un manifest;
+- `files`: percorsi relativi, dimensioni in byte e SHA-256;
+- esclusioni tracciate e categorie private/generated non incluse.
+
+Il manifest non include il proprio hash. Il checksum esterno copre
+l’intero ZIP. Un hash verifica integrità, non costituisce firma digitale
+né certificazione di origine: conservarlo insieme a una fonte fidata.
+
+## 2. Contenuti da conservare
+
+Font OpenDyslexic, ONNX, WASM, Tesseract, vocabolari, quaderno pubblico,
+patches e lockfile sono DIPENDENZE necessarie, non spazzatura runtime. La
+cornice `cornice-dinamica/embed-espressioni-dedicata.html` coincide con quella
+osservata nel post MATEMATICA il 7/11/2026 (559 righe, SHA-256
+`d7cd547a6f0ba53815a12dd0adcc16276cf02b3a91a16a74b46d8cbcf1968a4c`).
+Include CSS standard del blog e ping di conferma altezza a 80 ms; non
+scambiarla con la versione precedente di 526 righe.
+I test E2E e le fixture sintetiche sono utili e non vengono montati nel
+runtime. `GUIDA-UNICA.html` resta come eredità documentata.
+
+Gli originali di README/AGENTS/ADATTARE/RENDER precedenti al riordino sono
+in `docs/storico/`, per conservazione. Le loro istruzioni superate o i
+link relativi originari non sono procedure correnti; partire dal nuovo README.
+
+Da escludere: `.git`, `node_modules`, `dist`, `.env` reali, file generati
+con chiavi, database/sessioni, log e diagnostici standalone identificati.
+Non togliere fixture o asset solo perché grandi. Nessun file di produzione
+viene cancellato per costruire lo ZIP.
+
+## 3. Controllo di integrità senza eseguire il codice dell’app
+
+Dopo avere estratto il pacchetto, dalla cartella dell’app:
+
+```sh
+python3 scripts/verify-package.py /percorso/pacchetto.zip \
+  --report /percorso/verifica-integrita.json
+```
+
+Richiede Python 3.11+ e sola libreria standard. Verifica CRC, unicità e
+sicurezza dei percorsi, assenza di symlink, corrispondenza esatta con il
+manifest, SHA-256/dimensioni di ogni payload, file obbligatori, esclusioni
+private e firme note di credenziali. Nessun accesso a DB o API IA.
+La scansione non è un penetration test né garanzia contro ogni segreto
+possibile: l’export cerca anche i valori noti dell’ambiente sorgente.
+
+## 4. Ricostruzione automatizzata da nuova estrazione
+
+```sh
+python3 scripts/verify-package.py /percorso/pacchetto.zip \
+  --extract-to /percorso/cartella-NUOVA \
+  --rebuild \
+  --baseline-public dist/public \
+  --report /percorso/verifica-ricostruzione.json
+```
+
+`--baseline-public` è facoltativo: usare una build locale di questo stesso
+commit e cornice realmente disponibile. Senza, il verificatore controlla
+comunque gli hash JS/CSS **9212** e la cornice osservata sul blog. I vecchi
+verificatori e ZIP sono storici. Gli E2E restano separati dalla ricostruzione
+automatica: istruzioni in `tests/FRATTE-FOTO.md`, `tests/STUDENT-FLOW.md`
+e `tests/FEEDBACK-PRODOTTI.md`.
+
+La destinazione NON deve esistere. La procedura:
+
+1. Verifica lo ZIP prima di estrarlo.
+2. Rimuove dall’ambiente ereditato chiavi, token, DATABASE_URL e variabili
+   benchmark; non copia `.env` o dipendenze dalla sorgente.
+3. Imposta `NODE_ENV=production`, CI e installa con
+   `pnpm install --frozen-lockfile --prod=false`: simulazione del requisito
+   Render senza perdere Vite/TypeScript/esbuild.
+4. Esegue corepack, install, tipi, tutta la suite Vitest client/server
+   compreso `server/trascrizioneFratte.test.ts`, test Python e build; salva
+   i log isolati in `qa-logs/`. Qualsiasi test fallito blocca il rapporto
+   di ricostruzione: non accettare automaticamente errori storici.
+5. Verifica la chiave server generata vuota, la cornice Blogger osservata,
+   la coerenza dell'anteprima, JS/CSS approvati e, se richiesto, hash di
+   TUTTI i file della build client rispetto alla baseline locale corrente.
+6. Avvia Express su una porta libera e controlla root/header,
+   font/ONNX/WASM/Tesseract/PDF e bundle via contenuto reale e hash.
+7. Verifica IA non configurata (503) senza chiamare servizi IA live.
+   Non usa endpoint di lettura/scrittura di dati o sessioni.
+8. Arresta il server di collaudo e scrive un rapporto JSON.
+
+Richiede Node 22, Corepack/pnpm e rete per installare le dipendenze.
+La build esegue codice del repository: usarla su sorgenti fidate, in
+ambiente isolato. Non eseguire con credenziali o DB di produzione.
+
+## 5. Rigenerazione da repository
+
+Dopo checkpoint/commit e Git pulito, per la baseline **9212**:
+
+```sh
+python3 scripts/export-verified.py --project . \
+  --output ../espressioni-monomi-polinomi-RIORDINATO.zip \
+  --prefix espressioni-monomi-polinomi --deployment 9212
+```
+
+Scrivere lo ZIP fuori dal repository. Lo script rifiuta un albero sporco,
+file obbligatori mancanti o credenziali note, ed esclude runtime/diagnostici.
+Esportare anche lo script verificatore e i suoi test: non relegare gli
+strumenti di ricostruzione a una cartella privata non consegnata.
+
+Il rapporto finale può essere esterno all’archivio per evitare dipendenze
+circolari: prima esportare lo ZIP definitivo, poi collaudarlo e calcolarne
+checksum/rapporto. Se si cambia lo ZIP DOPO il test, ricontrollare il delta
+esatto o ripetere la ricostruzione. Non chiamare un vecchio rapporto
+«verifica del nuovo ZIP» senza questo controllo.
+
+## 6. Verifiche non coperte
+
+- L'export non esegue nuovi deploy Render/GitHub/Cloud Run: il deploy 9212
+  è stato eseguito separatamente, con consenso esplicito, prima dell'export.
+- Nessun test IA live: serve una chiave propria.
+- Nessun database di produzione o migrazione eseguita.
+- Nessun nuovo collaudo su telefoni fisici o certificazione di accessibilità.
+- Gli E2E non vengono eseguiti implicitamente dalla ricostruzione: le
+  istruzioni per feedback, prodotti notevoli, scroll e percorsi studente
+  con API simulate sono in `tests/FEEDBACK-PRODOTTI.md`. Gli altri E2E
+  crop/layout sono conservati con le loro istruzioni e i rapporti storici.
+
+Consegna: ZIP + rapporto effettivo + checksum + skill pertinenti complete
+(con tutti i relativi riferimenti e script). Le skill sono strumenti
+separati: non introdurle nelle dipendenze runtime dell’app.
+

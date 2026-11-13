@@ -1,0 +1,131 @@
+========================================
+   PACCHETTO — WIDGET METACOGNITIVO
+   PER IL CALCOLO DI ESPRESSIONI
+   (produzione 8744, 28/10/2026)
+========================================
+
+Hai scaricato i sorgenti completi dell'app didattica
+"WIDGET METACOGNITIVO PER IL CALCOLO DI ESPRESSIONI"
+(progetto corrente: espressioni-monomi-polinomi).
+
+
+DA DOVE COMINCIARE (leggi questi file, in ordine):
+
+  1. AGENTS.md          -> Punto di partenza per agenti IA
+                           (indice dei documenti + regole).
+
+  2. VERSIONE-8744.md   -> Stato pubblicato corrente
+                           (hash JS/CSS, overflow pezzi,
+                           didascalia finale).
+
+  3. REBUILD.md         -> Come RICOSTRUIRE l'app identica
+                           dal repository GitHub
+                           (install -> check -> test -> build).
+
+  4. ADATTARE.md        -> Come creare VARIANTI cambiando
+                           solo contenuti/configurazione
+                           (mai l'architettura).
+
+  5. RENDER.md          -> Come trasferire l'app su RENDER
+                           usando un repository GitHub
+                           (Blueprint render.yaml incluso).
+
+  6. ACCESSIBILITA.md   -> Sezione ACCESSIBILITA': tutte le
+                           misure BES/DSA (OpenDyslexic, ecc.)
+                           portabili su altre app simili.
+
+  7. FILOSOFIA-DSA.md   -> Filosofia DSA in 12 principi,
+                           CLONABILE in nuove app simili
+                           (checklist + prompt di clonazione).
+
+  8. README.md          -> Documentazione generale + embed
+                           nel blog + mappa completa dei doc.
+
+
+L'APP È GIÀ ONLINE (produzione Easy-Peasy.AI):
+  https://espressioni-monomi-polinomi.easy-peasy.site
+
+
+VARIANTI POSSIBILI (tramite l'IA, vedi ADATTARE.md):
+
+  * Altre tipologie di espressioni (potenze, doppie
+    parentesi, frazioni) -> estendi il motore
+    client/src/lib/espressioni.ts (+ test Vitest).
+
+  * Equazioni di famiglie strutturate (2, 4, 6, 8... via
+    sostituzione t = x^k): NON polinomi generici arbitrari.
+    Disequazioni/fratte richiedono nuovo motore e test
+    -> ADATTARE-EQUAZIONI.md + ESPORTA-PAGINE-1-2-EQUAZIONI.md.
+
+  * Trapiantare microfono + tastiera su un'altra app
+    -> ADATTARE.md sezione F.
+
+  * Trapiantare il tool foto (scatto -> ritaglio ->
+    IA vision -> OCR) su un'altra app
+    -> TRAPIANTO-FOTO.md.
+
+  * Cambiare la LINGUA (inglese, spagnolo, francese)
+    -> ADATTARE.md variante C.
+
+  * Quiz con set di domande (VERO/FALSO, 3 o 4 opzioni):
+    questa app NON include dashboard/schema quiz.
+    -> ADATTARE.md variante D: scegliere una sorgente quiz.
+
+
+TRASFERIRE SU RENDER (via GitHub):
+
+  1. Crea un repository su github.com (Public o Private).
+  2. Carica TUTTI i file di questo pacchetto (root del repo).
+     NON caricare: node_modules/, dist/, .git/, .env,
+     shared/env.generated.ts.
+  3. Vai su render.com -> New -> Blueprint.
+  4. Collega il repository: Render legge render.yaml
+     e crea il Web Service automaticamente.
+  5. Imposta EASY_PEASY_API_KEY in Environment
+     (tua chiave personale, mai quella di produzione).
+     Il Blueprint installa anche le dipendenze di build
+     con --prod=false. Non serve un sito statico.
+  6. Controlla la CI. L'autodeploy Render NON attende
+     automaticamente l'esito della CI: vedi RENDER.md.
+
+  Dettagli: RENDER.md (runtime Node/Express, NON static site).
+
+
+COMANDI DI VERIFICA (Node 22):
+
+  corepack enable
+  pnpm install --frozen-lockfile --prod=false
+  pnpm check
+  (cd client && pnpm exec vitest run)   # 738 superati, 28 saltati
+  pnpm build
+  pnpm start
+
+  Nota: NON esiste uno script `pnpm test`; usare il comando
+  Vitest sopra. `pnpm dev` serve solo il frontend (niente /api/*):
+  per provare le API usare `pnpm build && pnpm start`.
+
+
+STRUTTURA DEL PROGETTO:
+
+  client/            Frontend React + Vite + Tailwind
+  server/            Server Express (serving statico + /api/ai/*)
+  shared/            Costanti condivise
+  scripts/           sync-env.mjs (chiave IA nel bundle server),
+                     export-verified.py (rigenera lo ZIP),
+                     verify-package.py (verifica/ricostruisce)
+  docs/              Pacchetto, audit e cronologia separata
+  cornice-dinamica/  Embed Blogger (dedicata, lite, universale)
+  render.yaml        Blueprint Render
+  .github/workflows/ CI (install -> check -> test -> build)
+  *.md               Guide per umani e IA (vedi mappa sopra)
+
+FILE EREDITATI (segnalati, non rimossi):
+
+  GUIDA-UNICA.html      Guida stampabile dell'app storica
+                        delle equazioni biquadratiche:
+                        conservata per riferimento, non
+                        caricata dall'app.
+  ISTRUZIONI-GITHUB.txt Questo file (aggiornato al pacchetto 8744).
+
+
+BUON LAVORO!

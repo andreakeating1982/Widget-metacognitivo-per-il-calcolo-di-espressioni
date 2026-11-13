@@ -1,0 +1,17 @@
+node_modules
+.cache/
+dist
+.env
+.env.*
+!.env.example
+shared/env.generated.ts
+*.log
+.DS_Store
+__pycache__/
+*.pyc
+.venv/
+.qa/
+data/
+*.sqlite
+*.sqlite3
+*.db

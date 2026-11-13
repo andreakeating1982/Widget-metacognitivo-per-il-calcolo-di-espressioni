@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test tremolio — cornice strumentata</title>
+<style>
+  body { font-family: monospace; background: #eef; margin: 0; padding: 10px; }
+  #log { position: fixed; top: 0; right: 0; width: 460px; height: 100vh; overflow: auto; background: #fff; border-left: 3px solid #888; font-size: 11px; padding: 6px; box-sizing: border-box; }
+  #log b { color: #b00; }
+  .cornice-wrap { margin-right: 470px; }
+  .lf-cornice { border: 2px solid #333; background: #faf3e8; border-radius: 12px; overflow: hidden; }
+  .lf-iframe { display: block; width: 100%; border: 0; height: 640px; }
+  /* modalità BAD = replica le vecchie cornici (lite/base64/universale):
+     transizione CSS sull'altezza + applicazione IMMEDIATA senza debounce */
+  body.mode-bad .lf-iframe { transition: height 0.25s ease; }
+  h1 { font-size: 14px; }
+</style>
+</head>
+<body>
+<h1>Test tremolio — registro nel pannello a destra. In console: window.__report(). Modalità: <span id="mode"></span></h1>
+<div class="cornice-wrap">
+  <div class="lf-cornice" id="lfCornice">
+    <iframe class="lf-iframe" id="lfIframe" src="about:blank"></iframe>
+  </div>
+</div>
+<div id="log"><b>REGISTRO ALTEZZE</b><br></div>
+<script>
+(function () {
+  'use strict';
+  var qs = new URLSearchParams(window.location.search);
+  var mode = qs.get('mode') === 'bad' ? 'bad' : 'v3';
+  document.getElementById('mode').textContent = mode;
+  if (mode === 'bad') document.body.classList.add('mode-bad');
+
+  var token = 'test' + Math.random().toString(36).slice(2, 8);
+  var iframe = document.getElementById('lfIframe');
+  var logEl = document.getElementById('log');
+  window.__eventi = [];
+  window.__mode = mode;
+  var t0 = Date.now();
+  function log(txt) {
+    var d = document.createElement('div');
+    d.innerHTML = txt;
+    logEl.appendChild(d);
+    logEl.scrollTop = logEl.scrollHeight;
+  }
+  var altezzaApplicata = 0;
+  var timerSettle = null;
+  var ultimoValore = 0;
+
+  function applica(h, src) {
+    window.__eventi.push({ t: Date.now() - t0, h: h, tipo: 'msg' });
+    ultimoValore = h;
+    if (mode === 'bad') {
+      /* replica ESATTA lite/base64 vECCHIE: applica OGNI messaggio subito,
+         senza nessun filtro (caso peggiore per il test anti-tremolio) */
+      altezzaApplicata = h;
+      iframe.style.height = h + 'px';
+      window.__eventi.push({ t: Date.now() - t0, h: h, tipo: 'apply' });
+      return;
+    }
+    /* replica dedicata v3: debounce 200ms, skip se già applicato */
+    clearTimeout(timerSettle);
+    timerSettle = setTimeout(function () {
+      if (Math.abs(h - altezzaApplicata) < 2) {
+        window.__eventi.push({ t: Date.now() - t0, h: h, tipo: 'skip' });
+        return;
+      }
+      altezzaApplicata = h;
+      iframe.style.height = h + 'px';
+      window.__eventi.push({ t: Date.now() - t0, h: h, tipo: 'apply' });
+    }, 200);
+  }
+
+  function ping() {
+    try { iframe.contentWindow.postMessage({ type: 'labvisivo:ping', cornice: token }, '*'); } catch (e) {}
+  }
+  window.addEventListener('message', function (e) {
+    if (!e.data || typeof e.data !== 'object') return;
+    if (e.data.type === 'labvisivo:height' && typeof e.data.height === 'number') {
+      applica(e.data.height, 'msg');
+    }
+  });
+  window.addEventListener('resize', function () { ping(); });
+  var APP = window.location.origin + '/?cornice=' + token;
+  iframe.src = APP;
+  log('modalità=' + mode + ' src=' + APP);
+  ping();
+  setInterval(ping, 3000);
+
+  window.__report = function () {
+    var ev = window.__eventi;
+    var msg = ev.filter(function (e) { return e.tipo === 'msg'; });
+    var apply = ev.filter(function (e) { return e.tipo === 'apply'; });
+    var vals = apply.map(function (e) { return e.h; });
+    var distinte = vals.filter(function (v, i) { return vals.indexOf(v) === i; });
+    var delta = [];
+    for (var i = 1; i < vals.length; i++) delta.push(vals[i] - vals[i - 1]);
+    var oscillazioni = 0;
+    for (var j = 2; j < vals.length; j++) {
+      var a = vals[j] - vals[j - 1], b = vals[j - 1] - vals[j - 2];
+      if (a !== 0 && b !== 0 && ((a > 0 && b < 0) || (a < 0 && b > 0))) oscillazioni++;
+    }
+    return {
+      modalita: mode,
+      messaggi_ricevuti: msg.length,
+      applicazioni: apply.length,
+      valori_distinti: distinte.slice(0, 20),
+      ultimi_delta: delta.slice(-20),
+      inversioni_di_direzione: oscillazioni,
+      durata_s: Math.round((Date.now() - t0) / 1000),
+      ultima_applicata: altezzaApplicata
+    };
+  };
+})();
+</script>
+</body>
+</html>

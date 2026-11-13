@@ -1,0 +1,157 @@
+<!-- ============================================================
+     CORNICE DINAMICA — ESPRESSIONI LETTERALI · MONOMI E POLINOMI
+     (embed per Blogger o qualsiasi sito — stile LATINO FACILE)
+     ------------------------------------------------------------
+     ✏️  RIUSO PER UN'ALTRA APP: cambia SOLO le due righe nella
+         sezione "⚙️ CONFIGURAZIONE" qui sotto:
+           1. APP_URL   → l'URL della tua app (es. https://mia-app.example.com/)
+           2. APP_TITLE → (facoltativo) il titolo mostrato nella cornice
+         Tutto il resto (iframe, font OpenDyslexic, altezza dinamica)
+         si adatta automaticamente usando quell'URL.
+
+     ➕  BONUS — zero modifiche: puoi passare l'URL come parametro
+         della pagina, es. https://tuosito.it/post?app=https://mia-app.example.com/
+         (parametro "app" o "url"). Se presente, ha la precedenza su APP_URL.
+
+     📏  Altezza dinamica: protocollo labvisivo:height + ping.
+         Se l'app non lo supporta, resta l'altezza di default (640px).
+
+     🎨  Colori allineati all'app: carta #f8f1e4, inchiostro #2e2018.
+     ============================================================ -->
+<style>
+  #lfEmbed {
+    background: #f8f1e4;
+    border: 1px solid rgba(46, 32, 24, 0.15);
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    font-family: 'OpenDyslexic', 'Cambria', 'Times New Roman', Georgia, serif;
+    margin: 0 auto;
+    max-width: 800px;
+    overflow: hidden;
+  }
+  #lfEmbedHead {
+    align-items: center;
+    background: #f8f1e4;
+    border-bottom: 2px solid rgba(46, 32, 24, 0.08);
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+    padding: 12px 20px;
+  }
+  #lfEmbedTitle {
+    color: #2e2018;
+    flex: 1;
+    font-family: 'OpenDyslexic', 'Cambria', 'Times New Roman', Georgia, serif;
+    font-size: 17px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    line-height: 1.3;
+    margin: 0;
+    text-align: center;
+  }
+  #lfEmbedOpen {
+    color: #2e2018;
+    font-size: 13px;
+    font-weight: 700;
+    opacity: 0.6;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+    white-space: nowrap;
+  }
+  #lfEmbedOpen:hover { opacity: 1; }
+  #lfFrame {
+    border: none;
+    display: block;
+    height: 640px;
+    min-width: 100%;
+    /* ⛔ NESSUNA transizione sull'altezza: durante l'animazione l'app misura
+       e rinviare altezze intermedie → ciclo continuo di ±pochi pixel
+       (tremolio costante). L'altezza è applicata solo a layout stabilizzato
+       (debounce JS qui sotto). */
+    width: 1px;
+  }
+  @media (max-width: 480px) {
+    #lfEmbedHead { padding: 10px 12px; }
+    #lfEmbedTitle { font-size: 14px; letter-spacing: 1.5px; }
+    #lfEmbedOpen { font-size: 12px; }
+  }
+</style>
+
+<div id="lfEmbed">
+  <div id="lfEmbedHead">
+    <div id="lfEmbedTitle">ESPRESSIONI LETTERALI · MONOMI E POLINOMI</div>
+    <a id="lfEmbedOpen" href="#" target="_blank" rel="noopener">Apri ↗</a>
+  </div>
+  <iframe id="lfFrame" title="App in cornice" src="about:blank" allow="microphone"></iframe>
+</div>
+
+<script>
+  /* ================= ⚙️ CONFIGURAZIONE — unica parte da modificare ================= */
+  var APP_URL   = 'https://espressioni-monomi-polinomi.easy-peasy.site/';   // ← cambia SOLO qui per un'altra app
+  var APP_TITLE = 'ESPRESSIONI LETTERALI · MONOMI E POLINOMI';            // ← (facoltativo) titolo in cornice
+  /* ================================================================================ */
+
+  (function () {
+    'use strict';
+
+    /* 1) Se l'URL è passato come parametro (?app=... o ?url=...), ha la precedenza */
+    var qs = new URLSearchParams(window.location.search);
+    var paramUrl = qs.get('app') || qs.get('url');
+    if (paramUrl && /^https?:\/\//i.test(paramUrl)) APP_URL = paramUrl;
+    if (qs.get('title')) APP_TITLE = qs.get('title');
+
+    /* Normalizza: l'URL deve terminare con "/" per concatenare i percorsi */
+    APP_URL = APP_URL.replace(/\/?$/, '/');
+
+    /* 2) Font OpenDyslexic serviti dall'app stessa (stesso dominio dell'iframe) */
+    var fs = document.createElement('style');
+    fs.textContent =
+      "@font-face{font-family:'OpenDyslexic';src:url('" + APP_URL + "fonts/OpenDyslexic-Regular-v2.woff2') format('woff2');font-weight:400;font-style:normal;font-display:swap;}" +
+      "@font-face{font-family:'OpenDyslexic';src:url('" + APP_URL + "fonts/OpenDyslexic-Bold-v2.woff2') format('woff2');font-weight:700;font-style:normal;font-display:swap;}";
+    document.head.appendChild(fs);
+
+    /* 3) Titolo, link "apri" e src dell'iframe */
+    var titleEl = document.getElementById('lfEmbedTitle');
+    var openEl  = document.getElementById('lfEmbedOpen');
+    var iframe  = document.getElementById('lfFrame');
+    if (titleEl) titleEl.textContent = APP_TITLE;
+    if (openEl)  openEl.href = APP_URL;
+    if (iframe) {
+      iframe.src = APP_URL;
+      iframe.title = APP_TITLE + ' — app in cornice';
+    }
+
+    /* 4) Altezza dinamica: l'app risponde al ping con { type: "labvisivo:height" }.
+       ANTI-TREMOLIO: applicazione con DEBOUNCE ~200 ms (layout stabilizzato)
+       e filtro ±2 px — le versioni precedenti applicavano ogni messaggio
+       subito, incluso le misure intermedie che alimentavano il tremolio. */
+    var timerH = null;
+    var ultimaApplicazione = 0;   // timestamp: inizio del silenzio post-applicazione (anti-tremolio)
+    var hApplicata = 0;
+    function applicaAltezza(h) {
+      if (typeof h !== 'number' || h < 100 || h > 15000) return;
+
+          // --- SILENZIO POST-APPLICAZIONE (anti-tremolio): nei 300 ms dopo
+          // aver applicato un'altezza ignoriamo le rimisure ravvicinate (±30 px):
+          // sono le misure intermedie di stabilizzazione. Un cambiamento VERO
+          // (≥ 30 px) passa comunque. ---
+          if (ultimaApplicazione > 0 && Date.now() - ultimaApplicazione < 300 && Math.abs(h - hApplicata) < 30) return;      clearTimeout(timerH);
+      timerH = setTimeout(function () {
+        if (Math.abs(h - hApplicata) < 2) return;
+        hApplicata = h;
+        ultimaApplicazione = Date.now();
+        iframe.style.height = h + 'px';
+      }, 200);
+    }
+    window.addEventListener('message', function (e) {
+      if (e.data && e.data.type === 'labvisivo:height' && typeof e.data.height === 'number') {
+        applicaAltezza(e.data.height);
+      }
+    });
+    setTimeout(function () {
+      try {
+        if (iframe.contentWindow) iframe.contentWindow.postMessage({ type: 'labvisivo:ping' }, '*');
+      } catch (err) { /* app non ancora pronta o dominio diverso: resta l'altezza di default */ }
+    }, 800);
+  })();
+</script>

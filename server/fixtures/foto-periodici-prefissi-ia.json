@@ -1,0 +1,272 @@
+[
+  {
+    "label": "foto_originale 2",
+    "raw": {
+      "espressioneLatex": "\\dfrac{\\sqrt[-5]{x^{5}-5x^{4}+10x^{3}-10x^{2}+5x-1}\\cdot1,\\overline{333}+\\left(\\sqrt[4]{x^{4}+4x^{3}+6x^{2}+4x+1}\\right)^{-1}\\cdot0,\\overline{3}}{\\sqrt[-6]{0,00\\overline{1}\\cdot(x-1)^{6}}\\cdot0,03}",
+      "risultatoFinaleLatex": "\\dfrac{100\\left|x-1\\right|\\left(4\\left|x+1\\right|+x-1\\right)}{9\\left|x+1\\right|\\sqrt[6]{900}}",
+      "sezioni": [
+        {
+          "title": "PASSAGGI",
+          "boxes": [
+            {
+              "op": "1,\\overline{333}",
+              "answerLatex": "\\dfrac{4}{3}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "0,\\overline{3}",
+              "answerLatex": "\\dfrac{1}{3}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "0,00\\overline{1}",
+              "answerLatex": "\\dfrac{1}{900}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "0,03",
+              "answerLatex": "\\dfrac{3}{100}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "x^{5}-5x^{4}+10x^{3}-10x^{2}+5x-1",
+              "answerLatex": "(x-1)^{5}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[-5]{(x-1)^{5}}",
+              "answerLatex": "\\dfrac{1}{\\sqrt[5]{(x-1)^{5}}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[5]{(x-1)^{5}}",
+              "answerLatex": "x-1",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{x-1}\\cdot\\dfrac{4}{3}",
+              "answerLatex": "\\dfrac{4}{3(x-1)}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "x^{4}+4x^{3}+6x^{2}+4x+1",
+              "answerLatex": "(x+1)^{4}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\left(\\sqrt[4]{(x+1)^{4}}\\right)^{-1}",
+              "answerLatex": "\\dfrac{1}{\\sqrt[4]{(x+1)^{4}}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[4]{(x+1)^{4}}",
+              "answerLatex": "\\left|x+1\\right|",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{\\left|x+1\\right|}\\cdot\\dfrac{1}{3}",
+              "answerLatex": "\\dfrac{1}{3\\left|x+1\\right|}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{4}{3(x-1)}+\\dfrac{1}{3\\left|x+1\\right|}",
+              "answerLatex": "\\dfrac{4\\left|x+1\\right|+x-1}{3(x-1)\\left|x+1\\right|}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{900}\\cdot(x-1)^{6}",
+              "answerLatex": "\\dfrac{(x-1)^{6}}{900}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[-6]{\\dfrac{(x-1)^{6}}{900}}",
+              "answerLatex": "\\dfrac{1}{\\sqrt[6]{\\dfrac{(x-1)^{6}}{900}}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[6]{\\dfrac{(x-1)^{6}}{900}}",
+              "answerLatex": "\\dfrac{\\sqrt[6]{(x-1)^{6}}}{\\sqrt[6]{900}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[6]{(x-1)^{6}}",
+              "answerLatex": "\\left|x-1\\right|",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{\\dfrac{\\left|x-1\\right|}{\\sqrt[6]{900}}}",
+              "answerLatex": "\\dfrac{\\sqrt[6]{900}}{\\left|x-1\\right|}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{\\sqrt[6]{900}}{\\left|x-1\\right|}\\cdot\\dfrac{3}{100}",
+              "answerLatex": "\\dfrac{3\\sqrt[6]{900}}{100\\left|x-1\\right|}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{\\dfrac{4\\left|x+1\\right|+x-1}{3(x-1)\\left|x+1\\right|}}{\\dfrac{3\\sqrt[6]{900}}{100\\left|x-1\\right|}}",
+              "answerLatex": "\\dfrac{4\\left|x+1\\right|+x-1}{3(x-1)\\left|x+1\\right|}\\cdot\\dfrac{100\\left|x-1\\right|}{3\\sqrt[6]{900}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{\\left(4\\left|x+1\\right|+x-1\\right)100\\left|x-1\\right|}{3(x-1)\\left|x+1\\right|3\\sqrt[6]{900}}",
+              "answerLatex": "\\dfrac{100\\left|x-1\\right|\\left(4\\left|x+1\\right|+x-1\\right)}{9(x-1)\\left|x+1\\right|\\sqrt[6]{900}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{100\\cancel{(x-1)}\\left|x-1\\right|\\left(4\\left|x+1\\right|+x-1\\right)}{9\\cancel{(x-1)}\\left|x+1\\right|\\sqrt[6]{900}}",
+              "answerLatex": "\\dfrac{100\\left|x-1\\right|\\left(4\\left|x+1\\right|+x-1\\right)}{9\\left|x+1\\right|\\sqrt[6]{900}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            }
+          ]
+        }
+      ],
+      "righeProgressive": []
+    }
+  },
+  {
+    "label": "variante_valori_periodici 3",
+    "raw": {
+      "espressioneLatex": "\\dfrac{\\sqrt[-5]{x^{5}-10x^{4}+40x^{3}-80x^{2}+80x-32}\\cdot2,\\overline{111}+\\left(\\sqrt[4]{x^{4}+8x^{3}+24x^{2}+32x+16}\\right)^{-1}\\cdot0,\\overline{6}}{\\sqrt[-6]{0,00\\overline{2}\\cdot(x-2)^{6}}\\cdot0,04}",
+      "risultatoFinaleLatex": "\\dfrac{25\\left(57\\left|x+2\\right|+18x-36\\right)}{27\\left|x+2\\right|\\sqrt[6]{450}}",
+      "sezioni": [
+        {
+          "title": "PASSAGGI",
+          "boxes": [
+            {
+              "op": "2,\\overline{111}",
+              "answerLatex": "\\dfrac{19}{9}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "0,\\overline{6}",
+              "answerLatex": "\\dfrac{2}{3}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "0,00\\overline{2}",
+              "answerLatex": "\\dfrac{1}{450}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "0,04",
+              "answerLatex": "\\dfrac{1}{25}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "x^{5}-10x^{4}+40x^{3}-80x^{2}+80x-32",
+              "answerLatex": "(x-2)^{5}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[-5]{(x-2)^{5}}",
+              "answerLatex": "\\dfrac{1}{\\sqrt[5]{(x-2)^{5}}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{\\sqrt[5]{(x-2)^{5}}}",
+              "answerLatex": "\\dfrac{1}{x-2}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{x-2}\\cdot\\dfrac{19}{9}",
+              "answerLatex": "\\dfrac{19}{9(x-2)}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "x^{4}+8x^{3}+24x^{2}+32x+16",
+              "answerLatex": "(x+2)^{4}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[4]{(x+2)^{4}}",
+              "answerLatex": "\\left|x+2\\right|",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\left|x+2\\right|^{-1}",
+              "answerLatex": "\\dfrac{1}{\\left|x+2\\right|}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{\\left|x+2\\right|}\\cdot\\dfrac{2}{3}",
+              "answerLatex": "\\dfrac{2}{3\\left|x+2\\right|}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{19}{9(x-2)}+\\dfrac{2}{3\\left|x+2\\right|}",
+              "answerLatex": "\\dfrac{19\\cdot3\\left|x+2\\right|+2\\cdot9(x-2)}{27(x-2)\\left|x+2\\right|}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "19\\cdot3\\left|x+2\\right|+2\\cdot9(x-2)",
+              "answerLatex": "57\\left|x+2\\right|+18(x-2)",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "57\\left|x+2\\right|+18(x-2)",
+              "answerLatex": "57\\left|x+2\\right|+18x-36",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{57\\left|x+2\\right|+18x-36}{27(x-2)\\left|x+2\\right|}",
+              "answerLatex": "\\dfrac{57\\left|x+2\\right|+18x-36}{27(x-2)\\left|x+2\\right|}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{450}\\cdot(x-2)^{6}",
+              "answerLatex": "\\dfrac{(x-2)^{6}}{450}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[-6]{\\dfrac{(x-2)^{6}}{450}}",
+              "answerLatex": "\\dfrac{1}{\\sqrt[6]{\\dfrac{(x-2)^{6}}{450}}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{\\sqrt[6]{\\dfrac{(x-2)^{6}}{450}}}\\cdot\\dfrac{1}{25}",
+              "answerLatex": "\\dfrac{1}{25\\sqrt[6]{\\dfrac{(x-2)^{6}}{450}}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[6]{\\dfrac{(x-2)^{6}}{450}}",
+              "answerLatex": "\\dfrac{\\sqrt[6]{(x-2)^{6}}}{\\sqrt[6]{450}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{1}{25\\cdot\\dfrac{\\sqrt[6]{(x-2)^{6}}}{\\sqrt[6]{450}}}",
+              "answerLatex": "\\dfrac{\\sqrt[6]{450}}{25\\sqrt[6]{(x-2)^{6}}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\sqrt[6]{(x-2)^{6}}",
+              "answerLatex": "\\left|x-2\\right|",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{\\sqrt[6]{450}}{25\\left|x-2\\right|}",
+              "answerLatex": "\\dfrac{\\sqrt[6]{450}}{25\\left|x-2\\right|}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{57\\left|x+2\\right|+18x-36}{27(x-2)\\left|x+2\\right|}:\\dfrac{\\sqrt[6]{450}}{25\\left|x-2\\right|}",
+              "answerLatex": "\\dfrac{57\\left|x+2\\right|+18x-36}{27(x-2)\\left|x+2\\right|}\\cdot\\dfrac{25\\left|x-2\\right|}{\\sqrt[6]{450}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{\\left(57\\left|x+2\\right|+18x-36\\right)\\cdot25\\left|x-2\\right|}{27(x-2)\\left|x+2\\right|\\sqrt[6]{450}}",
+              "answerLatex": "\\dfrac{25\\left|x-2\\right|\\left(57\\left|x+2\\right|+18x-36\\right)}{27(x-2)\\left|x+2\\right|\\sqrt[6]{450}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            },
+            {
+              "op": "\\dfrac{25\\left|x-2\\right|\\left(57\\left|x+2\\right|+18x-36\\right)}{27(x-2)\\left|x+2\\right|\\sqrt[6]{450}}",
+              "answerLatex": "\\dfrac{25\\left(57\\left|x+2\\right|+18x-36\\right)}{27\\left|x+2\\right|\\sqrt[6]{450}}",
+              "prompt": "Applico il metodo e scrivo il risultato."
+            }
+          ]
+        }
+      ],
+      "righeProgressive": []
+    }
+  }
+]

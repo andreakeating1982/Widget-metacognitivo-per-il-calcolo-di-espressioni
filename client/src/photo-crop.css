@@ -1,0 +1,42 @@
+/* Ritaglio foto: foto/testata scorrono, pagina sotto bloccata.
+   RUOTA SINISTRA/DESTRA e CHIUDI/RITAGLIA condividono UN riquadro centrato;
+   nessun AZZERA. Compatti su due righe mobile e una riga quando c'è spazio. */
+.lf-crop-dialog {
+  overscroll-behavior: none;
+}
+.lf-crop-scroll {
+  -webkit-overflow-scrolling: touch;
+  scrollbar-gutter: stable;
+}
+.lf-crop-footer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 12px max(8px, env(safe-area-inset-bottom));
+}
+/* I pulsanti non devono comprimere icona e parole quando l'utente ingrandisce
+   il carattere. La larghezza minima segue il font: se due comandi non ci
+   stanno, il flex li dispone su righe centrate invece di farli sbordare.
+   Il limite al 50% rimane quando il testo è alla dimensione ordinaria. */
+.lf-crop-footer > button {
+  flex: 0 1 auto;
+  min-width: min(100%, 8rem);
+  max-width: max(min(100%, 8rem), calc(50% - 4px));
+  min-height: 44px;
+  height: auto;
+  white-space: normal;
+  overflow-wrap: normal;
+  word-break: normal;
+  line-height: 1.35;
+  padding: 8px 12px;
+  text-align: center;
+  justify-content: center;
+}
+/* Mouse E touch: trascinamento diretto da tutta l'area selezionata.
+   Nessuna icona necessaria. Lo scroll rimane sui margini e fuori dal crop. */
+.lf-crop-move {
+  pointer-events: auto;
+  touch-action: none;
+}

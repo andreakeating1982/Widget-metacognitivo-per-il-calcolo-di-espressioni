@@ -1,0 +1,2208 @@
+[
+  {
+    "name": "desktop",
+    "checks": [
+      {
+        "name": "altezza esterna delimitata e indipendente dal contenuto",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 635,
+            "top": 0,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 800,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          },
+          "target": 640
+        }
+      },
+      {
+        "name": "nessun overflow orizzontale della pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 635,
+          "top": 0,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 800,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scrollbar sottile 4px come Latino Facile",
+        "ok": true,
+        "detail": "4px"
+      },
+      {
+        "name": "regione raggiungibile da tastiera",
+        "ok": true
+      },
+      {
+        "name": "pannello audio e istruzioni non allungano la pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1081,
+          "top": 320,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 800,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "il contenuto lungo ha davvero overflow interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1081,
+          "top": 320,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 800,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scorrimento verticale da tastiera funziona",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1081,
+          "top": 503,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 800,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "toolbar resta ferma mentre il contenuto scorre",
+        "ok": true
+      },
+      {
+        "name": "dieci pezzi confermati mantengono la stessa altezza",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1418,
+          "top": 840,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 800,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "gesto dito o rotella scorre dentro la seconda pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1418,
+          "top": 300,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 800,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "ritaglio non allunga la pagina e congela il suo scroll",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 1418,
+            "top": 840,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 800,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          },
+          "locked": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 1418,
+            "top": 840,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 800,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "ritaglio interamente visibile nello schermo",
+        "ok": true,
+        "detail": {
+          "x": 254,
+          "y": 8,
+          "width": 768,
+          "height": 784
+        }
+      },
+      {
+        "name": "otto maniglie e quattro comandi preservati",
+        "ok": true
+      },
+      {
+        "name": "nessun toast o altro elemento copre i quattro comandi",
+        "ok": true,
+        "detail": [
+          {
+            "label": "Ruota sinistra",
+            "exposed": true
+          },
+          {
+            "label": "Ruota destra",
+            "exposed": true
+          },
+          {
+            "label": "Chiudi",
+            "exposed": true
+          },
+          {
+            "label": "Ritaglia",
+            "exposed": true
+          }
+        ]
+      },
+      {
+        "name": "nessun invio OCR prima della conferma",
+        "ok": true
+      },
+      {
+        "name": "chiusura ripristina posizione e scrollbar interne",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 1418,
+            "top": 840,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 800,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          },
+          "afterClose": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 1418,
+            "top": 840,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 800,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "PNG confermato trascritto in un nuovo pezzo senza calcolo",
+        "ok": true
+      },
+      {
+        "name": "altezza invariata dopo conferma foto",
+        "ok": true
+      },
+      {
+        "name": "pagina autonoma segue il viewport ridotto",
+        "ok": true,
+        "detail": {
+          "frame": 620,
+          "scroll": 558,
+          "content": 1481,
+          "top": 0,
+          "body": 620,
+          "windowY": 0,
+          "docHeight": 620,
+          "bodyHeight": 620,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 620,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "prima pagina senza contenitore limitato",
+        "ok": true
+      },
+      {
+        "name": "terza pagina senza contenitore limitato",
+        "ok": true
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "ok": true
+  },
+  {
+    "name": "mobile-320",
+    "checks": [
+      {
+        "name": "altezza esterna delimitata e indipendente dal contenuto",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 568,
+            "scroll": 392,
+            "content": 747,
+            "top": 0,
+            "body": 568,
+            "windowY": 0,
+            "docHeight": 568,
+            "bodyHeight": 568,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 568,
+            "width": 320,
+            "documentWidth": 320,
+            "bar": "4px"
+          },
+          "target": 568
+        }
+      },
+      {
+        "name": "nessun overflow orizzontale della pagina",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "scroll": 392,
+          "content": 747,
+          "top": 0,
+          "body": 568,
+          "windowY": 0,
+          "docHeight": 568,
+          "bodyHeight": 568,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 568,
+          "width": 320,
+          "documentWidth": 320,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scrollbar sottile 4px come Latino Facile",
+        "ok": true,
+        "detail": "4px"
+      },
+      {
+        "name": "regione raggiungibile da tastiera",
+        "ok": true
+      },
+      {
+        "name": "pannello audio e istruzioni non allungano la pagina",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "scroll": 392,
+          "content": 1558,
+          "top": 603,
+          "body": 568,
+          "windowY": 0,
+          "docHeight": 568,
+          "bodyHeight": 568,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 568,
+          "width": 320,
+          "documentWidth": 320,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "il contenuto lungo ha davvero overflow interno",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "scroll": 392,
+          "content": 1558,
+          "top": 603,
+          "body": 568,
+          "windowY": 0,
+          "docHeight": 568,
+          "bodyHeight": 568,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 568,
+          "width": 320,
+          "documentWidth": 320,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scorrimento verticale da tastiera funziona",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "scroll": 392,
+          "content": 1558,
+          "top": 1166,
+          "body": 568,
+          "windowY": 0,
+          "docHeight": 568,
+          "bodyHeight": 568,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 568,
+          "width": 320,
+          "documentWidth": 320,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "toolbar resta ferma mentre il contenuto scorre",
+        "ok": true
+      },
+      {
+        "name": "dieci pezzi confermati mantengono la stessa altezza",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "scroll": 392,
+          "content": 1560,
+          "top": 1168,
+          "body": 568,
+          "windowY": 0,
+          "docHeight": 568,
+          "bodyHeight": 568,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 568,
+          "width": 320,
+          "documentWidth": 320,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "gesto dito o rotella scorre dentro la seconda pagina",
+        "ok": true,
+        "detail": {
+          "frame": 568,
+          "scroll": 392,
+          "content": 1560,
+          "top": 158,
+          "body": 568,
+          "windowY": 0,
+          "docHeight": 568,
+          "bodyHeight": 568,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 568,
+          "width": 320,
+          "documentWidth": 320,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "ritaglio non allunga la pagina e congela il suo scroll",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 568,
+            "scroll": 392,
+            "content": 1560,
+            "top": 1034,
+            "body": 568,
+            "windowY": 0,
+            "docHeight": 568,
+            "bodyHeight": 568,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 568,
+            "width": 320,
+            "documentWidth": 320,
+            "bar": "4px"
+          },
+          "locked": {
+            "frame": 568,
+            "scroll": 392,
+            "content": 1560,
+            "top": 1034,
+            "body": 568,
+            "windowY": 0,
+            "docHeight": 568,
+            "bodyHeight": 568,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 568,
+            "width": 320,
+            "documentWidth": 320,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "ritaglio interamente visibile nello schermo",
+        "ok": true,
+        "detail": {
+          "x": 8,
+          "y": 8,
+          "width": 304,
+          "height": 552
+        }
+      },
+      {
+        "name": "otto maniglie e quattro comandi preservati",
+        "ok": true
+      },
+      {
+        "name": "nessun toast o altro elemento copre i quattro comandi",
+        "ok": true,
+        "detail": [
+          {
+            "label": "Ruota sinistra",
+            "exposed": true
+          },
+          {
+            "label": "Ruota destra",
+            "exposed": true
+          },
+          {
+            "label": "Chiudi",
+            "exposed": true
+          },
+          {
+            "label": "Ritaglia",
+            "exposed": true
+          }
+        ]
+      },
+      {
+        "name": "nessun invio OCR prima della conferma",
+        "ok": true
+      },
+      {
+        "name": "chiusura ripristina posizione e scrollbar interne",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 568,
+            "scroll": 392,
+            "content": 1560,
+            "top": 1034,
+            "body": 568,
+            "windowY": 0,
+            "docHeight": 568,
+            "bodyHeight": 568,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 568,
+            "width": 320,
+            "documentWidth": 320,
+            "bar": "4px"
+          },
+          "afterClose": {
+            "frame": 568,
+            "scroll": 392,
+            "content": 1560,
+            "top": 1034,
+            "body": 568,
+            "windowY": 0,
+            "docHeight": 568,
+            "bodyHeight": 568,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 568,
+            "width": 320,
+            "documentWidth": 320,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "PNG confermato trascritto in un nuovo pezzo senza calcolo",
+        "ok": true
+      },
+      {
+        "name": "altezza invariata dopo conferma foto",
+        "ok": true
+      },
+      {
+        "name": "pagina autonoma segue il viewport ridotto",
+        "ok": true,
+        "detail": {
+          "frame": 388,
+          "scroll": 212,
+          "content": 1622,
+          "top": 0,
+          "body": 388,
+          "windowY": 0,
+          "docHeight": 388,
+          "bodyHeight": 388,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 388,
+          "width": 320,
+          "documentWidth": 320,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "prima pagina senza contenitore limitato",
+        "ok": true
+      },
+      {
+        "name": "terza pagina senza contenitore limitato",
+        "ok": true
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "ok": true
+  },
+  {
+    "name": "mobile-393",
+    "checks": [
+      {
+        "name": "altezza esterna delimitata e indipendente dal contenuto",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 723,
+            "top": 0,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 780,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          },
+          "target": 640
+        }
+      },
+      {
+        "name": "nessun overflow orizzontale della pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 723,
+          "top": 0,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 780,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scrollbar sottile 4px come Latino Facile",
+        "ok": true,
+        "detail": "4px"
+      },
+      {
+        "name": "regione raggiungibile da tastiera",
+        "ok": true
+      },
+      {
+        "name": "pannello audio e istruzioni non allungano la pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1275,
+          "top": 396,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 780,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "il contenuto lungo ha davvero overflow interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1275,
+          "top": 396,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 780,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scorrimento verticale da tastiera funziona",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1275,
+          "top": 773,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 780,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "toolbar resta ferma mentre il contenuto scorre",
+        "ok": true
+      },
+      {
+        "name": "dieci pezzi confermati mantengono la stessa altezza",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1506,
+          "top": 1004,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 780,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "gesto dito o rotella scorre dentro la seconda pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1506,
+          "top": 161,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 780,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "ritaglio non allunga la pagina e congela il suo scroll",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 1506,
+            "top": 955,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 780,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          },
+          "locked": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 1506,
+            "top": 955,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 780,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "ritaglio interamente visibile nello schermo",
+        "ok": true,
+        "detail": {
+          "x": 8,
+          "y": 8,
+          "width": 377,
+          "height": 764
+        }
+      },
+      {
+        "name": "otto maniglie e quattro comandi preservati",
+        "ok": true
+      },
+      {
+        "name": "nessun toast o altro elemento copre i quattro comandi",
+        "ok": true,
+        "detail": [
+          {
+            "label": "Ruota sinistra",
+            "exposed": true
+          },
+          {
+            "label": "Ruota destra",
+            "exposed": true
+          },
+          {
+            "label": "Chiudi",
+            "exposed": true
+          },
+          {
+            "label": "Ritaglia",
+            "exposed": true
+          }
+        ]
+      },
+      {
+        "name": "nessun invio OCR prima della conferma",
+        "ok": true
+      },
+      {
+        "name": "chiusura ripristina posizione e scrollbar interne",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 1506,
+            "top": 955,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 780,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          },
+          "afterClose": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 1506,
+            "top": 955,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 780,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "PNG confermato trascritto in un nuovo pezzo senza calcolo",
+        "ok": true
+      },
+      {
+        "name": "altezza invariata dopo conferma foto",
+        "ok": true
+      },
+      {
+        "name": "pagina autonoma segue il viewport ridotto",
+        "ok": true,
+        "detail": {
+          "frame": 600,
+          "scroll": 462,
+          "content": 1569,
+          "top": 0,
+          "body": 600,
+          "windowY": 0,
+          "docHeight": 600,
+          "bodyHeight": 600,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 600,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "prima pagina senza contenitore limitato",
+        "ok": true
+      },
+      {
+        "name": "terza pagina senza contenitore limitato",
+        "ok": true
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "ok": true
+  },
+  {
+    "name": "landscape",
+    "checks": [
+      {
+        "name": "altezza esterna delimitata e indipendente dal contenuto",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 360,
+            "scroll": 260,
+            "content": 635,
+            "top": 0,
+            "body": 360,
+            "windowY": 0,
+            "docHeight": 360,
+            "bodyHeight": 360,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 360,
+            "width": 740,
+            "documentWidth": 740,
+            "bar": "4px"
+          },
+          "target": 360
+        }
+      },
+      {
+        "name": "nessun overflow orizzontale della pagina",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "scroll": 260,
+          "content": 635,
+          "top": 0,
+          "body": 360,
+          "windowY": 0,
+          "docHeight": 360,
+          "bodyHeight": 360,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 360,
+          "width": 740,
+          "documentWidth": 740,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scrollbar sottile 4px come Latino Facile",
+        "ok": true,
+        "detail": "4px"
+      },
+      {
+        "name": "regione raggiungibile da tastiera",
+        "ok": true
+      },
+      {
+        "name": "pannello audio e istruzioni non allungano la pagina",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "scroll": 260,
+          "content": 1081,
+          "top": 487,
+          "body": 360,
+          "windowY": 0,
+          "docHeight": 360,
+          "bodyHeight": 360,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 360,
+          "width": 740,
+          "documentWidth": 740,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "il contenuto lungo ha davvero overflow interno",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "scroll": 260,
+          "content": 1081,
+          "top": 487,
+          "body": 360,
+          "windowY": 0,
+          "docHeight": 360,
+          "bodyHeight": 360,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 360,
+          "width": 740,
+          "documentWidth": 740,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scorrimento verticale da tastiera funziona",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "scroll": 260,
+          "content": 1081,
+          "top": 821,
+          "body": 360,
+          "windowY": 0,
+          "docHeight": 360,
+          "bodyHeight": 360,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 360,
+          "width": 740,
+          "documentWidth": 740,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "toolbar resta ferma mentre il contenuto scorre",
+        "ok": true
+      },
+      {
+        "name": "dieci pezzi confermati mantengono la stessa altezza",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "scroll": 260,
+          "content": 1418,
+          "top": 1158,
+          "body": 360,
+          "windowY": 0,
+          "docHeight": 360,
+          "bodyHeight": 360,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 360,
+          "width": 740,
+          "documentWidth": 740,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "gesto dito o rotella scorre dentro la seconda pagina",
+        "ok": true,
+        "detail": {
+          "frame": 360,
+          "scroll": 260,
+          "content": 1418,
+          "top": 158,
+          "body": 360,
+          "windowY": 0,
+          "docHeight": 360,
+          "bodyHeight": 360,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 360,
+          "width": 740,
+          "documentWidth": 740,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "ritaglio non allunga la pagina e congela il suo scroll",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 360,
+            "scroll": 260,
+            "content": 1418,
+            "top": 1012,
+            "body": 360,
+            "windowY": 0,
+            "docHeight": 360,
+            "bodyHeight": 360,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 360,
+            "width": 740,
+            "documentWidth": 740,
+            "bar": "4px"
+          },
+          "locked": {
+            "frame": 360,
+            "scroll": 260,
+            "content": 1418,
+            "top": 1012,
+            "body": 360,
+            "windowY": 0,
+            "docHeight": 360,
+            "bodyHeight": 360,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 360,
+            "width": 740,
+            "documentWidth": 740,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "ritaglio interamente visibile nello schermo",
+        "ok": true,
+        "detail": {
+          "x": 8,
+          "y": 8,
+          "width": 724,
+          "height": 344
+        }
+      },
+      {
+        "name": "otto maniglie e quattro comandi preservati",
+        "ok": true
+      },
+      {
+        "name": "nessun toast o altro elemento copre i quattro comandi",
+        "ok": true,
+        "detail": [
+          {
+            "label": "Ruota sinistra",
+            "exposed": true
+          },
+          {
+            "label": "Ruota destra",
+            "exposed": true
+          },
+          {
+            "label": "Chiudi",
+            "exposed": true
+          },
+          {
+            "label": "Ritaglia",
+            "exposed": true
+          }
+        ]
+      },
+      {
+        "name": "nessun invio OCR prima della conferma",
+        "ok": true
+      },
+      {
+        "name": "chiusura ripristina posizione e scrollbar interne",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 360,
+            "scroll": 260,
+            "content": 1418,
+            "top": 1012,
+            "body": 360,
+            "windowY": 0,
+            "docHeight": 360,
+            "bodyHeight": 360,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 360,
+            "width": 740,
+            "documentWidth": 740,
+            "bar": "4px"
+          },
+          "afterClose": {
+            "frame": 360,
+            "scroll": 260,
+            "content": 1418,
+            "top": 1012,
+            "body": 360,
+            "windowY": 0,
+            "docHeight": 360,
+            "bodyHeight": 360,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 360,
+            "width": 740,
+            "documentWidth": 740,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "PNG confermato trascritto in un nuovo pezzo senza calcolo",
+        "ok": true
+      },
+      {
+        "name": "altezza invariata dopo conferma foto",
+        "ok": true
+      },
+      {
+        "name": "pagina autonoma segue il viewport ridotto",
+        "ok": true,
+        "detail": {
+          "frame": 240,
+          "scroll": 140,
+          "content": 1481,
+          "top": 0,
+          "body": 240,
+          "windowY": 0,
+          "docHeight": 240,
+          "bodyHeight": 240,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 240,
+          "width": 740,
+          "documentWidth": 740,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "prima pagina senza contenitore limitato",
+        "ok": true
+      },
+      {
+        "name": "terza pagina senza contenitore limitato",
+        "ok": true
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "ok": true
+  },
+  {
+    "name": "blog-mobile",
+    "checks": [
+      {
+        "name": "altezza esterna delimitata e indipendente dal contenuto",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 723,
+            "top": 0,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          },
+          "target": 640
+        }
+      },
+      {
+        "name": "nessun overflow orizzontale della pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 723,
+          "top": 0,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scrollbar sottile 4px come Latino Facile",
+        "ok": true,
+        "detail": "4px"
+      },
+      {
+        "name": "regione raggiungibile da tastiera",
+        "ok": true
+      },
+      {
+        "name": "pannello audio e istruzioni non allungano la pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1275,
+          "top": 396,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "il contenuto lungo ha davvero overflow interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1275,
+          "top": 396,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scorrimento verticale da tastiera funziona",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1275,
+          "top": 773,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "toolbar resta ferma mentre il contenuto scorre",
+        "ok": true
+      },
+      {
+        "name": "dieci pezzi confermati mantengono la stessa altezza",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1506,
+          "top": 1004,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "gesto dito o rotella scorre dentro la seconda pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 502,
+          "content": 1506,
+          "top": 160,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "ritaglio non allunga la pagina e congela il suo scroll",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 1506,
+            "top": 955,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          },
+          "locked": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 1506,
+            "top": 955,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "ritaglio interamente visibile nello schermo",
+        "ok": true,
+        "detail": {
+          "x": 8,
+          "y": 8,
+          "width": 377,
+          "height": 624
+        }
+      },
+      {
+        "name": "otto maniglie e quattro comandi preservati",
+        "ok": true
+      },
+      {
+        "name": "nessun toast o altro elemento copre i quattro comandi",
+        "ok": true,
+        "detail": [
+          {
+            "label": "Ruota sinistra",
+            "exposed": true
+          },
+          {
+            "label": "Ruota destra",
+            "exposed": true
+          },
+          {
+            "label": "Chiudi",
+            "exposed": true
+          },
+          {
+            "label": "Ritaglia",
+            "exposed": true
+          }
+        ]
+      },
+      {
+        "name": "nessun invio OCR prima della conferma",
+        "ok": true
+      },
+      {
+        "name": "nessun resize della cornice durante ritaglio neppure con ping",
+        "ok": true,
+        "detail": {
+          "count": 1,
+          "heightsBefore": 640
+        }
+      },
+      {
+        "name": "chiusura ripristina posizione e scrollbar interne",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 1506,
+            "top": 955,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          },
+          "afterClose": {
+            "frame": 640,
+            "scroll": 502,
+            "content": 1506,
+            "top": 955,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "PNG confermato trascritto in un nuovo pezzo senza calcolo",
+        "ok": true
+      },
+      {
+        "name": "altezza invariata dopo conferma foto",
+        "ok": true
+      },
+      {
+        "name": "messaggi altezza tutti con token e senza crescite",
+        "ok": true,
+        "detail": [
+          {
+            "type": "labvisivo:height",
+            "height": 640,
+            "cornice": "input-scroll-test"
+          }
+        ]
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "ok": true
+  },
+  {
+    "name": "blog-desktop",
+    "checks": [
+      {
+        "name": "altezza esterna delimitata e indipendente dal contenuto",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 635,
+            "top": 0,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          },
+          "target": 640
+        }
+      },
+      {
+        "name": "nessun overflow orizzontale della pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 635,
+          "top": 0,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scrollbar sottile 4px come Latino Facile",
+        "ok": true,
+        "detail": "4px"
+      },
+      {
+        "name": "regione raggiungibile da tastiera",
+        "ok": true
+      },
+      {
+        "name": "pannello audio e istruzioni non allungano la pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1081,
+          "top": 320,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "il contenuto lungo ha davvero overflow interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1081,
+          "top": 320,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scorrimento verticale da tastiera funziona",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1081,
+          "top": 503,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "toolbar resta ferma mentre il contenuto scorre",
+        "ok": true
+      },
+      {
+        "name": "dieci pezzi confermati mantengono la stessa altezza",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1418,
+          "top": 840,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "gesto dito o rotella scorre dentro la seconda pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 578,
+          "content": 1418,
+          "top": 300,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 1280,
+          "documentWidth": 1276,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "ritaglio non allunga la pagina e congela il suo scroll",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 1418,
+            "top": 840,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          },
+          "locked": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 1418,
+            "top": 840,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "ritaglio interamente visibile nello schermo",
+        "ok": true,
+        "detail": {
+          "x": 254,
+          "y": 8,
+          "width": 768,
+          "height": 624
+        }
+      },
+      {
+        "name": "otto maniglie e quattro comandi preservati",
+        "ok": true
+      },
+      {
+        "name": "nessun toast o altro elemento copre i quattro comandi",
+        "ok": true,
+        "detail": [
+          {
+            "label": "Ruota sinistra",
+            "exposed": true
+          },
+          {
+            "label": "Ruota destra",
+            "exposed": true
+          },
+          {
+            "label": "Chiudi",
+            "exposed": true
+          },
+          {
+            "label": "Ritaglia",
+            "exposed": true
+          }
+        ]
+      },
+      {
+        "name": "nessun invio OCR prima della conferma",
+        "ok": true
+      },
+      {
+        "name": "nessun resize della cornice durante ritaglio neppure con ping",
+        "ok": true,
+        "detail": {
+          "count": 1,
+          "heightsBefore": 640
+        }
+      },
+      {
+        "name": "chiusura ripristina posizione e scrollbar interne",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 1418,
+            "top": 840,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          },
+          "afterClose": {
+            "frame": 640,
+            "scroll": 578,
+            "content": 1418,
+            "top": 840,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 1280,
+            "documentWidth": 1276,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "PNG confermato trascritto in un nuovo pezzo senza calcolo",
+        "ok": true
+      },
+      {
+        "name": "altezza invariata dopo conferma foto",
+        "ok": true
+      },
+      {
+        "name": "messaggi altezza tutti con token e senza crescite",
+        "ok": true,
+        "detail": [
+          {
+            "type": "labvisivo:height",
+            "height": 640,
+            "cornice": "input-scroll-test"
+          }
+        ]
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "ok": true
+  },
+  {
+    "name": "accessibilita-160",
+    "checks": [
+      {
+        "name": "altezza esterna delimitata e indipendente dal contenuto",
+        "ok": true,
+        "detail": {
+          "initial": {
+            "frame": 640,
+            "scroll": 360,
+            "content": 1309,
+            "top": 0,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          },
+          "target": 640
+        }
+      },
+      {
+        "name": "nessun overflow orizzontale della pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 360,
+          "content": 1309,
+          "top": 0,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scrollbar sottile 4px come Latino Facile",
+        "ok": true,
+        "detail": "4px"
+      },
+      {
+        "name": "regione raggiungibile da tastiera",
+        "ok": true
+      },
+      {
+        "name": "pannello audio e istruzioni non allungano la pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 360,
+          "content": 3034,
+          "top": 1344,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "il contenuto lungo ha davvero overflow interno",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 360,
+          "content": 3034,
+          "top": 1344,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "scorrimento verticale da tastiera funziona",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 360,
+          "content": 3034,
+          "top": 2674,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "toolbar resta ferma mentre il contenuto scorre",
+        "ok": true
+      },
+      {
+        "name": "dieci pezzi confermati mantengono la stessa altezza",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 360,
+          "content": 2641,
+          "top": 2266,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "gesto dito o rotella scorre dentro la seconda pagina",
+        "ok": true,
+        "detail": {
+          "frame": 640,
+          "scroll": 360,
+          "content": 2641,
+          "top": 161,
+          "body": 640,
+          "windowY": 0,
+          "docHeight": 640,
+          "bodyHeight": 640,
+          "shellTop": 0,
+          "shellScroll": 0,
+          "rootHeight": 640,
+          "width": 393,
+          "documentWidth": 393,
+          "bar": "4px"
+        }
+      },
+      {
+        "name": "ritaglio non allunga la pagina e congela il suo scroll",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 360,
+            "content": 2641,
+            "top": 1826,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          },
+          "locked": {
+            "frame": 640,
+            "scroll": 360,
+            "content": 2641,
+            "top": 1826,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "ritaglio interamente visibile nello schermo",
+        "ok": true,
+        "detail": {
+          "x": 12.8125,
+          "y": 8,
+          "width": 367.390625,
+          "height": 624
+        }
+      },
+      {
+        "name": "otto maniglie e quattro comandi preservati",
+        "ok": true
+      },
+      {
+        "name": "nessun toast o altro elemento copre i quattro comandi",
+        "ok": true,
+        "detail": [
+          {
+            "label": "Ruota sinistra",
+            "exposed": true
+          },
+          {
+            "label": "Ruota destra",
+            "exposed": true
+          },
+          {
+            "label": "Chiudi",
+            "exposed": true
+          },
+          {
+            "label": "Ritaglia",
+            "exposed": true
+          }
+        ]
+      },
+      {
+        "name": "nessun invio OCR prima della conferma",
+        "ok": true
+      },
+      {
+        "name": "nessun resize della cornice durante ritaglio neppure con ping",
+        "ok": true,
+        "detail": {
+          "count": 1,
+          "heightsBefore": 640
+        }
+      },
+      {
+        "name": "chiusura ripristina posizione e scrollbar interne",
+        "ok": true,
+        "detail": {
+          "beforeCrop": {
+            "frame": 640,
+            "scroll": 360,
+            "content": 2641,
+            "top": 1826,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          },
+          "afterClose": {
+            "frame": 640,
+            "scroll": 360,
+            "content": 2641,
+            "top": 1826,
+            "body": 640,
+            "windowY": 0,
+            "docHeight": 640,
+            "bodyHeight": 640,
+            "shellTop": 0,
+            "shellScroll": 0,
+            "rootHeight": 640,
+            "width": 393,
+            "documentWidth": 393,
+            "bar": "4px"
+          }
+        }
+      },
+      {
+        "name": "PNG confermato trascritto in un nuovo pezzo senza calcolo",
+        "ok": true
+      },
+      {
+        "name": "altezza invariata dopo conferma foto",
+        "ok": true
+      },
+      {
+        "name": "messaggi altezza tutti con token e senza crescite",
+        "ok": true,
+        "detail": [
+          {
+            "type": "labvisivo:height",
+            "height": 640,
+            "cornice": "input-scroll-test"
+          }
+        ]
+      },
+      {
+        "name": "nessun errore JavaScript",
+        "ok": true,
+        "detail": []
+      }
+    ],
+    "ok": true
+  }
+]
